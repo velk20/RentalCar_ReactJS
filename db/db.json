@@ -1,0 +1,69 @@
+{
+  "vehicles": [
+    {
+      "id": "3ab67e59-0d59-4ef8-977c-63e2b97e9305",
+      "isActive": false,
+      "picture": "http://placehold.it/32x32",
+      "brand": "BMW",
+      "model": "E60",
+      "year": "2012",
+      "type": "economy",
+      "fuel": "petrol",
+      "numberOfSeats": 5,
+      "pricePerDay": 141.9789,
+      "count": 4
+    },
+    {
+      "id": "d2df73cc-5197-4e40-8a72-ee573969a305",
+      "isActive": true,
+      "picture": "http://placehold.it/32x32",
+      "brand": "Audi",
+      "model": "A4",
+      "year": "2011",
+      "type": "economy",
+      "fuel": "hybrid",
+      "numberOfSeats": 4,
+      "pricePerDay": 80.1373,
+      "count": 8
+    },
+    {
+      "id": "c24257cb-5719-4cc4-9a5e-44d66792490d",
+      "isActive": true,
+      "picture": "http://placehold.it/32x32",
+      "brand": "Mercedes",
+      "model": "CLK",
+      "year": "2008",
+      "type": "cargo",
+      "fuel": "electric",
+      "numberOfSeats": 4,
+      "pricePerDay": 121.2057,
+      "count": 6
+    },
+    {
+      "id": "7b5edfcf-18b2-481f-85e9-d1eea878d488",
+      "isActive": false,
+      "picture": "http://placehold.it/32x32",
+      "brand": "Mercedes",
+      "model": "S500",
+      "year": "2019",
+      "type": "luxury",
+      "fuel": "hybrid",
+      "numberOfSeats": 5,
+      "pricePerDay": 62.5804,
+      "count": 6
+    },
+    {
+      "id": "b36aa9f0-ea0b-475f-8406-b01f7821a9e1",
+      "isActive": true,
+      "picture": "http://placehold.it/32x32",
+      "brand": "Lexus",
+      "model": "V60",
+      "year": "2006",
+      "type": "economy",
+      "fuel": "diesel",
+      "numberOfSeats": 5,
+      "pricePerDay": 79.2028,
+      "count": 1
+    }
+  ]
+}
