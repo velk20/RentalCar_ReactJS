@@ -3,7 +3,7 @@
     {
       "id": "3ab67e59-0d59-4ef8-977c-63e2b97e9305",
       "isActive": false,
-      "picture": "http://placehold.it/32x32",
+      "picture": "https://shop.mirafiori.bg/wp-content/uploads/2019/03/DSC8763.jpg",
       "brand": "BMW",
       "model": "E60",
       "year": "2012",
@@ -16,7 +16,7 @@
     {
       "id": "d2df73cc-5197-4e40-8a72-ee573969a305",
       "isActive": true,
-      "picture": "http://placehold.it/32x32",
+      "picture": "https://www.auto-data.net/images/f93/Audi-A4-B8-8K-facelift-2011.jpg",
       "brand": "Audi",
       "model": "A4",
       "year": "2011",
@@ -29,7 +29,7 @@
     {
       "id": "c24257cb-5719-4cc4-9a5e-44d66792490d",
       "isActive": true,
-      "picture": "http://placehold.it/32x32",
+      "picture": "https://image-cdn.beforward.jp/large/201704/755364/BF631969_e2cc0c.jpg",
       "brand": "Mercedes",
       "model": "CLK",
       "year": "2008",
@@ -42,7 +42,7 @@
     {
       "id": "7b5edfcf-18b2-481f-85e9-d1eea878d488",
       "isActive": false,
-      "picture": "http://placehold.it/32x32",
+      "picture": "https://www.autocar.co.uk/sites/autocar.co.uk/files/images/car-reviews/first-drives/legacy/1-mercedes-benz-s500-2020-fd-hero-front.jpg",
       "brand": "Mercedes",
       "model": "S500",
       "year": "2019",
@@ -55,9 +55,9 @@
     {
       "id": "b36aa9f0-ea0b-475f-8406-b01f7821a9e1",
       "isActive": true,
-      "picture": "http://placehold.it/32x32",
+      "picture": "https://img.autoabc.lv/Lexus-ES/Lexus-ES_2006_Sedans_1641210554_3.jpg",
       "brand": "Lexus",
-      "model": "V60",
+      "model": "IS250",
       "year": "2006",
       "type": "economy",
       "fuel": "diesel",
