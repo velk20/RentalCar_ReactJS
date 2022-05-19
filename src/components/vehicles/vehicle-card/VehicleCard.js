@@ -2,30 +2,27 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import './VehicleCard.scss';
 
-export function VehicleCard({ user }) {
+export function VehicleCard({ vehicle }) {
   return (
     <Card style={{ width: '18rem' }}>
-      <Card.Img
-        variant="top"
-        src="https://img.autoabc.lv/Lexus-ES/Lexus-ES_2006_Sedans_1641210554_3.jpg"
-      />
+      <Card.Img variant="top" src={vehicle.picture} />
       <Card.Body>
-        <Card.Title>Vehicle Brand and Model</Card.Title>
+        <Card.Title>{`${vehicle.brand} ${vehicle.model}`}</Card.Title>
         <Card.Text>
           <span className="key">Year: </span>
-          <span className="value">2012</span>
+          <span className="value">{vehicle.year}</span>
         </Card.Text>
         <Card.Text>
           <span className="key">Type: </span>
-          <span className="value">Van</span>
+          <span className="value">{vehicle.type}</span>
         </Card.Text>
         <Card.Text>
           <span className="key">Fuel: </span>
-          <span className="value">Petrol</span>
+          <span className="value">{vehicle.fuel}</span>
         </Card.Text>
         <Card.Text>
           <span className="key">Number of seats: </span>
-          <span className="value">5</span>
+          <span className="value">{vehicle.numberOfSeats}</span>
         </Card.Text>
         <div className="btn-holder">
           <Button variant="primary">Edit</Button>
