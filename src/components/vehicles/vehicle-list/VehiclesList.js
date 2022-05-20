@@ -1,5 +1,8 @@
 import { useEffect, useState } from 'react';
-import { getAllVehicles } from '../../../utils/http-utils/user-request';
+import {
+  deleteVehicleById,
+  getAllVehicles,
+} from '../../../utils/http-utils/user-request';
 import { VehicleCard } from '../vehicle-card/VehicleCard';
 import './VehiclesList.scss';
 
@@ -12,12 +15,23 @@ export function VehiclesList() {
     });
   }, []); //only one time will execute when empty array
 
+  const deleteVehicleHandler = async (id) => {
+    await deleteVehicleById(id);
+    setVehicles((prevState) => {
+      return prevState.filter((vehicle) => vehicle.id !== id);
+    });
+  };
+
   return (
     <div className="vehicles-list-wrapper">
       {
         //getting all data
         vehicles.map((vehicle) => (
-          <VehicleCard key={vehicle.id} vehicle={vehicle} />
+          <VehicleCard
+            key={vehicle.id}
+            vehicle={vehicle}
+            deleteVehicle={deleteVehicleHandler}
+          />
         ))
       }
     </div>
