@@ -4,6 +4,10 @@ const apiUrlUsers = 'http://localhost:3005/users';
 
 //Users
 
+export function getLoggedUser() {
+  return JSON.parse(localStorage.getItem('loggedUser'));
+}
+
 export function getAllUsers() {
   return axios.get(apiUrlUsers);
 }
@@ -27,6 +31,29 @@ export function saveUser(user) {
   return axios.post(`${apiUrlUsers}`, user);
 }
 
-export function registerUser(user) {
-  return axios.post(`${apiUrlUsers}/${id}`);
+export async function registerUser(user) {
+  const existingUsers = (await axios.get(`${apiUrlUsers}?email=${user.email}`))
+    .data;
+
+  if (existingUsers.length > 0) {
+    throw new Error('User with this email already exist');
+  }
+
+  return saveUser(user);
+}
+
+export async function login(user) {
+  const allUsers = (await getAllUsers()).data;
+
+  const foundUser = allUsers.find(
+    (u) => u.email === user.email && u.password === user.password
+  );
+
+  if (!foundUser) {
+    throw new Error('Invalid username/password');
+  }
+
+  localStorage.setItem('loggedUser', JSON.stringify(foundUser));
+
+  return foundUser;
 }

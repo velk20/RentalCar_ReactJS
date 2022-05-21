@@ -94,6 +94,16 @@
       "phone": "+1 (933) 263-8266",
       "address": "213333333333333333",
       "id": "gFEmTLy"
+    },
+    {
+      "isActive": false,
+      "name": "tedec@mailinator.com",
+      "picture": "https://picsum.photos/200/300?random=7",
+      "email": "vyzuz@mailinator.comm",
+      "phone": "+1 (549) 533-7445",
+      "address": "gudejaho@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "id": "ewktb1K"
     }
   ]
 }

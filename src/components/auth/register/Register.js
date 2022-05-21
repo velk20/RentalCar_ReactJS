@@ -1,8 +1,12 @@
 import { useState } from 'react';
-import { Form } from 'react-bootstrap';
-import { Button } from 'bootstrap';
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
+import { registerUser } from '../../../utils/http-utils/user-request';
+import { useNavigate } from 'react-router-dom';
 
 export function Register() {
+  const navigate = useNavigate();
+  const [error, setError] = useState('');
   const [user, setUser] = useState({
     isActive: false,
     name: '',
@@ -21,19 +25,24 @@ export function Register() {
         [event.target.name]: value,
       };
     });
+
+    setError('');
   };
 
   const onFormSubmit = (event) => {
     event.preventDefault();
 
-    saveUser(user).then(() => {
-      navigate('/users-list');
-    });
+    registerUser(user)
+      .then(() => {
+        navigate('/users-list');
+      })
+      .catch((error) => setError(error.message));
   };
 
   return (
     <div className="user-form-wrapper">
       <Form onSubmit={onFormSubmit}>
+        {error && <span className="text-danger">{error}</span>}
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Full Name</Form.Label>
           <Form.Control
