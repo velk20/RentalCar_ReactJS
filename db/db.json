@@ -38,19 +38,62 @@
       "numberOfSeats": 5,
       "pricePerDay": 62.5804,
       "count": 6
+    }
+  ],
+  "users": [
+    {
+      "id": "f529a9c7-b5bb-4d3c-a451-825c03b12013",
+      "isActive": false,
+      "picture": "https://picsum.photos/200/300?random=1",
+      "name": "Kelly Johns",
+      "email": "kellyjohns@caxt.com",
+      "phone": "+1 (977) 521-3716",
+      "address": "585 Desmond Court, Ezel, Pennsylvania, 3419"
     },
     {
-      "id": "b36aa9f0-ea0b-475f-8406-b01f7821a9e1",
+      "id": "c3cd55ff-03e8-4e06-b4ee-fab89847958c",
+      "isActive": false,
+      "picture": "https://picsum.photos/200/300?random=2",
+      "name": "Tami Carlson",
+      "email": "tamicarlson@caxt.com",
+      "phone": "+1 (988) 494-2020",
+      "address": "515 Hazel Court, Hondah, Alaska, 8525"
+    },
+    {
+      "id": "c5a4e854-9689-4eb0-979a-12212d838d2b",
+      "isActive": false,
+      "picture": "https://picsum.photos/200/300?random=3",
+      "name": "Rosemarie Schneider",
+      "email": "rosemarieschneider@caxt.com",
+      "phone": "+1 (942) 477-2273",
+      "address": "355 Troutman Street, Hebron, Missouri, 3018"
+    },
+    {
+      "id": "70ad681a-75b0-4f05-8f80-cd5f36de57df",
+      "isActive": false,
+      "picture": "https://picsum.photos/200/300?random=4",
+      "name": "Silva Patton",
+      "email": "silvapatton@caxt.com",
+      "phone": "+1 (941) 545-2163",
+      "address": "571 Brooklyn Road, Ellerslie, Florida, 7824"
+    },
+    {
+      "id": "7cb88485-534b-4f61-a8e3-07a7fa3bd47f",
+      "isActive": false,
+      "picture": "https://picsum.photos/200/300?random=5",
+      "name": "Bertha Gray",
+      "email": "berthagray@caxt.com",
+      "phone": "+1 (861) 443-2680",
+      "address": "419 Sumner Place, Bellamy, Connecticut, 5480"
+    },
+    {
       "isActive": true,
-      "picture": "https://img.autoabc.lv/Lexus-ES/Lexus-ES_2006_Sedans_1641210554_3.jpg",
-      "brand": "Lexus",
-      "model": "IS250",
-      "year": "2006",
-      "type": "economy",
-      "fuel": "diesel",
-      "numberOfSeats": 5,
-      "pricePerDay": 79.2028,
-      "count": 1
+      "name": "Toni Bonboni",
+      "picture": "https://picsum.photos/200/300?random=6",
+      "email": "vyzuz@mailinator.com",
+      "phone": "+1 (933) 263-8266",
+      "address": "213333333333333333",
+      "id": "gFEmTLy"
     }
   ]
 }

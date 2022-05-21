@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { getVehicleById } from '../../../utils/http-utils/user-request';
+import { getVehicleById } from '../../../utils/http-utils/vehicle-request';
 import { VehicleCard } from '../vehicle-card/VehicleCard';
 
 export function Vehicle(props) {

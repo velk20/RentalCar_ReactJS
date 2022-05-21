@@ -8,7 +8,11 @@ export function Header() {
     <div className="header">
       <Navbar bg="light" expand="lg">
         <Container>
-          <Navbar.Brand href="/">Rental Car</Navbar.Brand>
+          <Navbar.Brand>
+            <Link className="nav-link" to="/">
+              Rental Car
+            </Link>
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
@@ -17,6 +21,12 @@ export function Header() {
               </Link>
               <Link className="nav-link" to="/vehicles-list">
                 Vehicles
+              </Link>
+              <Link className="nav-link" to="/users-list">
+                Users
+              </Link>
+              <Link className="nav-link" to="/user/create">
+                Create User
               </Link>
             </Nav>
           </Navbar.Collapse>

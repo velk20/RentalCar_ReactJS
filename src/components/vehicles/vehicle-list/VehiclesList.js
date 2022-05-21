@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import {
   deleteVehicleById,
   getAllVehicles,
-} from '../../../utils/http-utils/user-request';
+} from '../../../utils/http-utils/vehicle-request';
 import { VehicleCard } from '../vehicle-card/VehicleCard';
 import './VehiclesList.scss';
 

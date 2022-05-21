@@ -1,15 +1,32 @@
 import axios from 'axios';
 
-const apiUrl = 'http://localhost:3005/vehicles';
+const apiUrlUsers = 'http://localhost:3005/users';
 
-export function getAllVehicles() {
-  return axios.get(apiUrl);
+//Users
+
+export function getAllUsers() {
+  return axios.get(apiUrlUsers);
 }
 
-export function getVehicleById(id) {
-  return axios.get(`${apiUrl}/${id}`);
+export function getUserById(id) {
+  return axios.get(`${apiUrlUsers}/${id}`);
 }
 
-export function deleteVehicleById(id) {
-  return axios.delete(`${apiUrl}/${id}`);
+export function deleteUserById(id) {
+  return axios.delete(`${apiUrlUsers}/${id}`);
+}
+
+export function saveUser(user) {
+  if (!user.picture) {
+    user.picture = `https://picsum.photos/200/300?random=${Math.random()}`;
+  }
+
+  if (user.id) {
+    return axios.put(`${apiUrlUsers}/${user.id}`, user);
+  }
+  return axios.post(`${apiUrlUsers}`, user);
+}
+
+export function registerUser(user) {
+  return axios.post(`${apiUrlUsers}/${id}`);
 }
