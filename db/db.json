@@ -10,8 +10,7 @@
       "type": "economy",
       "fuel": "petrol",
       "numberOfSeats": 5,
-      "pricePerDay": 141.9789,
-      "count": 4
+      "pricePerDay": 141.9789
     },
     {
       "id": "d2df73cc-5197-4e40-8a72-ee573969a305",
@@ -23,8 +22,7 @@
       "type": "economy",
       "fuel": "hybrid",
       "numberOfSeats": 4,
-      "pricePerDay": 80.1373,
-      "count": 8
+      "pricePerDay": 80.1373
     },
     {
       "id": "7b5edfcf-18b2-481f-85e9-d1eea878d488",
@@ -36,8 +34,19 @@
       "type": "luxury",
       "fuel": "hybrid",
       "numberOfSeats": 5,
-      "pricePerDay": 62.5804,
-      "count": 6
+      "pricePerDay": 62.5804
+    },
+    {
+      "isActive": true,
+      "picture": "https://cdn.motor1.com/images/mgl/XL9Nv/s1/2019-volvo-v60-first-drive.jpg",
+      "brand": "Volvo",
+      "model": "V60",
+      "year": "2019",
+      "type": "comby",
+      "fuel": "diesel",
+      "numberOfSeats": "5",
+      "pricePerDay": "64",
+      "id": "DoeBDTl"
     }
   ],
   "users": [
@@ -104,6 +113,16 @@
       "address": "gudejaho@mailinator.com",
       "password": "Pa$$w0rd!",
       "id": "ewktb1K"
+    },
+    {
+      "isActive": false,
+      "name": "admin@admin",
+      "picture": "https://picsum.photos/200/300?random=8",
+      "email": "admin@admin",
+      "phone": "+1 (549) 533-7445",
+      "address": "gudejaho@mailinator.com",
+      "password": "admin",
+      "id": "ewktb1k"
     }
   ]
 }

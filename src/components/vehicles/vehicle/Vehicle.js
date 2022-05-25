@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { getVehicleById } from '../../../utils/http-utils/vehicle-request';
 import { VehicleCard } from '../vehicle-card/VehicleCard';
+import './Vehicle.scss';
 
 export function Vehicle(props) {
   const params = useParams();
@@ -12,7 +13,9 @@ export function Vehicle(props) {
   }, [params.id]);
   return (
     <div className="vehicle">
-      <VehicleCard vehicle={vehicle} />
+      <div>
+        <VehicleCard vehicle={vehicle} />
+      </div>
     </div>
   );
 }

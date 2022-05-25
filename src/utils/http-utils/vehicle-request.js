@@ -15,3 +15,10 @@ export function getVehicleById(id) {
 export function deleteVehicleById(id) {
   return axios.delete(`${apiUrl}/${id}`);
 }
+
+export function saveVehicle(vehicle) {
+  if (vehicle.id) {
+    return axios.put(`${apiUrl}/${vehicle.id}`, vehicle);
+  }
+  return axios.post(`${apiUrl}`, vehicle);
+}

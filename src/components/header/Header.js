@@ -22,6 +22,9 @@ export function Header() {
               <Link className="nav-link" to="/vehicles-list">
                 Vehicles
               </Link>
+              <Link className="nav-link" to="/vehicle/create">
+                Create Vehicle
+              </Link>
               <Link className="nav-link" to="/users-list">
                 Users
               </Link>

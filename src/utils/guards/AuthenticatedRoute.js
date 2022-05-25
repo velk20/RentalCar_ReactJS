@@ -1,7 +1,7 @@
 import { Navigate, useNavigate } from 'react-router-dom';
 import { getLoggedUser } from '../http-utils/user-request';
 
-export function AuthenticatedRoute(props, children) {
+export function AuthenticatedRoute({children}) {
   const navigate = useNavigate();
   const user = getLoggedUser();
 
@@ -9,5 +9,5 @@ export function AuthenticatedRoute(props, children) {
     return <Navigate to="/login" />;
   }
 
-  return <props.element {...props} />;
+  return children;
 }

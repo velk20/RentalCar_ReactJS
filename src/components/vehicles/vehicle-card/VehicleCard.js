@@ -9,6 +9,10 @@ export function VehicleCard({ vehicle, deleteVehicle }) {
     navigate(`/vehicle/${vehicle.id}`);
   };
 
+  const redirectToEdit = () => {
+    navigate(`/vehicle/edit/${vehicle.id}`);
+  };
+
   if (!vehicle) {
     return <p>No Vehicle!</p>;
   }
@@ -35,7 +39,9 @@ export function VehicleCard({ vehicle, deleteVehicle }) {
           <span className="value">{vehicle.numberOfSeats}</span>
         </Card.Text>
         <div className="btn-holder">
-          <Button variant="primary">Edit</Button>
+          <Button variant="primary" onClick={redirectToEdit}>
+            Edit
+          </Button>
           <Button variant="danger" onClick={() => deleteVehicle(vehicle.id)}>
             Delete
           </Button>
