@@ -74,6 +74,7 @@ export function VehicleForm() {
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Brand Name</Form.Label>
           <Form.Control
+            required
             value={vehicle.brand}
             type="text"
             placeholder="Enter brand name"
@@ -85,6 +86,7 @@ export function VehicleForm() {
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Model</Form.Label>
           <Form.Control
+            required
             value={vehicle.model}
             type="text"
             placeholder="Enter model"
@@ -96,6 +98,7 @@ export function VehicleForm() {
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Picture</Form.Label>
           <Form.Control
+            required
             value={vehicle.picture}
             type="text"
             onChange={onInputChange}
@@ -107,6 +110,7 @@ export function VehicleForm() {
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Year</Form.Label>
           <Form.Control
+            required
             value={vehicle.year}
             onChange={onInputChange}
             name="year"
@@ -121,6 +125,7 @@ export function VehicleForm() {
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Type</Form.Label>
           <Form.Select
+            required
             aria-label="Car type"
             placeholder="Select Car Type"
             name="type"
@@ -128,7 +133,9 @@ export function VehicleForm() {
             onChange={onInputChange}
           >
             {Object.keys(VehicleTypes).map((type) => (
-              <option value={VehicleTypes[type]}>{VehicleTypes[type]}</option>
+              <option key={type} value={VehicleTypes[type]}>
+                {VehicleTypes[type]}
+              </option>
             ))}
           </Form.Select>
         </Form.Group>
@@ -136,6 +143,7 @@ export function VehicleForm() {
         <Form.Group className="mb-3" controlId="formBasicCheckbox">
           <Form.Label>Fuel type</Form.Label>
           <Form.Select
+            required
             aria-label="Fuel type"
             placeholder="Select Fuel Type"
             name="fuel"
@@ -143,7 +151,7 @@ export function VehicleForm() {
             onChange={onInputChange}
           >
             {Object.keys(VehicleFuelTypes).map((type) => (
-              <option value={VehicleFuelTypes[type]}>
+              <option key={type} value={VehicleFuelTypes[type]}>
                 {VehicleFuelTypes[type]}
               </option>
             ))}
@@ -153,6 +161,7 @@ export function VehicleForm() {
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Number Of Seats</Form.Label>
           <Form.Control
+            required
             value={vehicle.numberOfSeats}
             onChange={onInputChange}
             name="numberOfSeats"
@@ -167,6 +176,7 @@ export function VehicleForm() {
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Price Per Day</Form.Label>
           <Form.Control
+            required
             value={vehicle.pricePerDay}
             onChange={onInputChange}
             name="pricePerDay"
@@ -186,7 +196,7 @@ export function VehicleForm() {
         </Form.Group>
 
         <Button variant="primary" type="submit">
-          Submit
+          Create Vehicle
         </Button>
       </Form>
     </div>

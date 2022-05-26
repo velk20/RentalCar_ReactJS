@@ -115,7 +115,7 @@ export function UserForm() {
           />
         </Form.Group>
         <Button variant="primary" type="submit">
-          Submit
+          Create User
         </Button>
       </Form>
     </div>
