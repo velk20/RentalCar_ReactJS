@@ -52,7 +52,7 @@
   "users": [
     {
       "id": "f529a9c7-b5bb-4d3c-a451-825c03b12013",
-      "isActive": false,
+      "isAdmin": false,
       "picture": "https://picsum.photos/200/300?random=1",
       "name": "Kelly Johns",
       "email": "kellyjohns@caxt.com",
@@ -61,7 +61,7 @@
     },
     {
       "id": "c3cd55ff-03e8-4e06-b4ee-fab89847958c",
-      "isActive": false,
+      "isAdmin": false,
       "picture": "https://picsum.photos/200/300?random=2",
       "name": "Tami Carlson",
       "email": "tamicarlson@caxt.com",
@@ -69,17 +69,8 @@
       "address": "515 Hazel Court, Hondah, Alaska, 8525"
     },
     {
-      "id": "c5a4e854-9689-4eb0-979a-12212d838d2b",
-      "isActive": false,
-      "picture": "https://picsum.photos/200/300?random=3",
-      "name": "Rosemarie Schneider",
-      "email": "rosemarieschneider@caxt.com",
-      "phone": "+1 (942) 477-2273",
-      "address": "355 Troutman Street, Hebron, Missouri, 3018"
-    },
-    {
       "id": "70ad681a-75b0-4f05-8f80-cd5f36de57df",
-      "isActive": false,
+      "isAdmin": false,
       "picture": "https://picsum.photos/200/300?random=4",
       "name": "Silva Patton",
       "email": "silvapatton@caxt.com",
@@ -88,7 +79,7 @@
     },
     {
       "id": "7cb88485-534b-4f61-a8e3-07a7fa3bd47f",
-      "isActive": false,
+      "isAdmin": false,
       "picture": "https://picsum.photos/200/300?random=5",
       "name": "Bertha Gray",
       "email": "berthagray@caxt.com",
@@ -96,7 +87,7 @@
       "address": "419 Sumner Place, Bellamy, Connecticut, 5480"
     },
     {
-      "isActive": true,
+      "isAdmin": true,
       "name": "Toni Bonboni",
       "picture": "https://picsum.photos/200/300?random=6",
       "email": "vyzuz@mailinator.com",
@@ -105,7 +96,7 @@
       "id": "gFEmTLy"
     },
     {
-      "isActive": false,
+      "isAdmin": false,
       "name": "tedec@mailinator.com",
       "picture": "https://picsum.photos/200/300?random=7",
       "email": "vyzuz@mailinator.comm",
@@ -115,7 +106,7 @@
       "id": "ewktb1K"
     },
     {
-      "isActive": false,
+      "isAdmin": true,
       "name": "admin@admin",
       "picture": "https://picsum.photos/200/300?random=8",
       "email": "admin@admin",

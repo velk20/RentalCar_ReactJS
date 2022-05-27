@@ -2,8 +2,10 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { useNavigate } from 'react-router-dom';
 import './VehicleCard.scss';
+import { getLoggedUser } from '../../../utils/http-utils/user-request';
 
 export function VehicleCard({ vehicle, deleteVehicle }) {
+  const loggedUser = getLoggedUser();
   const navigate = useNavigate();
   const redirectToDetails = () => {
     navigate(`/vehicle/${vehicle.id}`);
@@ -39,12 +41,18 @@ export function VehicleCard({ vehicle, deleteVehicle }) {
           <span className="value">{vehicle.numberOfSeats}</span>
         </Card.Text>
         <div className="btn-holder">
-          <Button variant="primary" onClick={redirectToEdit}>
-            Edit
-          </Button>
-          <Button variant="danger" onClick={() => deleteVehicle(vehicle.id)}>
-            Delete
-          </Button>
+          {loggedUser.isAdmin && (
+            <Button variant="primary" onClick={redirectToEdit}>
+              Edit
+            </Button>
+          )}
+
+          {loggedUser.isAdmin && (
+            <Button variant="danger" onClick={() => deleteVehicle(vehicle.id)}>
+              Delete
+            </Button>
+          )}
+
           <Button variant="info" onClick={redirectToDetails}>
             Details
           </Button>

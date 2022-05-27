@@ -2,8 +2,11 @@ import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import { Link } from 'react-router-dom';
+import { getLoggedUser } from '../../utils/http-utils/user-request';
 
 export function Header() {
+  const loggedUser = getLoggedUser();
+
   return (
     <div className="header">
       <Navbar bg="light" expand="lg">
@@ -22,15 +25,22 @@ export function Header() {
               <Link className="nav-link" to="/vehicles-list">
                 Vehicles
               </Link>
-              <Link className="nav-link" to="/vehicle/create">
-                Create Vehicle
-              </Link>
+
               <Link className="nav-link" to="/users-list">
                 Users
               </Link>
-              <Link className="nav-link" to="/user/create">
-                Create User
-              </Link>
+
+              {loggedUser.isAdmin && (
+                <Link className="nav-link" to="/vehicle/create">
+                  Create Vehicle
+                </Link>
+              )}
+
+              {loggedUser.isAdmin && (
+                <Link className="nav-link" to="/user/create">
+                  Create User
+                </Link>
+              )}
             </Nav>
           </Navbar.Collapse>
         </Container>

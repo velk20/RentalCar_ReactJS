@@ -9,7 +9,7 @@ export function UserForm() {
   const params = useParams();
   const navigate = useNavigate();
   const [user, setUser] = useState({
-    isActive: false,
+    isAdmin: false,
     name: '',
     picture: '',
     email: '',
@@ -35,7 +35,7 @@ export function UserForm() {
 
   const onInputChange = (event) => {
     let value = event.target.value;
-    if (event.target.name === 'isActive') {
+    if (event.target.name === 'isAdmin') {
       value = event.target.checked;
     }
 
@@ -108,14 +108,14 @@ export function UserForm() {
         <Form.Group className="mb-3" controlId="formBasicCheckbox">
           <Form.Check
             type="checkbox"
-            label="Active"
-            name="isActive"
-            checked={user.isActive}
+            label="Admin"
+            name="isAdmin"
+            checked={user.isAdmin}
             onChange={onInputChange}
           />
         </Form.Group>
         <Button variant="primary" type="submit">
-          Create User
+          {user.id ? 'Edit User' : 'Create User'}
         </Button>
       </Form>
     </div>

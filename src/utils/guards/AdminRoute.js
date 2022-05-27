@@ -1,10 +1,10 @@
 import { Navigate } from 'react-router-dom';
 import { getLoggedUser } from '../http-utils/user-request';
 
-export function AuthenticatedRoute({ children }) {
+export function AdminRoute({ children }) {
   const user = getLoggedUser();
 
-  if (!user) {
+  if (!user.isAdmin) {
     return <Navigate to="/login" />;
   }
 

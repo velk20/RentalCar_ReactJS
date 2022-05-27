@@ -11,6 +11,7 @@ import { UsersList } from './components/users/user-list/UsersList';
 import { Login } from './components/auth/login/Login';
 import { AuthenticatedRoute } from './utils/guards/AuthenticatedRoute';
 import { NonAuthenticatedRoute } from './utils/guards/NonAuthenticatedRoute';
+import { AdminRoute } from './utils/guards/AdminRoute';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
             </NonAuthenticatedRoute>
           }
         />
+
         <Route
           exact
           path="/login"
@@ -34,6 +36,7 @@ function App() {
             </NonAuthenticatedRoute>
           }
         />
+
         <Route
           exact
           path="/"
@@ -44,13 +47,48 @@ function App() {
           }
         >
           <Route exact path="/vehicles-list" element={<VehiclesList />} />
+
           <Route path="/vehicle/:id" element={<Vehicle />} />
-          <Route path="/vehicle/create" element={<VehicleForm />} />
-          <Route path="/vehicle/edit/:id" element={<VehicleForm />} />
+
+          <Route
+            path="/vehicle/create"
+            element={
+              <AdminRoute>
+                <VehicleForm />
+              </AdminRoute>
+            }
+          />
+
+          <Route
+            path="/vehicle/edit/:id"
+            element={
+              <AdminRoute>
+                <VehicleForm />
+              </AdminRoute>
+            }
+          />
+
           <Route exact path="users-list" element={<UsersList />} />
+
           <Route path="/user/:id" element={<User />} />
-          <Route path="/user/create" element={<UserForm />} />
-          <Route path="/user/edit/:id" element={<UserForm />} />
+
+          <Route
+            path="/user/create"
+            element={
+              <AdminRoute>
+                <UserForm />
+              </AdminRoute>
+            }
+          />
+
+          <Route
+            path="/user/edit/:id"
+            element={
+              <AdminRoute>
+                <UserForm />
+              </AdminRoute>
+            }
+          />
         </Route>
       </Routes>
     </div>

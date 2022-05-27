@@ -196,7 +196,7 @@ export function VehicleForm() {
         </Form.Group>
 
         <Button variant="primary" type="submit">
-          Create Vehicle
+          {vehicle.id ? 'Edit Vehicle' : 'Create Vehicle'}
         </Button>
       </Form>
     </div>

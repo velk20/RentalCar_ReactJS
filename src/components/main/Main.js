@@ -5,11 +5,13 @@ import { UsersList } from '../users/user-list/UsersList';
 import { User } from '../users/user/User';
 import { UserForm } from '../users/user-form/UserForm';
 import { VehicleForm } from '../vehicles/vehicle-form/VehicleForm';
+import { Home } from '../home/Home';
 
 export function Main() {
   return (
     <div className="main-content">
       <Routes>
+        <Route exact path="/" element={<Home />} />
         <Route exact path="vehicles-list" element={<VehiclesList />} />
         <Route path="/vehicle/:id" element={<Vehicle />} />
         <Route path="/vehicle/create" element={<VehicleForm />} />
