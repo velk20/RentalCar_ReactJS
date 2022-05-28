@@ -3,6 +3,7 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import { useNavigate } from 'react-router-dom';
 import { login } from '../../../utils/http-utils/user-request';
+import { Link } from 'react-router-dom';
 
 export function Login() {
   const navigate = useNavigate();
@@ -59,6 +60,10 @@ export function Login() {
           />
         </Form.Group>
 
+        <div>
+          <span>You don't have account? </span>
+          <Link to="/register">Register here</Link>
+        </div>
         <Button variant="primary" type="submit">
           Submit
         </Button>

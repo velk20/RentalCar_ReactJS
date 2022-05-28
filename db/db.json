@@ -114,6 +114,16 @@
       "address": "gudejaho@mailinator.com",
       "password": "admin",
       "id": "eektb1k"
+    },
+    {
+      "isActive": false,
+      "name": "Toni Bonboni",
+      "picture": "https://picsum.photos/200/300?random=0.6831566951798274",
+      "email": "toni@bonboni",
+      "phone": "12345678901",
+      "address": "asdasdasdad",
+      "password": "toni",
+      "id": "ZYYul4H"
     }
   ]
 }

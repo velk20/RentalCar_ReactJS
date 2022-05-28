@@ -51,6 +51,7 @@ function App() {
           <Route path="/vehicle/:id" element={<Vehicle />} />
 
           <Route
+            exact
             path="/vehicle/create"
             element={
               <AdminRoute>
@@ -73,6 +74,7 @@ function App() {
           <Route path="/user/:id" element={<User />} />
 
           <Route
+            exact
             path="/user/create"
             element={
               <AdminRoute>
