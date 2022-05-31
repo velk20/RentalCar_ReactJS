@@ -7,6 +7,7 @@ import { UserForm } from '../users/user-form/UserForm';
 import { VehicleForm } from '../vehicles/vehicle-form/VehicleForm';
 import { Home } from '../home/Home';
 import { RentList } from '../rents/rent-list/RentList';
+import { Rent } from '../rents/rent/Rent';
 
 export function Main() {
   return (
@@ -24,8 +25,7 @@ export function Main() {
         <Route path="/user/edit/:id" element={<UserForm />} />
 
         <Route exact path="/rents-list" element={<RentList />} />
-        <Route path="/rent/:id" element={<User />} />
-        <Route path="/rent/edit/:id" element={<UserForm />} />
+        <Route path="/rent/edit/:id" element={<Rent />} />
       </Routes>
     </div>
   );

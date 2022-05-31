@@ -10,18 +10,13 @@ import { Form } from 'react-bootstrap';
 import { getLoggedUser } from '../../../utils/http-utils/user-request';
 import { Button } from 'react-bootstrap';
 import { saveRent } from '../../../utils/http-utils/rent-requests';
+import { orderStatus } from '../../../utils/http-utils/rent-requests';
 
 export function Vehicle(props) {
   const params = useParams();
   const loggedUser = getLoggedUser();
   const navigate = useNavigate();
   const [vehicle, setVehicle] = useState(null);
-
-  const orderStatus = {
-    InProgress: 'In Progress',
-    Canceled: 'Canceled',
-    Finished: 'Finished',
-  };
 
   const [rent, setRent] = useState({
     id: '',

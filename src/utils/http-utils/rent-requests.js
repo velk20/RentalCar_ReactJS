@@ -22,3 +22,9 @@ export function saveRent(rent) {
   }
   return axios.post(`${apiUrl}`, rent);
 }
+
+export const orderStatus = {
+  InProgress: 'In Progress',
+  Canceled: 'Canceled',
+  Finished: 'Finished',
+};

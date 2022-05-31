@@ -13,6 +13,7 @@ import { AuthenticatedRoute } from './utils/guards/AuthenticatedRoute';
 import { NonAuthenticatedRoute } from './utils/guards/NonAuthenticatedRoute';
 import { AdminRoute } from './utils/guards/AdminRoute';
 import { RentList } from './components/rents/rent-list/RentList';
+import { Rent } from './components/rents/rent/Rent';
 
 function App() {
   return (
@@ -49,6 +50,14 @@ function App() {
         >
           <Route exact path="/vehicles-list" element={<VehiclesList />} />
           <Route exact path="/rents-list" element={<RentList />} />
+          <Route
+            path="/rent/edit/:id"
+            element={
+              <AdminRoute>
+                <Rent />
+              </AdminRoute>
+            }
+          />
 
           <Route path="/vehicle/:id" element={<Vehicle />} />
 

@@ -5,9 +5,11 @@ import {
 import { useEffect, useState } from 'react';
 import { RentCard } from '../rent-card/RentCard';
 import './RentList.scss';
+import { getLoggedUser } from '../../../utils/http-utils/user-request';
 
 export function RentList() {
   const [rents, setRents] = useState([]);
+  const loggedUser = getLoggedUser();
 
   useEffect(() => {
     getAllRents().then((response) => {
@@ -24,9 +26,21 @@ export function RentList() {
 
   return (
     <div className="rents-list-wrapper">
-      {rents.map((rent) => (
-        <RentCard key={rent.id} rent={rent} deleteRent={deleteRentHandler} />
-      ))}
+      {loggedUser.isAdmin &&
+        rents.map((rent) => (
+          <RentCard key={rent.id} rent={rent} deleteRent={deleteRentHandler} />
+        ))}
+
+      {!loggedUser.isAdmin &&
+        rents
+          .filter((rent) => rent.userId === loggedUser.id)
+          .map((rent) => (
+            <RentCard
+              key={rent.id}
+              rent={rent}
+              deleteRent={deleteRentHandler}
+            />
+          ))}
     </div>
   );
 }
