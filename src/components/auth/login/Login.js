@@ -26,7 +26,7 @@ export function Login() {
 
     login(user)
       .then(() => {
-        navigate('/users-list');
+        navigate('/');
       })
       .catch((e) => setError(e.message));
   };
@@ -64,8 +64,9 @@ export function Login() {
           <span>You don't have account? </span>
           <Link to="/register">Register here</Link>
         </div>
+        <br />
         <Button variant="primary" type="submit">
-          Submit
+          Login
         </Button>
       </Form>
     </div>

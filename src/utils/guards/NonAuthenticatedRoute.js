@@ -5,7 +5,7 @@ export function NonAuthenticatedRoute({ children }) {
   const user = getLoggedUser();
 
   if (user) {
-    return <Navigate to="/users-list" />;
+    return <Navigate to="/" />;
   }
   return children;
 }

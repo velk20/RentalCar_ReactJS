@@ -19,9 +19,9 @@ export function VehicleForm() {
   const VehicleTypes = {
     ECONOMY: 'Economy',
     ESTATE: 'Estate',
-    LUXURY: 'luxury',
+    LUXURY: 'Luxury',
     SUV: 'SUV',
-    CARGO: 'cargo',
+    CARGO: 'Cargo',
   };
 
   const params = useParams();
@@ -36,6 +36,7 @@ export function VehicleForm() {
     fuel: '',
     numberOfSeats: '',
     pricePerDay: '',
+    carCount: '',
   });
 
   useEffect(() => {
@@ -174,9 +175,23 @@ export function VehicleForm() {
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicEmail">
+          <Form.Label>Number of Cars</Form.Label>
+          <Form.Control
+            required
+            value={vehicle.carCount}
+            onChange={onInputChange}
+            name="carCount"
+            type="number"
+            step="0"
+            placeholder="Enter Number of cars"
+          />
+        </Form.Group>
+
+        <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Price Per Day</Form.Label>
           <Form.Control
             required
+            step="0.01"
             value={vehicle.pricePerDay}
             onChange={onInputChange}
             name="pricePerDay"

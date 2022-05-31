@@ -5,7 +5,7 @@ export function AdminRoute({ children }) {
   const user = getLoggedUser();
 
   if (!user.isAdmin) {
-    return <Navigate to="/login" />;
+    return <Navigate to="/" />;
   }
 
   return children;

@@ -5,9 +5,11 @@ import {
 } from '../../../utils/http-utils/vehicle-request';
 import { VehicleCard } from '../vehicle-card/VehicleCard';
 import './VehiclesList.scss';
+import { getLoggedUser } from '../../../utils/http-utils/user-request';
 
 export function VehiclesList() {
   const [vehicles, setVehicles] = useState([]);
+  const loggedUser = getLoggedUser();
 
   useEffect(() => {
     getAllVehicles().then((response) => {
@@ -25,14 +27,30 @@ export function VehiclesList() {
   return (
     <div className="vehicles-list-wrapper">
       {
-        //getting all data
-        vehicles.map((vehicle) => (
-          <VehicleCard
-            key={vehicle.id}
-            vehicle={vehicle}
-            deleteVehicle={deleteVehicleHandler}
-          />
-        ))
+        //getting all data for ADMINS only
+        loggedUser.isAdmin &&
+          vehicles.map((vehicle) => (
+            <VehicleCard
+              key={vehicle.id}
+              vehicle={vehicle}
+              deleteVehicle={deleteVehicleHandler}
+            />
+          ))
+      }
+
+      {
+        //getting all data for users
+
+        !loggedUser.isAdmin &&
+          vehicles
+            .filter((vehicle) => vehicle.isActive)
+            .map((vehicle) => (
+              <VehicleCard
+                key={vehicle.id}
+                vehicle={vehicle}
+                deleteVehicle={deleteVehicleHandler}
+              />
+            ))
       }
     </div>
   );

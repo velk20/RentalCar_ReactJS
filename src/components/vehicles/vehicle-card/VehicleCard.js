@@ -7,6 +7,8 @@ import { getLoggedUser } from '../../../utils/http-utils/user-request';
 export function VehicleCard({ vehicle, deleteVehicle }) {
   const loggedUser = getLoggedUser();
   const navigate = useNavigate();
+  const currentVehicleId = window.location.href.split('/').pop();
+
   const redirectToDetails = () => {
     navigate(`/vehicle/${vehicle.id}`);
   };
@@ -40,22 +42,62 @@ export function VehicleCard({ vehicle, deleteVehicle }) {
           <span className="key">Number of seats: </span>
           <span className="value">{vehicle.numberOfSeats}</span>
         </Card.Text>
+        <Card.Text>
+          <span className="key">Number of cars: </span>
+          <span className="value">
+            {Number(vehicle.carCount) ? (
+              vehicle.carCount
+            ) : (
+              <span style={{ color: 'red', fontWeight: 'bold' }}>No Cars</span>
+            )}
+          </span>
+        </Card.Text>
+        <Card.Text>
+          <span className="key">Price per day: </span>
+          <span className="value">${vehicle.pricePerDay}</span>
+        </Card.Text>
+        {loggedUser.isAdmin && (
+          <Card.Text>
+            <span className="key">isActive: </span>
+            <span className="value">
+              {vehicle.isActive ? (
+                <span style={{ color: 'green', fontWeight: 'bold' }}>Yes</span>
+              ) : (
+                <span style={{ color: 'red', fontWeight: 'bold' }}>No</span>
+              )}
+            </span>
+          </Card.Text>
+        )}
         <div className="btn-holder">
-          {loggedUser.isAdmin && (
-            <Button variant="primary" onClick={redirectToEdit}>
-              Edit
-            </Button>
-          )}
+          {currentVehicleId !== vehicle.id &&
+            currentVehicleId !== 'rents-list' &&
+            loggedUser.isAdmin && (
+              <Button variant="primary" onClick={redirectToEdit}>
+                Edit
+              </Button>
+            )}
 
-          {loggedUser.isAdmin && (
-            <Button variant="danger" onClick={() => deleteVehicle(vehicle.id)}>
-              Delete
-            </Button>
-          )}
+          {currentVehicleId !== vehicle.id &&
+            currentVehicleId !== 'rents-list' &&
+            loggedUser.isAdmin && (
+              <Button
+                variant="danger"
+                onClick={() => deleteVehicle(vehicle.id)}
+              >
+                Delete
+              </Button>
+            )}
 
-          <Button variant="info" onClick={redirectToDetails}>
-            Details
-          </Button>
+          {currentVehicleId !== vehicle.id &&
+            currentVehicleId !== 'rents-list' && (
+              <div>
+                <Button variant="warning" onClick={redirectToDetails}>
+                  Rent
+                </Button>
+              </div>
+            )}
+
+          {console.log(currentVehicleId)}
         </div>
       </Card.Body>
     </Card>

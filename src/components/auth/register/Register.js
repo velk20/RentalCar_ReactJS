@@ -3,6 +3,7 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import { registerUser } from '../../../utils/http-utils/user-request';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export function Register() {
   const navigate = useNavigate();
@@ -113,9 +114,13 @@ export function Register() {
             required
           />
         </Form.Group>
-
+        <div>
+          <span>You have account? </span>
+          <Link to="/login">Login here</Link>
+        </div>
+        <br />
         <Button variant="primary" type="submit">
-          Submit
+          Register
         </Button>
       </Form>
     </div>

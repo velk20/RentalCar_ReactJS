@@ -10,7 +10,7 @@ export function Footer() {
           <div className="row">
             <div className="col-md-6 mt-md-0 mt-3">
               <h5 className="text-uppercase">Footer Content</h5>
-              <p>This is my first ReactJS project form car rental!</p>
+              <p>This is my first SPA ReactJS project for car rental!</p>
             </div>
 
             <hr className="clearfix w-100 d-md-none pb-0" />
@@ -24,7 +24,7 @@ export function Footer() {
                 </li>
 
                 <li>
-                  <a href="#!">
+                  <a href="https://github.com/velk20/RentalCarReactJS">
                     <img src={github} alt="Logo" />
                   </a>
                 </li>

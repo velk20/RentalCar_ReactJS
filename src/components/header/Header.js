@@ -1,11 +1,19 @@
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
-import { Link } from 'react-router-dom';
-import { getLoggedUser } from '../../utils/http-utils/user-request';
+import { Link, useNavigate } from 'react-router-dom';
+import { getLoggedUser, logout } from '../../utils/http-utils/user-request';
+import './Header.scss';
 
 export function Header() {
   const loggedUser = getLoggedUser();
+  const navigate = useNavigate();
+
+  const logoutHandler = () => {
+    logout().then(() => {
+      navigate('/login');
+    });
+  };
 
   return (
     <div className="header">
@@ -25,23 +33,32 @@ export function Header() {
               <Link className="nav-link" to="/vehicles-list">
                 Vehicles
               </Link>
-
-              <Link className="nav-link" to="/users-list">
-                Users
-              </Link>
-
+              {loggedUser.isAdmin && (
+                <Link className="nav-link" to="/users-list">
+                  Users
+                </Link>
+              )}
+              {loggedUser.isAdmin && (
+                <Link className="nav-link" to="/rents-list">
+                  Rents
+                </Link>
+              )}
               {loggedUser.isAdmin && (
                 <Link className="nav-link" to="/vehicle/create">
                   Create Vehicle
                 </Link>
               )}
-
               {loggedUser.isAdmin && (
                 <Link className="nav-link" to="/user/create">
                   Create User
                 </Link>
               )}
             </Nav>
+            {loggedUser && (
+              <span className="nav-link logout-btn" onClick={logoutHandler}>
+                Logout
+              </span>
+            )}
           </Navbar.Collapse>
         </Container>
       </Navbar>

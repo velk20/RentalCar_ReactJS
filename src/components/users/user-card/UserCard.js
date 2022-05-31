@@ -36,6 +36,20 @@ export function UserCard({ user, deleteUser }) {
           <span className="key">Phone: </span>
           <span className="value">{user.phone}</span>
         </Card.Text>
+
+        {loggedUser.isAdmin && (
+          <Card.Text>
+            <span className="key">isAdmin: </span>
+            <span className="value">
+              {user.isAdmin ? (
+                <span style={{ color: 'green', fontWeight: 'bold' }}>Yes</span>
+              ) : (
+                <span style={{ color: 'red', fontWeight: 'bold' }}>No</span>
+              )}
+            </span>
+          </Card.Text>
+        )}
+
         <div className="btn-holder">
           {loggedUser.isAdmin && (
             <Button variant="primary" onClick={redirectToEdit}>
