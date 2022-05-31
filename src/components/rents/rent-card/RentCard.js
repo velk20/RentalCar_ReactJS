@@ -5,9 +5,11 @@ import { VehicleCard } from '../../vehicles/vehicle-card/VehicleCard';
 import { getVehicleById } from '../../../utils/http-utils/vehicle-request';
 import { useEffect, useState } from 'react';
 import { orderStatus } from '../../../utils/http-utils/rent-requests';
+import { getLoggedUser } from '../../../utils/http-utils/user-request';
 
 export function RentCard({ rent, deleteRent }) {
   const navigate = useNavigate();
+  const loggedUser = getLoggedUser();
   const [vehicle, setVehicle] = useState(null);
 
   useEffect(() => {
@@ -30,25 +32,41 @@ export function RentCard({ rent, deleteRent }) {
         </div>
 
         {rent.status === orderStatus.InProgress && (
-          <p style={{ color: 'blue', fontWeight: 'bold' }}>In Progress</p>
+          <p style={{ color: 'blue', fontWeight: 'bold' }}>
+            {orderStatus.InProgress}
+          </p>
         )}
 
         {rent.status === orderStatus.Canceled && (
-          <p style={{ color: 'red', fontWeight: 'bold' }}>Canceled</p>
+          <p style={{ color: 'red', fontWeight: 'bold' }}>
+            {orderStatus.Canceled}
+          </p>
         )}
 
         {rent.status === orderStatus.Finished && (
-          <p style={{ color: 'green', fontWeight: 'bold' }}>Finished</p>
+          <p style={{ color: 'green', fontWeight: 'bold' }}>
+            {orderStatus.Finished}
+          </p>
+        )}
+
+        {rent.status === orderStatus.WaitingConfirm && (
+          <p style={{ color: '#f5e042', fontWeight: 'bold' }}>
+            {orderStatus.WaitingConfirm}
+          </p>
         )}
         <div className="btn-holder">
-          <Button variant="danger" onClick={() => deleteRent(rent.id)}>
-            Delete
-          </Button>
+          {loggedUser.isAdmin && (
+            <Button variant="danger" onClick={() => deleteRent(rent.id)}>
+              Delete
+            </Button>
+          )}
         </div>
         <div>
-          <Button variant="warning" onClick={redirectToEdit}>
-            Change Rent
-          </Button>
+          {loggedUser.isAdmin && (
+            <Button variant="warning" onClick={redirectToEdit}>
+              Change Rent
+            </Button>
+          )}
         </div>
       </div>
     </div>

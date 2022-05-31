@@ -11,7 +11,7 @@
       "fuel": "Petrol",
       "numberOfSeats": 5,
       "pricePerDay": "142.07",
-      "carCount": 4
+      "carCount": 3
     },
     {
       "id": "d2df73cc-5197-4e40-8a72-ee573969a305",
@@ -38,7 +38,7 @@
       "fuel": "Hybrid",
       "numberOfSeats": 5,
       "pricePerDay": "162.57",
-      "carCount": "2"
+      "carCount": 1
     },
     {
       "isActive": true,
@@ -360,9 +360,17 @@
       "id": "gs1cobh",
       "userId": "eektb1k",
       "vehicleId": "3ab67e59-0d59-4ef8-977c-63e2b97e9305",
-      "status": "In Progress",
+      "status": "Canceled",
       "startDate": "2022-06-02",
       "endDate": "2022-06-04"
+    },
+    {
+      "id": "kpjKY3a",
+      "userId": "ewktb1K",
+      "vehicleId": "7b5edfcf-18b2-481f-85e9-d1eea878d488",
+      "status": "In Progress",
+      "startDate": "2022-06-02",
+      "endDate": "2022-06-11"
     }
   ]
 }

@@ -35,9 +35,7 @@ export function Vehicle(props) {
     event.preventDefault();
     rent.userId = loggedUser.id;
     rent.vehicleId = vehicle.id;
-    rent.status = orderStatus.InProgress;
-
-    vehicle.carCount -= 1;
+    rent.status = orderStatus.WaitingConfirm;
 
     saveVehicle(vehicle).finally(
       saveRent(rent).then(() => {

@@ -46,7 +46,8 @@ export function Rent(props) {
   const onFormSubmit = (event) => {
     event.preventDefault();
 
-    rent.status === (orderStatus.Canceled || orderStatus.Finished)
+    rent.status ===
+    (orderStatus.Canceled || orderStatus.Finished || orderStatus.WaitingConfirm)
       ? (vehicle.carCount += 1)
       : (vehicle.carCount -= 1);
 

@@ -27,4 +27,5 @@ export const orderStatus = {
   InProgress: 'In Progress',
   Canceled: 'Canceled',
   Finished: 'Finished',
+  WaitingConfirm: 'Awaiting Confirmation',
 };

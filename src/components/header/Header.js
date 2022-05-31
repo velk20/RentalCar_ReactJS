@@ -38,11 +38,11 @@ export function Header() {
                   Users
                 </Link>
               )}
-              {loggedUser.isAdmin && (
-                <Link className="nav-link" to="/rents-list">
-                  Rents
-                </Link>
-              )}
+
+              <Link className="nav-link" to="/rents-list">
+                Rents
+              </Link>
+
               {loggedUser.isAdmin && (
                 <Link className="nav-link" to="/vehicle/create">
                   Create Vehicle
