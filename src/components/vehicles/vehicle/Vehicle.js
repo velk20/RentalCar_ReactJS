@@ -18,9 +18,7 @@ export function Vehicle(props) {
   const loggedUser = getLoggedUser();
   const navigate = useNavigate();
   const [vehicle, setVehicle] = useState({ pricePerDay: '' });
-  const [days, setDays] = useState({
-    dayCount: '',
-  });
+
   const [rent, setRent] = useState({
     id: '',
     userId: '',
@@ -57,14 +55,6 @@ export function Vehicle(props) {
       ...prevState,
       [event.target.name]: event.target.value,
     }));
-
-    setDays((prevState) => ({
-      ...prevState,
-      dayCount: getDifferenceInDays(
-        new Date(rent.startDate),
-        new Date(rent.endDate)
-      ),
-    }));
   };
 
   return (
@@ -97,7 +87,16 @@ export function Vehicle(props) {
             />
           </Form.Group>
 
-          <Total days={days} vehicle={vehicle} />
+          <Total
+            days={{
+              dayCount: getDifferenceInDays(
+                new Date(rent.startDate),
+                new Date(rent.endDate)
+              ),
+            }}
+            vehicle={vehicle}
+          />
+          <br></br>
           <Button variant="warning" type="submit">
             Rent Car
           </Button>

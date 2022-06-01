@@ -24,8 +24,7 @@
       "fuel": "Petrol",
       "numberOfSeats": 4,
       "pricePerDay": 80.13,
-      "carCount": 2,
-      "countCar": -1
+      "carCount": 2
     },
     {
       "id": "7b5edfcf-18b2-481f-85e9-d1eea878d488",
@@ -59,7 +58,7 @@
       "brand": "Toyota",
       "model": "Avalon",
       "year": "2021",
-      "type": "",
+      "type": "Economy",
       "fuel": "Diesel",
       "numberOfSeats": "5",
       "pricePerDay": "98",
@@ -85,8 +84,8 @@
       "brand": "Nissan",
       "model": "Versa",
       "year": "2022",
-      "type": "",
-      "fuel": "",
+      "type": "Estate",
+      "fuel": "Petrol",
       "numberOfSeats": "5",
       "pricePerDay": "89",
       "id": "zUCKHMA",
@@ -124,146 +123,26 @@
       "brand": "Honda",
       "model": "Odyssey",
       "year": "2022",
-      "type": "",
+      "type": "Cargo",
       "fuel": "Diesel",
       "numberOfSeats": "1",
       "pricePerDay": "100",
       "id": "oZor8fp",
-      "carCount": "0"
+      "carCount": "2"
     },
-    [
-      {
-        "id": "3ab67e59-0d59-4ef8-977c-63e2b97e9305",
-        "isActive": true,
-        "picture": "https://cars.usnews.com/pics/size/776x517/images/Auto/izmo/337793/2012_bmw_5_series_angularfront.jpg",
-        "brand": "BMW",
-        "model": "F10",
-        "year": "2012",
-        "type": "Cargo",
-        "fuel": "Petrol",
-        "numberOfSeats": 5,
-        "pricePerDay": "142.07",
-        "carCount": 4
-      },
-      {
-        "id": "d2df73cc-5197-4e40-8a72-ee573969a305",
-        "isActive": true,
-        "picture": "https://cars.usnews.com/pics/size/776x517/images/Auto/izmo/i5451/2016_audi_a4_angularfront.jpg",
-        "brand": "Audi",
-        "model": "A4",
-        "year": "2016",
-        "type": "Estate",
-        "fuel": "Petrol",
-        "numberOfSeats": 4,
-        "pricePerDay": 80.13,
-        "carCount": 3,
-        "countCar": -1
-      },
-      {
-        "id": "7b5edfcf-18b2-481f-85e9-d1eea878d488",
-        "isActive": true,
-        "picture": "https://cars.usnews.com/pics/size/776x517/images/Auto/izmo/i159614957/2022_mercedes_benz_s_class_angularfront.jpg",
-        "brand": "Mercedes",
-        "model": "S500",
-        "year": "2022",
-        "type": "Luxury",
-        "fuel": "Hybrid",
-        "numberOfSeats": 5,
-        "pricePerDay": "162.57",
-        "carCount": "2"
-      },
-      {
-        "isActive": true,
-        "picture": "https://cars.usnews.com/pics/size/776x517/images/Auto/izmo/i159614825/2022_honda_accord_sedan_angularfront.jpg",
-        "brand": "Honda",
-        "model": "Accord",
-        "year": "2022",
-        "type": "Luxury",
-        "fuel": "Hybrid",
-        "numberOfSeats": "5",
-        "pricePerDay": "107.99",
-        "id": "Ni8VOvF",
-        "carCount": 3
-      },
-      {
-        "isActive": true,
-        "picture": "https://cars.usnews.com/pics/size/776x517/images/Auto/izmo/i159614710/2022_toyota_avalon_angularfront.jpg",
-        "brand": "Toyota",
-        "model": "Avalon",
-        "year": "2021",
-        "type": "",
-        "fuel": "Diesel",
-        "numberOfSeats": "5",
-        "pricePerDay": "98",
-        "id": "OLm5fxE",
-        "carCount": "5"
-      },
-      {
-        "isActive": true,
-        "picture": "https://cars.usnews.com/pics/size/776x517/images/Auto/izmo/i159614930/2022_hyundai_kona_angularfront.jpg",
-        "brand": "Hyundai",
-        "model": "Kona",
-        "year": "2020",
-        "type": "SUV",
-        "fuel": "Hybrid",
-        "numberOfSeats": "5",
-        "pricePerDay": "89",
-        "id": "46FSQBJ",
-        "carCount": "6"
-      },
-      {
-        "isActive": true,
-        "picture": "https://cars.usnews.com/pics/size/776x517/images/Auto/izmo/i159614876/2022_nissan_versa_sedan_angularfront.jpg",
-        "brand": "Nissan",
-        "model": "Versa",
-        "year": "2022",
-        "type": "",
-        "fuel": "",
-        "numberOfSeats": "5",
-        "pricePerDay": "89",
-        "id": "zUCKHMA",
-        "carCount": "2"
-      },
-      {
-        "isActive": true,
-        "picture": "https://cars.usnews.com/pics/size/776x517/images/Auto/izmo/i159614594/2022_hyundai_tucson_angularfront.jpg",
-        "brand": "Hyundai",
-        "model": "Tucson",
-        "year": "2022",
-        "type": "SUV",
-        "fuel": "Hybrid",
-        "numberOfSeats": "5",
-        "pricePerDay": "123",
-        "id": "BapmaVZ",
-        "carCount": "1"
-      },
-      {
-        "isActive": true,
-        "picture": "https://cars.usnews.com/pics/size/776x517/images/Auto/izmo/i159614623/2022_kia_telluride_angularfront.jpg",
-        "brand": "Kia",
-        "model": "Telluride",
-        "year": "2022",
-        "type": "SUV",
-        "fuel": "Hybrid",
-        "numberOfSeats": "5",
-        "pricePerDay": "145",
-        "id": "JcbyFMi",
-        "carCount": "3"
-      },
-      {
-        "isActive": true,
-        "picture": "https://cars.usnews.com/pics/size/776x517/images/Auto/izmo/i159614519/2022_honda_odyssey_angularfront.jpg",
-        "brand": "Honda",
-        "model": "Odyssey",
-        "year": "2022",
-        "type": "",
-        "fuel": "Diesel",
-        "numberOfSeats": "1",
-        "pricePerDay": "100",
-        "id": "oZor8fp",
-        "carCount": "0"
-      }
-    ]
+    {
+      "isActive": true,
+      "picture": "https://cars.usnews.com/pics/size/776x517/images/Auto/izmo/i88656852/2019_infiniti_q70_angularfront.jpg",
+      "brand": "Infiniti",
+      "model": "Q70",
+      "year": "2019",
+      "type": "Luxury",
+      "fuel": "Hybrid",
+      "numberOfSeats": "5",
+      "pricePerDay": "120",
+      "carCount": "4",
+      "id": "0qz1aJ7"
+    }
   ],
   "users": [
     {
@@ -363,14 +242,6 @@
       "status": "Canceled",
       "startDate": "2022-06-02",
       "endDate": "2022-06-04"
-    },
-    {
-      "id": "kpjKY3a",
-      "userId": "ewktb1K",
-      "vehicleId": "7b5edfcf-18b2-481f-85e9-d1eea878d488",
-      "status": "In Progress",
-      "startDate": "2022-06-02",
-      "endDate": "2022-06-11"
     },
     {
       "id": "3a7bvv6",
