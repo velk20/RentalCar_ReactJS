@@ -96,8 +96,6 @@ export function VehicleCard({ vehicle, deleteVehicle }) {
                 </Button>
               </div>
             )}
-
-          {console.log(currentVehicleId)}
         </div>
       </Card.Body>
     </Card>

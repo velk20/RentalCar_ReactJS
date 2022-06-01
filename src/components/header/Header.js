@@ -40,7 +40,7 @@ export function Header() {
               )}
 
               <Link className="nav-link" to="/rents-list">
-                Rents
+                {loggedUser.isAdmin ? 'All Rents' : 'Your Rents'}
               </Link>
 
               {loggedUser.isAdmin && (

@@ -7,6 +7,8 @@ import { getLoggedUser } from '../../../utils/http-utils/user-request';
 export function UserCard({ user, deleteUser }) {
   const loggedUser = getLoggedUser();
   const navigate = useNavigate();
+  const url = window.location.href.split('/').pop();
+
   const redirectToDetails = () => {
     navigate(`/user/${user.id}`);
   };
@@ -21,7 +23,7 @@ export function UserCard({ user, deleteUser }) {
 
   return (
     <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={user.picture} />
+      {url !== 'rents-list' && <Card.Img variant="top" src={user.picture} />}
       <Card.Body>
         <Card.Title>{user.name}</Card.Title>
         <Card.Text>
@@ -49,24 +51,25 @@ export function UserCard({ user, deleteUser }) {
             </span>
           </Card.Text>
         )}
+        {url !== 'rents-list' && (
+          <div className="btn-holder">
+            {loggedUser.isAdmin && (
+              <Button variant="primary" onClick={redirectToEdit}>
+                Edit
+              </Button>
+            )}
 
-        <div className="btn-holder">
-          {loggedUser.isAdmin && (
-            <Button variant="primary" onClick={redirectToEdit}>
-              Edit
+            {loggedUser.isAdmin && loggedUser.id !== user.id && (
+              <Button variant="danger" onClick={() => deleteUser(user.id)}>
+                Delete
+              </Button>
+            )}
+
+            <Button variant="info" onClick={redirectToDetails}>
+              Details
             </Button>
-          )}
-
-          {loggedUser.isAdmin && (
-            <Button variant="danger" onClick={() => deleteUser(user.id)}>
-              Delete
-            </Button>
-          )}
-
-          <Button variant="info" onClick={redirectToDetails}>
-            Details
-          </Button>
-        </div>
+          </div>
+        )}
       </Card.Body>
     </Card>
   );

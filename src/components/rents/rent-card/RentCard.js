@@ -5,16 +5,35 @@ import { VehicleCard } from '../../vehicles/vehicle-card/VehicleCard';
 import { getVehicleById } from '../../../utils/http-utils/vehicle-request';
 import { useEffect, useState } from 'react';
 import { orderStatus } from '../../../utils/http-utils/rent-requests';
-import { getLoggedUser } from '../../../utils/http-utils/user-request';
+import {
+  getLoggedUser,
+  getUserById,
+} from '../../../utils/http-utils/user-request';
+import { Form } from 'react-bootstrap';
+import { UserCard } from '../../users/user-card/UserCard';
 
 export function RentCard({ rent, deleteRent }) {
   const navigate = useNavigate();
   const loggedUser = getLoggedUser();
   const [vehicle, setVehicle] = useState(null);
+  const [user, setUser] = useState({
+    id: '',
+    isAdmin: false,
+    picture: '',
+    name: '',
+    email: '',
+    password: '',
+    phone: '',
+    address: '',
+  });
 
   useEffect(() => {
     getVehicleById(rent.vehicleId).then((res) => setVehicle(res.data));
   }, [rent.vehicleId]);
+
+  useEffect(() => {
+    getUserById(rent.userId).then((res) => setUser(res.data));
+  }, [rent.userId]);
 
   const redirectToEdit = () => {
     navigate(`/rent/edit/${rent.id}`);
@@ -28,7 +47,41 @@ export function RentCard({ rent, deleteRent }) {
     <div className="rent-card-wrapper">
       <div className="form-vehicle">
         <div className="vehicleCard">
-          <VehicleCard key={rent.vehicleId} vehicle={vehicle} />
+          <div>
+            <h3>Rented Car:</h3>
+            <VehicleCard key={rent.vehicleId} vehicle={vehicle} />
+          </div>
+          <div className="rental-user">
+            <h3>Rental User:</h3>
+            <UserCard key={user.id} user={user} />
+            <div className="rent-date">
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Label>Start Date</Form.Label>
+                <Form.Control
+                  disabled
+                  required
+                  type="date"
+                  placeholder="Enter Due date"
+                  name="startDate"
+                  value={rent.startDate}
+                />
+              </Form.Group>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Label>End Date</Form.Label>
+                <Form.Control
+                  disabled
+                  required
+                  type="date"
+                  placeholder="Enter Due date"
+                  name="endDate"
+                  value={rent.endDate}
+                />
+              </Form.Group>
+            </div>
+            <div>
+              <h3>Total price: </h3>
+            </div>
+          </div>
         </div>
 
         {rent.status === orderStatus.InProgress && (

@@ -69,9 +69,6 @@ export function Rent(props) {
     <div className="vehicle">
       <div className="form-vehicle">
         <Form onSubmit={onFormSubmit}>
-          {console.log(params.id.data)}
-          {console.log(rent)}
-          {console.log(vehicle)}
           <Form.Group className="mb-3" controlId="formBasicCheckbox">
             <Form.Label>Rent Status</Form.Label>
             <Form.Select

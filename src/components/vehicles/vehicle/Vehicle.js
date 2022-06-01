@@ -11,13 +11,16 @@ import { getLoggedUser } from '../../../utils/http-utils/user-request';
 import { Button } from 'react-bootstrap';
 import { saveRent } from '../../../utils/http-utils/rent-requests';
 import { orderStatus } from '../../../utils/http-utils/rent-requests';
+import { Total } from './Total';
 
 export function Vehicle(props) {
   const params = useParams();
   const loggedUser = getLoggedUser();
   const navigate = useNavigate();
-  const [vehicle, setVehicle] = useState(null);
-
+  const [vehicle, setVehicle] = useState({ pricePerDay: '' });
+  const [days, setDays] = useState({
+    dayCount: '',
+  });
   const [rent, setRent] = useState({
     id: '',
     userId: '',
@@ -30,6 +33,11 @@ export function Vehicle(props) {
   useEffect(() => {
     getVehicleById(params.id).then((res) => setVehicle(res.data));
   }, [params.id]);
+
+  function getDifferenceInDays(date1, date2) {
+    const diffInMs = Math.abs(date2 - date1);
+    return diffInMs / (1000 * 60 * 60 * 24);
+  }
 
   const onFormSubmit = (event) => {
     event.preventDefault();
@@ -48,6 +56,14 @@ export function Vehicle(props) {
     setRent((prevState) => ({
       ...prevState,
       [event.target.name]: event.target.value,
+    }));
+
+    setDays((prevState) => ({
+      ...prevState,
+      dayCount: getDifferenceInDays(
+        new Date(rent.startDate),
+        new Date(rent.endDate)
+      ),
     }));
   };
 
@@ -81,6 +97,7 @@ export function Vehicle(props) {
             />
           </Form.Group>
 
+          <Total days={days} vehicle={vehicle} />
           <Button variant="warning" type="submit">
             Rent Car
           </Button>

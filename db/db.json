@@ -24,7 +24,7 @@
       "fuel": "Petrol",
       "numberOfSeats": 4,
       "pricePerDay": 80.13,
-      "carCount": 3,
+      "carCount": 2,
       "countCar": -1
     },
     {
@@ -37,8 +37,8 @@
       "type": "Luxury",
       "fuel": "Hybrid",
       "numberOfSeats": 5,
-      "pricePerDay": "162.57",
-      "carCount": 1
+      "pricePerDay": "100",
+      "carCount": 0
     },
     {
       "isActive": true,
@@ -352,7 +352,7 @@
       "id": "QvvhKdS",
       "userId": "eektb1k",
       "vehicleId": "d2df73cc-5197-4e40-8a72-ee573969a305",
-      "status": "Canceled",
+      "status": "In Progress",
       "startDate": "2022-06-01",
       "endDate": "2022-06-03"
     },
@@ -371,6 +371,14 @@
       "status": "In Progress",
       "startDate": "2022-06-02",
       "endDate": "2022-06-11"
+    },
+    {
+      "id": "3a7bvv6",
+      "userId": "eektb1k",
+      "vehicleId": "7b5edfcf-18b2-481f-85e9-d1eea878d488",
+      "status": "In Progress",
+      "startDate": "2022-06-02",
+      "endDate": "2022-06-04"
     }
   ]
 }
