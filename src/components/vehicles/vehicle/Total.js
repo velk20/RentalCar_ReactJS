@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { getVehicleById } from '../../../utils/http-utils/vehicle-request';
 import { getLoggedUser } from '../../../utils/http-utils/user-request';
 
-export function Total({ days }, passData) {
+export function Total({ days, passData }) {
   const [vehicleTotal, setVehicle] = useState({});
   const currentVehicleId = window.location.href.split('/').pop();
   const loggedUser = getLoggedUser();
@@ -31,7 +31,9 @@ export function Total({ days }, passData) {
 
     return (
       <h4>
-        {`Total: $${totalWithoutDiscount} - $${withDiscount} = $${total}`}
+        {`Total: $${totalWithoutDiscount} - $${
+          withDiscount > 0 ? withDiscount : ''
+        } = $${total}`}
       </h4>
     );
   }
@@ -55,6 +57,7 @@ export function Total({ days }, passData) {
   return (
     <div>
       <h4>{`Price for ${days.dayCount ? days.dayCount : '0'} days`}</h4>
+
       {checkForDiscount(days.dayCount)}
       {calculateTotalPrice({ days }, discount)}
     </div>

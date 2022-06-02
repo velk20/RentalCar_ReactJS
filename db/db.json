@@ -246,28 +246,74 @@
     {
       "id": 1,
       "userId": "eektb1k",
-      "vehicleId": "46FSQBJ",
+      "vehicleId": "0qz1aJ7",
       "status": "Awaiting Confirmation",
-      "startDate": "2022-06-02",
-      "endDate": "2022-06-09",
-      "totalPrice": 623
+      "startDate": "2022-06-03",
+      "endDate": "2022-06-10",
+      "totalPrice": "781.20"
     },
     {
       "id": 2,
-      "userId": "ewktb1K",
-      "vehicleId": "OLm5fxE",
-      "status": "In Progress",
+      "userId": "eektb1k",
+      "vehicleId": "Ni8VOvF",
+      "status": "Awaiting Confirmation",
       "startDate": "2022-06-03",
-      "endDate": "2022-06-10",
-      "totalPrice": 686
+      "endDate": "2022-06-09",
+      "totalPrice": "602.58"
     },
     {
       "id": 3,
       "userId": "eektb1k",
       "vehicleId": "OLm5fxE",
       "status": "Awaiting Confirmation",
-      "startDate": "2022-06-11",
-      "endDate": "2022-06-18"
+      "startDate": "2022-06-04",
+      "endDate": "2022-06-11",
+      "totalPrice": "637.98"
+    },
+    {
+      "id": 4,
+      "userId": "eektb1k",
+      "vehicleId": "OLm5fxE",
+      "status": "Awaiting Confirmation",
+      "startDate": "2022-06-03",
+      "endDate": "2022-06-10",
+      "totalPrice": "637.98"
+    },
+    {
+      "id": 5,
+      "userId": "eektb1k",
+      "vehicleId": "3ab67e59-0d59-4ef8-977c-63e2b97e9305",
+      "status": "Awaiting Confirmation",
+      "startDate": "2022-06-04",
+      "endDate": "2022-06-18",
+      "totalPrice": "1790.08"
+    },
+    {
+      "id": 6,
+      "userId": "eektb1k",
+      "vehicleId": "BapmaVZ",
+      "status": "Awaiting Confirmation",
+      "startDate": "2022-06-04",
+      "endDate": "2022-06-18",
+      "totalPrice": "1549.80"
+    },
+    {
+      "id": 7,
+      "userId": "eektb1k",
+      "vehicleId": "OLm5fxE",
+      "status": "Awaiting Confirmation",
+      "startDate": "2022-06-04",
+      "endDate": "2022-06-11",
+      "totalPrice": "637.98"
+    },
+    {
+      "id": 8,
+      "userId": "eektb1k",
+      "vehicleId": "Ni8VOvF",
+      "status": "Awaiting Confirmation",
+      "startDate": "2022-06-04",
+      "endDate": "2022-06-18",
+      "totalPrice": "1360.67"
     }
   ]
 }

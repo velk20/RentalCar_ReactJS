@@ -7,7 +7,10 @@ import {
 import { VehicleCard } from '../vehicle-card/VehicleCard';
 import './Vehicle.scss';
 import { Form } from 'react-bootstrap';
-import { getLoggedUser } from '../../../utils/http-utils/user-request';
+import {
+  getLoggedUser,
+  saveUser,
+} from '../../../utils/http-utils/user-request';
 import { Button } from 'react-bootstrap';
 import { saveRent } from '../../../utils/http-utils/rent-requests';
 import { orderStatus } from '../../../utils/http-utils/rent-requests';
@@ -50,10 +53,12 @@ export function Vehicle(props) {
     rent.status = orderStatus.WaitingConfirm;
     rent.totalPrice = finalPrice;
 
-    saveVehicle(vehicle).finally(
-      saveRent(rent).then(() => {
-        navigate('/rents-list');
-      })
+    saveVehicle(vehicle).then(
+      saveUser(loggedUser).then(
+        saveRent(rent).then(() => {
+          navigate('/rents-list');
+        })
+      )
     );
   };
 

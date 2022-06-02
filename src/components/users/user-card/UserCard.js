@@ -3,11 +3,20 @@ import Card from 'react-bootstrap/Card';
 import { useNavigate } from 'react-router-dom';
 import './UserCard.scss';
 import { getLoggedUser } from '../../../utils/http-utils/user-request';
+import { getAllRents } from '../../../utils/http-utils/rent-requests';
+import { useEffect, useState } from 'react';
 
 export function UserCard({ user, deleteUser }) {
   const loggedUser = getLoggedUser();
   const navigate = useNavigate();
   const url = window.location.href.split('/').pop();
+  const [rents, setRents] = useState([]);
+
+  useEffect(() => {
+    getAllRents().then((response) => {
+      setRents(response.data);
+    });
+  }, []);
 
   const redirectToDetails = () => {
     navigate(`/user/${user.id}`);
@@ -39,6 +48,17 @@ export function UserCard({ user, deleteUser }) {
           <span className="value">{user.phone}</span>
         </Card.Text>
 
+        <Card.Text>
+          <span className="key">Cars Rented: </span>
+          <span className="value">
+            {
+              (user.totalRentedCars = rents.filter(
+                (e) => e.userId === user.id
+              ).length)
+            }
+          </span>
+        </Card.Text>
+
         {loggedUser.isAdmin && (
           <Card.Text>
             <span className="key">isAdmin: </span>
@@ -51,6 +71,20 @@ export function UserCard({ user, deleteUser }) {
             </span>
           </Card.Text>
         )}
+
+        {loggedUser.isAdmin && (
+          <Card.Text>
+            <span className="key">isVIP: </span>
+            <span className="value">
+              {rents.filter((e) => e.userId === user.id).length > 3 ? (
+                <span style={{ color: 'green', fontWeight: 'bold' }}>Yes</span>
+              ) : (
+                <span style={{ color: 'red', fontWeight: 'bold' }}>No</span>
+              )}
+            </span>
+          </Card.Text>
+        )}
+
         {url !== 'rents-list' && (
           <div className="btn-holder">
             {loggedUser.isAdmin && (
