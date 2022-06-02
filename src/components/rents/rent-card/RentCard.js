@@ -2,7 +2,10 @@ import Button from 'react-bootstrap/Button';
 import { useNavigate } from 'react-router-dom';
 import './RentCard.scss';
 import { VehicleCard } from '../../vehicles/vehicle-card/VehicleCard';
-import { getVehicleById } from '../../../utils/http-utils/vehicle-request';
+import {
+  getVehicleById,
+  saveVehicle,
+} from '../../../utils/http-utils/vehicle-request';
 import { useEffect, useState } from 'react';
 import { orderStatus } from '../../../utils/http-utils/rent-requests';
 import {
@@ -79,37 +82,58 @@ export function RentCard({ rent, deleteRent }) {
               </Form.Group>
             </div>
             <div>
-              <h3>Total price: </h3>
+              <h3>{`Total price: $ ${rent.totalPrice}`}</h3>
+              {!loggedUser.isAdmin &&
+                rent.status === orderStatus.WaitingConfirm && (
+                  <Button
+                    variant="danger"
+                    onClick={() => {
+                      deleteRent(rent.id);
+                      vehicle.carCount += 1;
+                      saveVehicle(vehicle).then(navigate('/vehicles-list'));
+                    }}
+                  >
+                    Cancel Rent
+                  </Button>
+                )}
             </div>
           </div>
         </div>
 
-        {rent.status === orderStatus.InProgress && (
-          <p style={{ color: 'blue', fontWeight: 'bold' }}>
-            {orderStatus.InProgress}
-          </p>
-        )}
+        <h4>
+          Status:{' '}
+          {rent.status === orderStatus.InProgress && (
+            <p style={{ color: 'blue', fontWeight: 'bold' }}>
+              {orderStatus.InProgress}
+            </p>
+          )}
+          {rent.status === orderStatus.Canceled && (
+            <p style={{ color: 'red', fontWeight: 'bold' }}>
+              {orderStatus.Canceled}
+            </p>
+          )}
+          {rent.status === orderStatus.Finished && (
+            <p style={{ color: 'green', fontWeight: 'bold' }}>
+              {orderStatus.Finished}
+            </p>
+          )}
+          {rent.status === orderStatus.WaitingConfirm && (
+            <p style={{ color: 'orange', fontWeight: 'bold' }}>
+              {orderStatus.WaitingConfirm}
+            </p>
+          )}
+        </h4>
 
-        {rent.status === orderStatus.Canceled && (
-          <p style={{ color: 'red', fontWeight: 'bold' }}>
-            {orderStatus.Canceled}
-          </p>
-        )}
-
-        {rent.status === orderStatus.Finished && (
-          <p style={{ color: 'green', fontWeight: 'bold' }}>
-            {orderStatus.Finished}
-          </p>
-        )}
-
-        {rent.status === orderStatus.WaitingConfirm && (
-          <p style={{ color: '#f5e042', fontWeight: 'bold' }}>
-            {orderStatus.WaitingConfirm}
-          </p>
-        )}
         <div className="btn-holder">
           {loggedUser.isAdmin && (
-            <Button variant="danger" onClick={() => deleteRent(rent.id)}>
+            <Button
+              variant="danger"
+              onClick={() => {
+                deleteRent(rent.id);
+                vehicle.carCount += 1;
+                saveVehicle(vehicle).then(navigate('/vehicles-list'));
+              }}
+            >
               Delete
             </Button>
           )}
@@ -117,7 +141,7 @@ export function RentCard({ rent, deleteRent }) {
         <div>
           {loggedUser.isAdmin && (
             <Button variant="warning" onClick={redirectToEdit}>
-              Change Rent
+              Change Status
             </Button>
           )}
         </div>

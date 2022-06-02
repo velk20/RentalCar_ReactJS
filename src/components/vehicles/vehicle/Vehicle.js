@@ -18,6 +18,7 @@ export function Vehicle(props) {
   const loggedUser = getLoggedUser();
   const navigate = useNavigate();
   const [vehicle, setVehicle] = useState({ pricePerDay: '' });
+  const [finalPrice, setFinalPrice] = useState('');
 
   const [rent, setRent] = useState({
     id: '',
@@ -26,6 +27,7 @@ export function Vehicle(props) {
     status: '',
     startDate: '',
     endDate: '',
+    totalPrice: '',
   });
 
   useEffect(() => {
@@ -37,15 +39,20 @@ export function Vehicle(props) {
     return diffInMs / (1000 * 60 * 60 * 24);
   }
 
+  function passData(data) {
+    setFinalPrice(data);
+  }
+
   const onFormSubmit = (event) => {
     event.preventDefault();
     rent.userId = loggedUser.id;
     rent.vehicleId = vehicle.id;
     rent.status = orderStatus.WaitingConfirm;
+    rent.totalPrice = finalPrice;
 
     saveVehicle(vehicle).finally(
       saveRent(rent).then(() => {
-        navigate('/vehicles-list');
+        navigate('/rents-list');
       })
     );
   };
@@ -87,15 +94,18 @@ export function Vehicle(props) {
             />
           </Form.Group>
 
-          <Total
-            days={{
-              dayCount: getDifferenceInDays(
-                new Date(rent.startDate),
-                new Date(rent.endDate)
-              ),
-            }}
-            vehicle={vehicle}
-          />
+          {rent.startDate && rent.endDate && (
+            <Total
+              days={{
+                dayCount: getDifferenceInDays(
+                  new Date(rent.startDate),
+                  new Date(rent.endDate)
+                ),
+              }}
+              passData={passData}
+            />
+          )}
+
           <br></br>
           <Button variant="warning" type="submit">
             Rent Car

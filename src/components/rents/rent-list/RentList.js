@@ -24,6 +24,9 @@ export function RentList() {
     });
   };
 
+  if (rents.length === 0) {
+    return <div>No Rents!</div>;
+  }
   return (
     <div className="rents-list-wrapper">
       {loggedUser.isAdmin &&

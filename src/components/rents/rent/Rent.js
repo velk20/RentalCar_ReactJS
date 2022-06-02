@@ -33,6 +33,7 @@ export function Rent(props) {
     status: '',
     startDate: '',
     endDate: '',
+    totalPrice: '',
   });
 
   useEffect(() => {
@@ -46,14 +47,18 @@ export function Rent(props) {
   const onFormSubmit = (event) => {
     event.preventDefault();
 
-    rent.status ===
-    (orderStatus.Canceled || orderStatus.Finished || orderStatus.WaitingConfirm)
-      ? (vehicle.carCount += 1)
-      : (vehicle.carCount -= 1);
+    if (
+      rent.status === orderStatus.Canceled ||
+      rent.status === orderStatus.Finished
+    ) {
+      vehicle.carCount += 1;
+    } else if (rent.status === orderStatus.InProgress) {
+      vehicle.carCount -= 1;
+    }
 
     saveVehicle(vehicle).finally(
       saveRent(rent).then(() => {
-        navigate('/');
+        navigate('/rents-list');
       })
     );
   };
