@@ -18,6 +18,8 @@ export function RentList() {
     getAllRents().then((response) => {
       setRents(response.data);
     });
+
+    console.log(rents);
   }, []);
 
   const toAllVehicles = () => {
@@ -31,7 +33,7 @@ export function RentList() {
     });
   };
 
-  if (rents.length === 0) {
+  if (rents.filter((rent) => rent.userId === loggedUser.id).length === 0) {
     return (
       <div style={{ margin: '20px' }}>
         <h1>No Rents!</h1>

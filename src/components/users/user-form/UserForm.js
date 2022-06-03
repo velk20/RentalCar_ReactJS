@@ -36,7 +36,7 @@ export function UserForm() {
     event.preventDefault();
 
     saveUser(user).then(() => {
-      navigate('/users-list');
+      navigate('/');
     });
   };
 

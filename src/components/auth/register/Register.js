@@ -10,13 +10,15 @@ export function Register() {
   const navigate = useNavigate();
   const [error, setError] = useState('');
   const [user, setUser] = useState({
-    isActive: false,
+    isAdmin: false,
     name: '',
     picture: '',
     email: '',
     phone: '',
     address: '',
     password: '',
+    isVIP: false,
+    totalRentedCars: 0,
   });
 
   const onInputChange = (event) => {

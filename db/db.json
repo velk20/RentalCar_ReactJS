@@ -129,19 +129,6 @@
       "pricePerDay": "100",
       "id": "oZor8fp",
       "carCount": 3
-    },
-    {
-      "isActive": true,
-      "picture": "https://cars.usnews.com/pics/size/776x517/images/Auto/izmo/i88656852/2019_infiniti_q70_angularfront.jpg",
-      "brand": "Infiniti",
-      "model": "Q70",
-      "year": "2019",
-      "type": "Luxury",
-      "fuel": "Hybrid",
-      "numberOfSeats": "5",
-      "pricePerDay": "120",
-      "carCount": "41",
-      "id": "0qz1aJ7"
     }
   ],
   "users": [
@@ -240,6 +227,28 @@
       "address": "8406 Center Ave. Holyoke, MA 01040",
       "password": "toni",
       "id": "ZYYul4H"
+    },
+    {
+      "isAdmin": false,
+      "isVIP": false,
+      "totalRentedCars": 0,
+      "name": "Ganka Petrova",
+      "picture": "https://images.pexels.com/photos/3746210/pexels-photo-3746210.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "email": "ad@ad",
+      "phone": "+1 256 897 152",
+      "address": "stree. Petrovi, bl.2, 32",
+      "password": "ganka",
+      "id": "_71frDv"
+    },
+    {
+      "isAdmin": false,
+      "name": "Vuti Mailinator",
+      "picture": "https://images.pexels.com/photos/4063856/pexels-photo-4063856.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "email": "janag@mailinator.com",
+      "phone": "+1 (966) 667-4639",
+      "address": "str. Botev Hrisov 123",
+      "password": "Pa$$w0rd!",
+      "id": "WCP8t9m"
     }
   ],
   "rents": [
