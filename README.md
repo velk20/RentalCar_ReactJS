@@ -24,7 +24,7 @@ This is my first SPA Serveless Web App with ReactJS. It is a ready-to-use web ap
 <br/><br/>
 
 ## :hammer: Built with:
-* [Node.js v16.13.2]((https://nodejs.org/en/))
+* [Node.js v16.13.2](https://nodejs.org/en/)
 * [ReactJS 18.1.0](https://reactjs.org/)
 * [Json-server 0.17.0](https://www.npmjs.com/package/json-server)
 * [React-Bootstrap 2.4.0](https://react-bootstrap.github.io/)
