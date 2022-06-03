@@ -1,16 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.073c9b0a.css",
-    "main.js": "/static/js/main.d54848d2.js",
-    "static/js/787.db85fa8a.chunk.js": "/static/js/787.db85fa8a.chunk.js",
-    "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "index.html": "/index.html",
-    "main.073c9b0a.css.map": "/static/css/main.073c9b0a.css.map",
-    "main.d54848d2.js.map": "/static/js/main.d54848d2.js.map",
-    "787.db85fa8a.chunk.js.map": "/static/js/787.db85fa8a.chunk.js.map"
+    "main.css": "/RentalCarReactJS/static/css/main.72cc5c34.css",
+    "main.js": "/RentalCarReactJS/static/js/main.421c1505.js",
+    "static/media/login-car.jpg": "/RentalCarReactJS/static/media/login-car.1acb67f2a39d1335ca23.jpg",
+    "static/media/car-home.jpg": "/RentalCarReactJS/static/media/car-home.8512d81dc37a35afe361.jpg",
+    "index.html": "/RentalCarReactJS/index.html",
+    "main.72cc5c34.css.map": "/RentalCarReactJS/static/css/main.72cc5c34.css.map",
+    "main.421c1505.js.map": "/RentalCarReactJS/static/js/main.421c1505.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.d54848d2.js"
+    "static/css/main.72cc5c34.css",
+    "static/js/main.421c1505.js"
   ]
 }
