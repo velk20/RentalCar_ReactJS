@@ -4,6 +4,7 @@ import Button from 'react-bootstrap/Button';
 import { useNavigate } from 'react-router-dom';
 import { login } from '../../../utils/http-utils/user-request';
 import { Link } from 'react-router-dom';
+import './Login.scss';
 
 export function Login() {
   const navigate = useNavigate();

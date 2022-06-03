@@ -1,0 +1,20 @@
+.user-form-wrapper {
+  background-image: url(../../../img/login-car.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100%;
+  min-width: 1024px;
+
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+  form {
+    background: rgb(156, 192, 228);
+  }
+}
