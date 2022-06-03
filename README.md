@@ -35,24 +35,6 @@ This is my first SPA Serveless Web App with ReactJS. It is a ready-to-use web ap
 ## 📸 Application screenshots
 <kbd><img src="https://github.com/velk20/food-order/blob/main/images/appScreenshots/InitialPage.jpg" /></kbd>
 <br/><br/>
-<kbd><img src="https://github.com/velk20/food-order/blob/main/images/appScreenshots/admins.png" /></kbd>
-<br/><br/>
-<kbd><img src="https://github.com/velk20/food-order/blob/main/images/appScreenshots/categories-admin.png" /></kbd>
-<br/><br/>
-<kbd><img src= "https://github.com/velk20/food-order/blob/main/images/appScreenshots/categories.png" /></kbd>
-<br/><br/>
-<kbd><img src="https://github.com/velk20/food-order/blob/main/images/appScreenshots/contacts.png" /></kbd>
-<br/><br/>
-<kbd><img src="https://github.com/velk20/food-order/blob/main/images/appScreenshots/dashboard.png" /></kbd>
-<br/><br/>
-<kbd><img src="https://github.com/velk20/food-order/blob/main/images/appScreenshots/foods.png" /></kbd>
-<br/><br/>
-<kbd><img src="https://github.com/velk20/food-order/blob/main/images/appScreenshots/indexPage.png" /></kbd>
-<br/><br/>
-<kbd><img src="https://github.com/velk20/food-order/blob/main/images/appScreenshots/login.png" /></kbd>
-<br/><br/>
-<kbd><img src="https://github.com/velk20/food-order/blob/main/images/appScreenshots/orders.png" /></kbd>
-<br/><br/>
 
 ## :v: Leave a feedback
 Give a :star: if you like it.
