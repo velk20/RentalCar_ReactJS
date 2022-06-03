@@ -5,7 +5,7 @@ This is my first SPA Serveless Web App with ReactJS. It is a ready-to-use web ap
 <br/><br/>
 
 ## 📝 Project Overview
--	**RentalCarReactJS** is a ready to use application for rent and manage cars and users, which is easy to use and has a simple user-friendly interface. The backend is developed with NodeJS and ReactJS, and the frontend is built with ReactJS Bootstrap.
+-	**RentalCarReactJS** is a ready to use application for rent and manage cars and users, which is easy to use and has a simple user-friendly interface. The backend is developed with JSON-server, and the frontend is built with ReactJs and Bootstrap.
 -	The application requires a simple registration process.
 -	Users can rent cars, cancel their requests, also edit their accounts.
 -	Only the administrator can delete, add or edit cars and users, to accept or deny rent requests.
@@ -40,7 +40,6 @@ npm run start-json:server
 <br/><br/>
 
 ## :hammer: Built with:
-* [Node.js v16.13.2](https://nodejs.org/en/)
 * [ReactJS 18.1.0](https://reactjs.org/)
 * [Json-server 0.17.0](https://www.npmjs.com/package/json-server)
 * [React-Bootstrap 2.4.0](https://react-bootstrap.github.io/)
@@ -49,11 +48,25 @@ npm run start-json:server
 <br/><br/>
 
 ## 📸 Application screenshots
-<kbd><img src="https://user-images.githubusercontent.com/48069264/171827577-17cece80-1cfb-4b89-a692-36c3b81cd500.png"/></kbd>
+<kbd><img src="https://user-images.githubusercontent.com/48069264/171832577-4ccbbceb-7a0d-4aeb-bcc3-0be0d55df74d.png"/></kbd>
+<br/><br/>
+<kbd><img src="https://user-images.githubusercontent.com/48069264/171832698-703b8edb-11a4-4d2b-aaf4-e0da25837361.png"/></kbd>
+<br/><br/>
+<kbd><img src="https://user-images.githubusercontent.com/48069264/171832877-e630e910-0dfc-47b0-9f96-fcdd2473db29.png"/></kbd>
+<br/><br/>
+<kbd><img src="https://user-images.githubusercontent.com/48069264/171832874-e5f29c2e-9b0a-4731-a868-b6d14249b0ea.png"/></kbd>
+<br/><br/>
+<kbd><img src="https://user-images.githubusercontent.com/48069264/171832873-4852acd3-bdf8-4550-8805-7a8dbeff2417.png"/></kbd>
+<br/><br/>
+<kbd><img src="https://user-images.githubusercontent.com/48069264/171832872-1c90058c-e79b-4a1f-a2e0-bb871b3c488f.png"/></kbd>
+<br/><br/>
+<kbd><img src="https://user-images.githubusercontent.com/48069264/171832870-faf4f799-2155-4cb6-b1f9-24a2243fa2d1.png"/></kbd>
+<br/><br/>
+<kbd><img src="https://user-images.githubusercontent.com/48069264/171832868-d96cc9ad-7793-46fc-8932-8ae32c9147c8.png"/></kbd>
 <br/><br/>
 
+## :v: Leave a feedback!
 
-## :v: Leave a feedback
 Give a :star: if you like it.
 Thank you ❤️
 <br/><br/>
