@@ -1,4 +1,7 @@
 .user-form-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-image: url(../../../img/login-car.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -15,7 +18,11 @@
   top: 0;
   left: 0;
   form {
-    background: rgb(156, 192, 228);
+    border: 1px solid gray;
+    padding: 20px;
+    border-radius: 10px;
+    width: 500px;
+    background-color: rgb(156, 192, 228);
     border-color: black;
   }
 }
