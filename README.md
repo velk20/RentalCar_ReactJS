@@ -13,6 +13,20 @@ This is my first SPA Serveless Web App with ReactJS. It is a ready-to-use web ap
 -	Admins can configur order details like: "On Delivery", "Cancled" ...
 <br/><br/>
 
+## Getting Started <a name = "getting_started"></a>
+
+### Run the project
+
+```
+npm install
+```
+```
+npm start
+```
+```
+npm run start-json:server
+```
+
 ## 🧪 Test Accounts
 #For Admin Permissions
 &nbsp;&nbsp;&nbsp;&nbsp;Username: **admin@admin**  
