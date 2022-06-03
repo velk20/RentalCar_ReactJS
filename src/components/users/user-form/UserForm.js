@@ -55,8 +55,9 @@ export function UserForm() {
   };
 
   return (
-    <div className="user-form-wrapper">
+    <div className="userForm-wrapper">
       <Form onSubmit={onFormSubmit}>
+        <h2>{user.id ? 'Edit User' : 'Create User'}</h2>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Full Name</Form.Label>
           <Form.Control

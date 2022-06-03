@@ -3,11 +3,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: url(../../../img/login-car.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
   form {
     border: 1px solid gray;
     padding: 20px;
     border-radius: 10px;
     width: 500px;
+    background-color: rgb(156, 192, 228);
   }
 }

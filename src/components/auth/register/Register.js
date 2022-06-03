@@ -4,6 +4,7 @@ import Button from 'react-bootstrap/Button';
 import { registerUser } from '../../../utils/http-utils/user-request';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import './Register.scss';
 
 export function Register() {
   const navigate = useNavigate();
@@ -43,6 +44,8 @@ export function Register() {
   return (
     <div className="user-form-wrapper">
       <Form onSubmit={onFormSubmit}>
+        <h2>Register</h2>
+        <br />
         {error && <span className="text-danger">{error}</span>}
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Full Name</Form.Label>

@@ -72,6 +72,7 @@ export function VehicleForm() {
   return (
     <div className="vehicle-form-wrapper">
       <Form onSubmit={onFormSubmit}>
+        <h2> {vehicle.id ? 'Edit Vehicle' : 'Create Vehicle'}</h2>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Brand Name</Form.Label>
           <Form.Control
