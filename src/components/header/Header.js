@@ -15,6 +15,10 @@ export function Header() {
     });
   };
 
+  const redirectToEditUser = () => {
+    navigate(`/user/editUser/${loggedUser.id}`);
+  };
+
   return (
     <div className="header">
       <Navbar bg="light" expand="lg">
@@ -33,6 +37,7 @@ export function Header() {
               <Link className="nav-link" to="/vehicles-list">
                 Vehicles
               </Link>
+
               {loggedUser.isAdmin && (
                 <Link className="nav-link" to="/users-list">
                   Users
@@ -42,6 +47,15 @@ export function Header() {
               <Link className="nav-link" to="/rents-list">
                 {loggedUser.isAdmin ? 'All Rents' : 'Your Rents'}
               </Link>
+
+              {!loggedUser.isAdmin && (
+                <Link
+                  className="nav-link"
+                  to={'/user/editUser/' + loggedUser.id}
+                >
+                  Edit Your User
+                </Link>
+              )}
 
               {loggedUser.isAdmin && (
                 <Link className="nav-link" to="/vehicle/create">

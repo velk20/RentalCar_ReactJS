@@ -27,7 +27,7 @@ export function UserCard({ user, deleteUser }) {
   };
 
   if (!user) {
-    return <p>No User!</p>;
+    return <h1 style={{ margin: '20px' }}>No Users!</h1>;
   }
 
   return (
@@ -50,13 +50,7 @@ export function UserCard({ user, deleteUser }) {
 
         <Card.Text>
           <span className="key">Cars Rented: </span>
-          <span className="value">
-            {
-              (user.totalRentedCars = rents.filter(
-                (e) => e.userId === user.id
-              ).length)
-            }
-          </span>
+          <span className="value">{user.totalRentedCars}</span>
         </Card.Text>
 
         {loggedUser.isAdmin && (
@@ -76,7 +70,7 @@ export function UserCard({ user, deleteUser }) {
           <Card.Text>
             <span className="key">isVIP: </span>
             <span className="value">
-              {rents.filter((e) => e.userId === user.id).length > 3 ? (
+              {user.isVIP ? (
                 <span style={{ color: 'green', fontWeight: 'bold' }}>Yes</span>
               ) : (
                 <span style={{ color: 'red', fontWeight: 'bold' }}>No</span>

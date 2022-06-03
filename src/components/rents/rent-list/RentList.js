@@ -6,9 +6,12 @@ import { useEffect, useState } from 'react';
 import { RentCard } from '../rent-card/RentCard';
 import './RentList.scss';
 import { getLoggedUser } from '../../../utils/http-utils/user-request';
+import { Button } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 
 export function RentList() {
   const [rents, setRents] = useState([]);
+  const navigate = useNavigate();
   const loggedUser = getLoggedUser();
 
   useEffect(() => {
@@ -16,6 +19,10 @@ export function RentList() {
       setRents(response.data);
     });
   }, []);
+
+  const toAllVehicles = () => {
+    navigate('/vehicles-list');
+  };
 
   const deleteRentHandler = async (id) => {
     await deleteRentById(id);
@@ -25,7 +32,14 @@ export function RentList() {
   };
 
   if (rents.length === 0) {
-    return <div>No Rents!</div>;
+    return (
+      <div style={{ margin: '20px' }}>
+        <h1>No Rents!</h1>
+        <Button variant="primary" onClick={toAllVehicles}>
+          Explore Our Cars
+        </Button>
+      </div>
+    );
   }
   return (
     <div className="rents-list-wrapper">

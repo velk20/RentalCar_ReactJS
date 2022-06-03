@@ -110,6 +110,15 @@ function App() {
               </AdminRoute>
             }
           />
+
+          <Route
+            path="/user/editUser/:id"
+            element={
+              <AdminRoute>
+                <UserForm />
+              </AdminRoute>
+            }
+          />
         </Route>
       </Routes>
     </div>

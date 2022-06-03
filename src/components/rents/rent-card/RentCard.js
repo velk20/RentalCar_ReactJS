@@ -28,6 +28,8 @@ export function RentCard({ rent, deleteRent }) {
     password: '',
     phone: '',
     address: '',
+    isVIP: false,
+    totalRentedCars: 0,
   });
 
   useEffect(() => {
@@ -131,7 +133,7 @@ export function RentCard({ rent, deleteRent }) {
               onClick={() => {
                 deleteRent(rent.id);
                 vehicle.carCount += 1;
-                saveVehicle(vehicle).then(navigate('/vehicles-list'));
+                saveVehicle(vehicle).then(navigate('/rents-list'));
               }}
             >
               Delete

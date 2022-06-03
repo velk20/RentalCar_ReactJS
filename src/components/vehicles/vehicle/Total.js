@@ -25,9 +25,7 @@ export function Total({ days, passData }) {
 
     const total = (totalWithoutDiscount - withDiscount).toFixed(2);
 
-    //!Here i want to pass the value of total to the parent Component ('Vehicle')
     passData(total);
-    //!Here i want to pass the value of total to the parent Component ('Vehicle')
 
     return (
       <h4>

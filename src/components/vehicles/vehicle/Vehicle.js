@@ -15,6 +15,7 @@ import { Button } from 'react-bootstrap';
 import { saveRent } from '../../../utils/http-utils/rent-requests';
 import { orderStatus } from '../../../utils/http-utils/rent-requests';
 import { Total } from './Total';
+import { getUserById } from '../../../utils/http-utils/user-request';
 
 export function Vehicle(props) {
   const params = useParams();
@@ -22,6 +23,25 @@ export function Vehicle(props) {
   const navigate = useNavigate();
   const [vehicle, setVehicle] = useState({ pricePerDay: '' });
   const [finalPrice, setFinalPrice] = useState('');
+
+  const [user, setUser] = useState({
+    isAdmin: false,
+    name: '',
+    picture: '',
+    email: '',
+    phone: '',
+    address: '',
+    isVIP: false,
+    totalRentedCars: 0,
+  });
+
+  useEffect(() => {
+    if (loggedUser.id) {
+      getUserById(loggedUser.id).then((user) => {
+        setUser(user.data);
+      });
+    }
+  }, [loggedUser.id]);
 
   const [rent, setRent] = useState({
     id: '',
@@ -52,9 +72,13 @@ export function Vehicle(props) {
     rent.vehicleId = vehicle.id;
     rent.status = orderStatus.WaitingConfirm;
     rent.totalPrice = finalPrice;
+    user.totalRentedCars += 1;
+    if (user.totalRentedCars >= 3) {
+      user.isVIP = true;
+    }
 
     saveVehicle(vehicle).then(
-      saveUser(loggedUser).then(
+      saveUser(user).then(
         saveRent(rent).then(() => {
           navigate('/rents-list');
         })

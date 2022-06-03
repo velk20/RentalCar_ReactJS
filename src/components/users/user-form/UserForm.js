@@ -2,12 +2,17 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import './UserForm.scss';
 import { useEffect, useState } from 'react';
-import { saveUser, getUserById } from '../../../utils/http-utils/user-request';
+import {
+  saveUser,
+  getUserById,
+  getLoggedUser,
+} from '../../../utils/http-utils/user-request';
 import { useNavigate, useParams } from 'react-router-dom';
 
 export function UserForm() {
   const params = useParams();
   const navigate = useNavigate();
+  const loggedUser = getLoggedUser();
   const [user, setUser] = useState({
     isAdmin: false,
     name: '',
@@ -15,6 +20,8 @@ export function UserForm() {
     email: '',
     phone: '',
     address: '',
+    isVIP: false,
+    totalRentedCars: 0,
   });
 
   useEffect(() => {
@@ -105,15 +112,18 @@ export function UserForm() {
           />
         </Form.Group>
 
-        <Form.Group className="mb-3" controlId="formBasicCheckbox">
-          <Form.Check
-            type="checkbox"
-            label="Admin"
-            name="isAdmin"
-            checked={user.isAdmin}
-            onChange={onInputChange}
-          />
-        </Form.Group>
+        {loggedUser.isAdmin && (
+          <Form.Group className="mb-3" controlId="formBasicCheckbox">
+            <Form.Check
+              type="checkbox"
+              label="Admin"
+              name="isAdmin"
+              checked={user.isAdmin}
+              onChange={onInputChange}
+            />
+          </Form.Group>
+        )}
+
         <Button variant="primary" type="submit">
           {user.id ? 'Edit User' : 'Create User'}
         </Button>

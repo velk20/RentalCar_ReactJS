@@ -18,7 +18,7 @@ export function VehicleCard({ vehicle, deleteVehicle }) {
   };
 
   if (!vehicle) {
-    return <p>No Vehicle!</p>;
+    return <h1 style={{ margin: '20px' }}>No Vehicle!</h1>;
   }
 
   return (

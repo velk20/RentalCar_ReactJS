@@ -23,6 +23,7 @@ export function Main() {
         <Route path="/user/:id" element={<User />} />
         <Route path="/user/create" element={<UserForm />} />
         <Route path="/user/edit/:id" element={<UserForm />} />
+        <Route path="/user/editUser/:id" element={<UserForm />} />
 
         <Route exact path="/rents-list" element={<RentList />} />
         <Route path="/rent/edit/:id" element={<Rent />} />
