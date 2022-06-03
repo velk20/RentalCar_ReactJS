@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+# Rent a Car Serverless Single Page Application with ReactJS
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## :eyeglasses: Project Introduction
+This is my first SPA Serveless Web App with ReactJS. It is a ready-to-use web application for renting cars.
+<br/><br/>
 
-## Available Scripts
+## 📝 Project Overview
+-	**RentalCarReactJS** is a ready to use application for rent and manage cars and users, which is easy to use and has a simple user-friendly interface. The backend is developed with NodeJS and ReactJS, and the frontend is built with ReactJS Bootstrap.
+-	The application requires a simple registration process.
+-	Users can rent cars, cancel their requests, also edit their accounts.
+-	Only the administrator can delete, add or edit cars and users, to accept or deny rent requests.
+-	Also admins can add other accounts and make them administrators
+-	Admins can configur order details like: "On Delivery", "Cancled" ...
+<br/><br/>
 
-In the project directory, you can run:
+## Getting Started <a name = "getting_started"></a>
 
-### `npm start`
+### Run the project
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```
+npm install
+```
+```
+npm start
+```
+```
+npm run start-json:server
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🧪 Test Accounts
+##For Admin Permissions
 
-### `npm test`
+&nbsp;&nbsp;&nbsp;&nbsp;Username: **admin@admin**  
+&nbsp;&nbsp;&nbsp;&nbsp;Password: **admin**  
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+##For Normal User Permissions
 
-### `npm run build`
+&nbsp;&nbsp;&nbsp;&nbsp;Username: **vyzuz@mailinator.comm**  
+&nbsp;&nbsp;&nbsp;&nbsp;Password: **Pa$$w0rd!**  
+<br/><br/>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## :hammer: Built with:
+* [Node.js v16.13.2](https://nodejs.org/en/)
+* [ReactJS 18.1.0](https://reactjs.org/)
+* [Json-server 0.17.0](https://www.npmjs.com/package/json-server)
+* [React-Bootstrap 2.4.0](https://react-bootstrap.github.io/)
+* [Axios 0.27.0](https://www.npmjs.com/package/axios)
+* [SCSS 1.15.0](https://www.npmjs.com/package/scss)
+<br/><br/>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 📸 Application screenshots
+<kbd><img src="https://user-images.githubusercontent.com/48069264/171827577-17cece80-1cfb-4b89-a692-36c3b81cd500.png"/></kbd>
+<br/><br/>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## :v: Leave a feedback
+Give a :star: if you like it.
+Thank you ❤️
+<br/><br/>
