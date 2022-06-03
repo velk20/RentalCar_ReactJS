@@ -49,8 +49,9 @@ npm run start-json:server
 <br/><br/>
 
 ## 📸 Application screenshots
-<kbd><img src="https://github.com/velk20/food-order/blob/main/images/appScreenshots/InitialPage.jpg" /></kbd>
+<kbd><img src=![screencapture-localhost-3000-login-2022-06-03-12_23_11](https://user-images.githubusercontent.com/48069264/171827577-17cece80-1cfb-4b89-a692-36c3b81cd500.png) /></kbd>
 <br/><br/>
+
 
 ## :v: Leave a feedback
 Give a :star: if you like it.
