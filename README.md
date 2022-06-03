@@ -28,12 +28,12 @@ npm run start-json:server
 ```
 
 ## 🧪 Test Accounts
-#For Admin Permissions
+##For Admin Permissions
 
 &nbsp;&nbsp;&nbsp;&nbsp;Username: **admin@admin**  
 &nbsp;&nbsp;&nbsp;&nbsp;Password: **admin**  
 
-#For Normal User Permissions
+##For Normal User Permissions
 
 &nbsp;&nbsp;&nbsp;&nbsp;Username: **vyzuz@mailinator.comm**  
 &nbsp;&nbsp;&nbsp;&nbsp;Password: **Pa$$w0rd!**  
