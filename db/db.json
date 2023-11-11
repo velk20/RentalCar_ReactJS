@@ -146,7 +146,7 @@
     },
     {
       "id": "c3cd55ff-03e8-4e06-b4ee-fab89847958c",
-      "isAdmin": false,
+      "isAdmin": true,
       "isVIP": false,
       "totalRentedCars": 0,
       "picture": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
@@ -249,6 +249,18 @@
       "address": "str. Botev Hrisov 123",
       "password": "Pa$$w0rd!",
       "id": "WCP8t9m"
+    },
+    {
+      "isAdmin": true,
+      "name": "puwafohudy@mailinator.com",
+      "picture": "xylomesyx@mailinator.com",
+      "email": "admin@admin.com",
+      "phone": "+1 (664) 278-4199",
+      "address": "totupyp@mailinator.com",
+      "password": "admin",
+      "isVIP": false,
+      "totalRentedCars": 0,
+      "id": "TPO0oVJ"
     }
   ],
   "rents": [

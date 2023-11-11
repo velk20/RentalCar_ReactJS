@@ -16,113 +16,117 @@ import { RentList } from './components/rents/rent-list/RentList';
 import { Rent } from './components/rents/rent/Rent';
 
 function App() {
-  return (
-    <div className="App">
-      <Routes>
-        <Route
-          exact
-          path="/register"
-          element={
-            <NonAuthenticatedRoute>
-              <Register />
-            </NonAuthenticatedRoute>
-          }
-        />
+    return (
+        <div className="App">
+            <Routes>
+                <Route
+                    exact
+                    path="/register"
+                    element={
+                        <NonAuthenticatedRoute>
+                            <Register />
+                        </NonAuthenticatedRoute>
+                    }
+                />
 
-        <Route
-          exact
-          path="/login"
-          element={
-            <NonAuthenticatedRoute>
-              <Login />
-            </NonAuthenticatedRoute>
-          }
-        />
+                <Route
+                    exact
+                    path="/login"
+                    element={
+                        <NonAuthenticatedRoute>
+                            <Login />
+                        </NonAuthenticatedRoute>
+                    }
+                />
 
-        <Route
-          exact
-          path="/"
-          element={
-            <AuthenticatedRoute>
-              <Layout />
-            </AuthenticatedRoute>
-          }
-        >
-          <Route exact path="/vehicles-list" element={<VehiclesList />} />
-          <Route exact path="/rents-list" element={<RentList />} />
-          <Route
-            path="/rent/edit/:id"
-            element={
-              <AdminRoute>
-                <Rent />
-              </AdminRoute>
-            }
-          />
+                <Route
+                    exact
+                    path="/"
+                    element={
+                        <AuthenticatedRoute>
+                            <Layout />
+                        </AuthenticatedRoute>
+                    }
+                >
+                    <Route
+                        exact
+                        path="/vehicles-list"
+                        element={<VehiclesList />}
+                    />
+                    <Route exact path="/rents-list" element={<RentList />} />
+                    <Route
+                        path="/rent/edit/:id"
+                        element={
+                            <AdminRoute>
+                                <Rent />
+                            </AdminRoute>
+                        }
+                    />
 
-          <Route path="/vehicle/:id" element={<Vehicle />} />
+                    <Route path="/vehicle/:id" element={<Vehicle />} />
 
-          <Route
-            exact
-            path="/vehicle/create"
-            element={
-              <AdminRoute>
-                <VehicleForm />
-              </AdminRoute>
-            }
-          />
+                    <Route
+                        exact
+                        path="/vehicle/create"
+                        element={
+                            <AdminRoute>
+                                <VehicleForm />
+                            </AdminRoute>
+                        }
+                    />
 
-          <Route
-            path="/vehicle/edit/:id"
-            element={
-              <AdminRoute>
-                <VehicleForm />
-              </AdminRoute>
-            }
-          />
+                    <Route
+                        path="/vehicle/edit/:id"
+                        element={
+                            <AdminRoute>
+                                <VehicleForm />
+                            </AdminRoute>
+                        }
+                    />
 
-          <Route
-            exact
-            path="users-list"
-            element={
-              <AdminRoute>
-                <UsersList />
-              </AdminRoute>
-            }
-          />
+                    <Route
+                        exact
+                        path="users-list"
+                        element={
+                            <AdminRoute>
+                                <UsersList />
+                            </AdminRoute>
+                        }
+                    />
 
-          <Route path="/user/:id" element={<User />} />
+                    <Route path="/user/:id" element={<User />} />
 
-          <Route
-            exact
-            path="/user/create"
-            element={
-              <AdminRoute>
-                <UserForm />
-              </AdminRoute>
-            }
-          />
+                    <Route
+                        exact
+                        path="/user/create"
+                        element={
+                            <AdminRoute>
+                                <UserForm />
+                            </AdminRoute>
+                        }
+                    />
 
-          <Route
-            path="/user/edit/:id"
-            element={
-              <AdminRoute>
-                <UserForm />
-              </AdminRoute>
-            }
-          />
+                    <Route
+                        path="/user/edit/:id"
+                        element={
+                            <AdminRoute>
+                                <UserForm />
+                            </AdminRoute>
+                        }
+                    />
 
-          <Route
-            path="/user/editUser/:id"
-            element={
-              <AdminRoute>
-                <UserForm />
-              </AdminRoute>
-            }
-          />
-        </Route>
-      </Routes>
-    </div>
-  );
+                    <Route
+                        path="/user/editUser/:id"
+                        element={
+                            <AdminRoute>
+                                <UserForm />
+                            </AdminRoute>
+                        }
+                    />
+                </Route>
+            </Routes>
+        </div>
+    );
 }
 
 export default App;
