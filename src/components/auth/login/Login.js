@@ -35,8 +35,8 @@ export function Login() {
   return (
     <div className="user-form-wrapper">
       <Form onSubmit={onFormSubmit}>
-        {error && <span className="text-danger">{error}</span>}
         <h2>Login</h2>
+        {error && <p className="bg-danger">{error}</p>}
         <br />
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>

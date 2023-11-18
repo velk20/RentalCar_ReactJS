@@ -54,10 +54,12 @@ export function Total({ days, passData }) {
 
   return (
     <div>
-      <h4>{`Price for ${days.dayCount ? days.dayCount : '0'} days`}</h4>
-
-      {checkForDiscount(days.dayCount)}
-      {calculateTotalPrice({ days }, discount)}
+      {days.dayCount <= 0 && (
+          <h5 className={'text-danger'}>Please choose End Date to be at least 1 day in the future of Start Date</h5>
+      )}
+      {days.dayCount > 0 && <h4>{`Price for ${days.dayCount ? days.dayCount : '0'} days`}</h4>}
+      {days.dayCount > 0 && checkForDiscount(days.dayCount)}
+      {days.dayCount > 0 && calculateTotalPrice({ days }, discount)}
     </div>
   );
 }

@@ -24,7 +24,7 @@
       "fuel": "Petrol",
       "numberOfSeats": 4,
       "pricePerDay": 80.13,
-      "carCount": 4
+      "carCount": 3
     },
     {
       "id": "7b5edfcf-18b2-481f-85e9-d1eea878d488",
@@ -231,13 +231,13 @@
     {
       "isAdmin": false,
       "isVIP": false,
-      "totalRentedCars": 0,
+      "totalRentedCars": 1,
       "name": "Ganka Petrova",
       "picture": "https://images.pexels.com/photos/3746210/pexels-photo-3746210.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "email": "ad@ad",
       "phone": "+1 256 897 152",
       "address": "stree. Petrovi, bl.2, 32",
-      "password": "ganka",
+      "password": "admin",
       "id": "_71frDv"
     },
     {
@@ -281,6 +281,15 @@
       "startDate": "2022-06-04",
       "endDate": "2022-06-25",
       "totalPrice": "2041.01"
+    },
+    {
+      "id": 10,
+      "userId": "_71frDv",
+      "vehicleId": "d2df73cc-5197-4e40-8a72-ee573969a305",
+      "status": "In Progress",
+      "startDate": "2023-11-19",
+      "endDate": "2023-12-08",
+      "totalPrice": "1370.22"
     }
   ]
 }

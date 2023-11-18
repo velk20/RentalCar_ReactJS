@@ -2,7 +2,12 @@
   "name": "rental-car",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://velk20.github.io/",
+  "author": {
+    "email": "angelmladenov3@gmail.com",
+    "name": "Angel Mladenov",
+    "url": "https://github.com/velk20"
+  },
+  "homepage": "https://github.com/velk20/RentalCar_ReactJS",
   "dependencies": {
     "@mui/material": "^5.8.1",
     "@testing-library/jest-dom": "^5.16.4",

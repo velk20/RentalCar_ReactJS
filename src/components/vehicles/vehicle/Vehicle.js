@@ -16,6 +16,7 @@ import { saveRent } from '../../../utils/http-utils/rent-requests';
 import { orderStatus } from '../../../utils/http-utils/rent-requests';
 import { Total } from './Total';
 import { getUserById } from '../../../utils/http-utils/user-request';
+import {idID} from '@mui/material/locale';
 
 export function Vehicle(props) {
   const params = useParams();
@@ -35,14 +36,6 @@ export function Vehicle(props) {
     totalRentedCars: 0,
   });
 
-  useEffect(() => {
-    if (loggedUser.id) {
-      getUserById(loggedUser.id).then((user) => {
-        setUser(user.data);
-      });
-    }
-  }, [loggedUser.id]);
-
   const [rent, setRent] = useState({
     id: '',
     userId: '',
@@ -53,11 +46,24 @@ export function Vehicle(props) {
     totalPrice: '',
   });
 
+  const [error, setError] = useState('');
+
+  useEffect(() => {
+    if (loggedUser.id) {
+      getUserById(loggedUser.id).then((user) => {
+        setUser(user.data);
+      });
+    }
+  }, [loggedUser.id]);
+
   useEffect(() => {
     getVehicleById(params.id).then((res) => setVehicle(res.data));
   }, [params.id]);
 
   function getDifferenceInDays(date1, date2) {
+    if (date1 >  date2){
+      return 0;
+    }
     const diffInMs = Math.abs(date2 - date1);
     return diffInMs / (1000 * 60 * 60 * 24);
   }
@@ -100,6 +106,7 @@ export function Vehicle(props) {
           <VehicleCard vehicle={vehicle} />
         </div>
         <Form onSubmit={onFormSubmit}>
+          {error && <p className="bg-danger">{error}</p>}
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Start Date</Form.Label>
             <Form.Control
