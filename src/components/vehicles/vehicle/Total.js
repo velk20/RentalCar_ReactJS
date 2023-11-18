@@ -54,7 +54,12 @@ export function Total({ days, passData }) {
 
   return (
     <div>
-      {days.dayCount <= 0 && (
+      {
+        days.dayCount === -1 && (
+              <h5 className={'text-danger'}>Please choose Start Date that is not in the past</h5>
+          )
+      }
+      {days.dayCount === 0 && (
           <h5 className={'text-danger'}>Please choose End Date to be at least 1 day in the future of Start Date</h5>
       )}
       {days.dayCount > 0 && <h4>{`Price for ${days.dayCount ? days.dayCount : '0'} days`}</h4>}

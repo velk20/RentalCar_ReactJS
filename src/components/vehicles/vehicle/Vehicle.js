@@ -61,6 +61,10 @@ export function Vehicle(props) {
   }, [params.id]);
 
   function getDifferenceInDays(date1, date2) {
+    let currentDate = new Date();
+    if (date1 < currentDate.setDate(currentDate.getDate() - 1)) {
+      return -1;
+    }
     if (date1 >  date2){
       return 0;
     }
