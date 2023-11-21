@@ -8,6 +8,7 @@ import { VehicleForm } from '../vehicles/vehicle-form/VehicleForm';
 import { Home } from '../home/Home';
 import { RentList } from '../rents/rent-list/RentList';
 import { Rent } from '../rents/rent/Rent';
+import {AdminRoute} from "../../utils/guards/AdminRoute";
 
 export function Main() {
   return (
@@ -16,17 +17,17 @@ export function Main() {
         <Route exact path="/" element={<Home />} />
         <Route exact path="/vehicles-list" element={<VehiclesList />} />
         <Route path="/vehicle/:id" element={<Vehicle />} />
-        <Route path="/vehicle/create" element={<VehicleForm />} />
-        <Route path="/vehicle/edit/:id" element={<VehicleForm />} />
+        <Route path="/vehicle/create" element={<AdminRoute> <VehicleForm /> </AdminRoute>} />
+        <Route path="/vehicle/edit/:id" element={<AdminRoute> <VehicleForm /> </AdminRoute>} />
 
-        <Route exact path="/users-list" element={<UsersList />} />
-        <Route path="/user/:id" element={<User />} />
-        <Route path="/user/create" element={<UserForm />} />
-        <Route path="/user/edit/:id" element={<UserForm />} />
+        <Route exact path="/users-list" element={<AdminRoute> <UsersList/> </AdminRoute>} />
+        <Route path="/user/:id" element={<AdminRoute> <User/> </AdminRoute>} />
+        <Route path="/user/create" element={<AdminRoute> <UserForm /> </AdminRoute>} />
+        <Route path="/user/edit/:id" element={<AdminRoute> <UserForm /> </AdminRoute>} />
         <Route path="/user/editUser/:id" element={<UserForm />} />
 
         <Route exact path="/rents-list" element={<RentList />} />
-        <Route path="/rent/edit/:id" element={<Rent />} />
+        <Route path="/rent/edit/:id" element={<AdminRoute><Rent /></AdminRoute>} />
       </Routes>
     </div>
   );

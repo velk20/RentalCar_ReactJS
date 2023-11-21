@@ -56,7 +56,7 @@ export function VehicleCard({ vehicle, deleteVehicle }) {
           <span className="key">Price per day: </span>
           <span className="value">${vehicle.pricePerDay}</span>
         </Card.Text>
-        {loggedUser.isAdmin && (
+        {loggedUser && loggedUser.isAdmin && (
           <Card.Text>
             <span className="key">isActive: </span>
             <span className="value">
@@ -71,7 +71,8 @@ export function VehicleCard({ vehicle, deleteVehicle }) {
         <div className="btn-holder">
           {currentVehicleId !== vehicle.id &&
             currentVehicleId !== 'rents-list' &&
-            loggedUser.isAdmin && (
+              loggedUser &&
+              loggedUser.isAdmin && (
               <Button variant="primary" onClick={redirectToEdit}>
                 Edit
               </Button>
@@ -79,7 +80,8 @@ export function VehicleCard({ vehicle, deleteVehicle }) {
 
           {currentVehicleId !== vehicle.id &&
             currentVehicleId !== 'rents-list' &&
-            loggedUser.isAdmin && (
+              loggedUser &&
+              loggedUser.isAdmin && (
               <Button
                 variant="danger"
                 onClick={() => deleteVehicle(vehicle.id)}
@@ -89,7 +91,8 @@ export function VehicleCard({ vehicle, deleteVehicle }) {
             )}
 
           {currentVehicleId !== vehicle.id &&
-            currentVehicleId !== 'rents-list' && (
+            currentVehicleId !== 'rents-list' &&
+              loggedUser && (
               <div>
                 <Button variant="warning" onClick={redirectToDetails}>
                   Rent

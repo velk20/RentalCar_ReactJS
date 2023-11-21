@@ -30,82 +30,81 @@ function App() {
               <Route
                 exact
                 path="/login"
-                element={<NonAuthenticatedRoute>
+                element={
+                  <NonAuthenticatedRoute>
                     <Login/>
                 </NonAuthenticatedRoute>}
               />
 
               <Route
-                exact
-                path="/"
+                path="/*"
                 element={
-                  <AuthenticatedRoute>
-                    <Layout/>
-                </AuthenticatedRoute>}
+                    <Layout/>}
               >
-                  <Route
-                    exact
-                    path="/vehicles-list"
-                    element={<VehiclesList/>}
-                  />
-                  <Route exact path="/rents-list" element={<RentList/>}/>
-                  <Route
-                    path="/rent/edit/:id"
-                    element={
-                      <AdminRoute>
-                        <Rent/>
-                    </AdminRoute>}
-                  />
+                  {/*<Route*/}
+                  {/*  exact*/}
+                  {/*  path="/vehicles-list"*/}
+                  {/*  element={<VehiclesList/>}*/}
+                  {/*/>*/}
+                  {/*<Route exact path="/rents-list" element={<RentList/>}/>*/}
+                  {/*<Route*/}
+                  {/*  path="/rent/edit/:id"*/}
+                  {/*  element={*/}
+                  {/*    <AdminRoute>*/}
+                  {/*      <Rent/>*/}
+                  {/*  </AdminRoute>}*/}
+                  {/*/>*/}
 
-                  <Route path="/vehicle/:id" element={<Vehicle/>}/>
+                  {/*<Route path="/vehicle/:id" element={<Vehicle/>}/>*/}
 
-                  <Route
-                    exact
-                    path="/vehicle/create"
-                    element={<AdminRoute>
-                        <VehicleForm/>
-                    </AdminRoute>}
-                  />
+                  {/*<Route*/}
+                  {/*  exact*/}
+                  {/*  path="/vehicle/create"*/}
+                  {/*  element={*/}
+                  {/*    <AdminRoute>*/}
+                  {/*      <VehicleForm/>*/}
+                  {/*  </AdminRoute>}*/}
+                  {/*/>*/}
 
-                  <Route
-                    path="/vehicle/edit/:id"
-                    element={<AdminRoute>
-                        <VehicleForm/>
-                    </AdminRoute>}
-                  />
+                  {/*<Route*/}
+                  {/*  path="/vehicle/edit/:id"*/}
+                  {/*  element={<AdminRoute>*/}
+                  {/*      <VehicleForm/>*/}
+                  {/*  </AdminRoute>}*/}
+                  {/*/>*/}
 
-                  <Route
-                    exact
-                    path="users-list"
-                    element={<AdminRoute>
-                        <UsersList/>
-                    </AdminRoute>}
-                  />
+                  {/*<Route*/}
+                  {/*  exact*/}
+                  {/*  path="users-list"*/}
+                  {/*  element={<AdminRoute>*/}
+                  {/*      <UsersList/>*/}
+                  {/*  </AdminRoute>}*/}
+                  {/*/>*/}
 
-                  <Route path="/user/:id" element={<User/>}/>
+                  {/*<Route path="/user/:id" element={<User/>}/>*/}
 
-                  <Route
-                    exact
-                    path="/user/create"
-                    element={<AdminRoute>
-                        <UserForm/>
-                    </AdminRoute>}
-                  />
+                  {/*<Route*/}
+                  {/*  exact*/}
+                  {/*  path="/user/create"*/}
+                  {/*  element={<AdminRoute>*/}
+                  {/*      <UserForm/>*/}
+                  {/*  </AdminRoute>}*/}
+                  {/*/>*/}
 
-                  <Route
-                    path="/user/edit/:id"
-                    element={<AdminRoute>
-                        <UserForm/>
-                    </AdminRoute>}
-                  />
+                  {/*<Route*/}
+                  {/*  path="/user/edit/:id"*/}
+                  {/*  element={<AdminRoute>*/}
+                  {/*      <UserForm/>*/}
+                  {/*  </AdminRoute>}*/}
+                  {/*/>*/}
 
-                  <Route
-                    path="/user/editUser/:id"
-                    element={
-                      <AdminRoute>
-                        <UserForm/>
-                    </AdminRoute>}
-                  />
+                  {/*<Route*/}
+                  {/*  path="/user/editUser/:id"*/}
+                  {/*  element={*/}
+                  {/*    <AdminRoute>*/}
+                  {/*      <UserForm/>*/}
+                  {/*  </AdminRoute>}*/}
+                  {/*/>*/}
               </Route>
           </Routes>
       </div>);

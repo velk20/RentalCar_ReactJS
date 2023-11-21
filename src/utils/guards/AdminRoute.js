@@ -4,7 +4,7 @@ import { getLoggedUser } from '../http-utils/user-request';
 export function AdminRoute({ children }) {
   const user = getLoggedUser();
 
-  if (!user.isAdmin) {
+  if (!user || !user.isAdmin) {
     return <Navigate to="/" />;
   }
 

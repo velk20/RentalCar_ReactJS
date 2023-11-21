@@ -19,12 +19,12 @@
       "picture": "https://cars.usnews.com/pics/size/776x517/images/Auto/izmo/i5451/2016_audi_a4_angularfront.jpg",
       "brand": "Audi",
       "model": "A4",
-      "year": "2016",
+      "year": "2017",
       "type": "Estate",
       "fuel": "Petrol",
       "numberOfSeats": 4,
       "pricePerDay": 80.13,
-      "carCount": 3
+      "carCount": 5
     },
     {
       "id": "7b5edfcf-18b2-481f-85e9-d1eea878d488",
@@ -102,7 +102,7 @@
       "numberOfSeats": "5",
       "pricePerDay": "123",
       "id": "BapmaVZ",
-      "carCount": "1"
+      "carCount": "11"
     },
     {
       "isActive": true,
@@ -252,15 +252,15 @@
     },
     {
       "isAdmin": true,
-      "name": "puwafohudy@mailinator.com",
-      "picture": "xylomesyx@mailinator.com",
-      "email": "admin@admin.com",
-      "phone": "+1 (664) 278-4199",
-      "address": "totupyp@mailinator.com",
-      "password": "admin",
+      "name": "User User",
+      "picture": "https://images.pexels.com/photos/354951/pexels-photo-354951.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "email": "user@user",
+      "phone": "0878285388",
+      "address": "СПИДИ Пловдив - Тракия (жк), бл. 45",
+      "password": "user",
       "isVIP": false,
-      "totalRentedCars": 0,
-      "id": "TPO0oVJ"
+      "totalRentedCars": 2,
+      "id": "WiOLSRC"
     }
   ],
   "rents": [
@@ -290,6 +290,15 @@
       "startDate": "2023-11-19",
       "endDate": "2023-12-08",
       "totalPrice": "1370.22"
+    },
+    {
+      "id": 11,
+      "userId": "WiOLSRC",
+      "vehicleId": "d2df73cc-5197-4e40-8a72-ee573969a305",
+      "status": "Finished",
+      "startDate": "2023-11-30",
+      "endDate": "2023-12-08",
+      "totalPrice": "596.17"
     }
   ]
 }

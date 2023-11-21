@@ -28,7 +28,7 @@ export function VehiclesList() {
     <div className="vehicles-list-wrapper">
       {
         //getting all data for ADMINS only
-        loggedUser.isAdmin &&
+          loggedUser && loggedUser.isAdmin &&
           vehicles.map((vehicle) => (
             <VehicleCard
               key={vehicle.id}
@@ -39,9 +39,8 @@ export function VehiclesList() {
       }
 
       {
-        //getting all data for users
-
-        !loggedUser.isAdmin &&
+        //getting all data for normal users
+          loggedUser && !loggedUser.isAdmin &&
           vehicles
             .filter((vehicle) => vehicle.isActive)
             .map((vehicle) => (
@@ -52,6 +51,16 @@ export function VehiclesList() {
               />
             ))
       }
+
+      {!loggedUser &&
+      vehicles
+          .filter((vehicle)=>vehicle.isActive)
+          .map((vehicle) => (
+              <VehicleCard
+              key={vehicle.id}
+              vehicle={vehicle}
+          />
+          ))}
     </div>
   );
 }
