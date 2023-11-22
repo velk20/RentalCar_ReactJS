@@ -9,6 +9,7 @@ import { Home } from '../home/Home';
 import { RentList } from '../rents/rent-list/RentList';
 import { Rent } from '../rents/rent/Rent';
 import {AdminRoute} from "../../utils/guards/AdminRoute";
+import {PageNotFound} from "../404/PageNotFound";
 
 export function Main() {
   return (
@@ -28,6 +29,9 @@ export function Main() {
 
         <Route exact path="/rents-list" element={<RentList />} />
         <Route path="/rent/edit/:id" element={<AdminRoute><Rent /></AdminRoute>} />
+
+        <Route exact path="/404" element={<PageNotFound/>} />
+        <Route path="*" element={<PageNotFound/>} />
       </Routes>
     </div>
   );

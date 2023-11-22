@@ -36,7 +36,7 @@ export function Login() {
     <div className="user-form-wrapper">
       <Form onSubmit={onFormSubmit}>
         <h2>Login</h2>
-        {error && <p className="bg-danger">{error}</p>}
+        {error.message && <p className="bg-danger fw-semibold">{error.message}</p>}
         <br />
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>

@@ -7,12 +7,14 @@ import {
   getUserById,
   getLoggedUser,
 } from '../../../utils/http-utils/user-request';
+import  * as validatorService from '../../../utils/validators/validator';
 import { useNavigate, useParams } from 'react-router-dom';
 
 export function UserForm() {
   const params = useParams();
   const navigate = useNavigate();
   const loggedUser = getLoggedUser();
+  const [errors, setErrors] = useState({});
   const [user, setUser] = useState({
     isAdmin: false,
     name: '',
@@ -26,18 +28,22 @@ export function UserForm() {
 
   useEffect(() => {
     if (params.id) {
-      getUserById(params.id).then((user) => {
+      getUserById(params.id)
+          .then((user) => {
         setUser(user.data);
-      });
+      })
+          .catch((err)=> navigate('/404'));
     }
   }, [params.id]);
 
   const onFormSubmit = (event) => {
     event.preventDefault();
 
-    saveUser(user).then(() => {
-      navigate('/');
-    });
+    saveUser(user)
+        .then(() => {
+              navigate('/');
+        })
+        .catch((error)=>setErrors({message: error.message}));
   };
 
   const onInputChange = (event) => {
@@ -52,12 +58,16 @@ export function UserForm() {
         [event.target.name]: value,
       };
     });
+
+    delete errors.message
   };
 
   return (
     <div className="userForm-wrapper">
       <Form onSubmit={onFormSubmit}>
         <h2>{user.id ? 'Edit User' : 'Create User'}</h2>
+        <br/>
+        {errors.message && <p className="bg-danger fw-semibold">{errors.message}</p>}
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Full Name</Form.Label>
           <Form.Control
@@ -65,8 +75,15 @@ export function UserForm() {
             type="text"
             placeholder="Enter full name"
             onChange={onInputChange}
+            onBlur={(e)=>validatorService.minMaxLength(e,3,30, setErrors, user)}
             name="name"
+            required
           />
+          {errors.name && (
+              <span className="text-danger">
+                Full name must be between 3 and 30 characters.
+              </span>
+          )}
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -76,8 +93,15 @@ export function UserForm() {
             type="email"
             placeholder="Enter email"
             onChange={onInputChange}
+            onBlur={(e)=>validatorService.emailValidation(e, setErrors)}
             name="email"
+            required
           />
+          {errors.email && (
+              <span className="text-danger">
+                Email is not valid.
+              </span>
+          )}
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -86,9 +110,16 @@ export function UserForm() {
             value={user.picture}
             type="text"
             onChange={onInputChange}
+            onBlur={(e)=>validatorService.imageValidation(e, setErrors)}
             name="picture"
             placeholder="Enter link of picture"
+            required
           />
+          {errors.picture && (
+              <span className="text-danger">
+                Picture URL is not valid.
+              </span>
+          )}
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -96,10 +127,17 @@ export function UserForm() {
           <Form.Control
             value={user.phone}
             onChange={onInputChange}
+            onBlur={(e)=>validatorService.phoneValidation(e, setErrors)}
             name="phone"
             type="tel"
             placeholder="Enter phone"
+            required
           />
+          {errors.phone && (
+              <span className="text-danger">
+                Phone number not valid for Bulgarian standards.
+              </span>
+          )}
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -107,10 +145,17 @@ export function UserForm() {
           <Form.Control
             value={user.address}
             onChange={onInputChange}
+            onBlur={(e)=>validatorService.minMaxLength(e,10, 150, setErrors, user)}
             name="address"
             type="text"
             placeholder="Enter address"
+            required
           />
+          {errors.address && (
+              <span className="text-danger">
+                Address must be between 10 and 150 characters.
+              </span>
+          )}
         </Form.Group>
 
         {loggedUser.isAdmin && (
@@ -125,7 +170,7 @@ export function UserForm() {
           </Form.Group>
         )}
 
-        <Button variant="primary" type="submit">
+        <Button variant="primary" type="submit" disabled={!validatorService.isFormValid(errors)}>
           {user.id ? 'Edit User' : 'Create User'}
         </Button>
       </Form>

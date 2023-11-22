@@ -9,14 +9,13 @@ import './Vehicle.scss';
 import { Form } from 'react-bootstrap';
 import {
   getLoggedUser,
-  saveUser,
+  saveUser, updateUser,
 } from '../../../utils/http-utils/user-request';
 import { Button } from 'react-bootstrap';
 import { saveRent } from '../../../utils/http-utils/rent-requests';
 import { orderStatus } from '../../../utils/http-utils/rent-requests';
 import { Total } from './Total';
 import { getUserById } from '../../../utils/http-utils/user-request';
-import {idID} from '@mui/material/locale';
 
 export function Vehicle(props) {
   const params = useParams();
@@ -46,7 +45,6 @@ export function Vehicle(props) {
     totalPrice: '',
   });
 
-  const [error, setError] = useState('');
 
   useEffect(() => {
     if (loggedUser.id) {
@@ -82,13 +80,13 @@ export function Vehicle(props) {
     rent.vehicleId = vehicle.id;
     rent.status = orderStatus.WaitingConfirm;
     rent.totalPrice = finalPrice;
-    user.totalRentedCars += 1;
+    user.totalRentedCars = user.totalRentedCars + 1;
     if (user.totalRentedCars >= 3) {
       user.isVIP = true;
     }
 
     saveVehicle(vehicle).then(
-      saveUser(user).then(
+      updateUser(user).then(
         saveRent(rent).then(() => {
           navigate('/rents-list');
         })
@@ -110,7 +108,6 @@ export function Vehicle(props) {
           <VehicleCard vehicle={vehicle} />
         </div>
         <Form onSubmit={onFormSubmit}>
-          {error && <p className="bg-danger">{error}</p>}
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Start Date</Form.Label>
             <Form.Control
@@ -134,7 +131,9 @@ export function Vehicle(props) {
             />
           </Form.Group>
 
-          {rent.startDate && rent.endDate && (
+          {rent.startDate
+              && rent.endDate
+              && (
             <Total
               days={{
                 dayCount: getDifferenceInDays(
@@ -147,7 +146,14 @@ export function Vehicle(props) {
           )}
 
           <br></br>
-          <Button variant="warning" type="submit">
+          <Button variant="warning" type="submit"
+                  disabled={
+            !rent.startDate
+              || !rent.endDate
+              || getDifferenceInDays(
+                  new Date(rent.startDate),
+                  new Date(rent.endDate)
+              ) <=  0 }>
             Rent Car
           </Button>
         </Form>

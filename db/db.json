@@ -24,7 +24,7 @@
       "fuel": "Petrol",
       "numberOfSeats": 4,
       "pricePerDay": 80.13,
-      "carCount": 5
+      "carCount": 6
     },
     {
       "id": "7b5edfcf-18b2-481f-85e9-d1eea878d488",
@@ -261,6 +261,30 @@
       "isVIP": false,
       "totalRentedCars": 2,
       "id": "WiOLSRC"
+    },
+    {
+      "isAdmin": false,
+      "name": "213",
+      "picture": "https://images.pexels.com/photos/19154211/pexels-photo-19154211/free-photo-of-a-man-playing-a-bass-at-a-wedding.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "email": "vixo@gmail.com",
+      "phone": "0878285369",
+      "address": "Trakia 82F, Ploviv",
+      "password": "user",
+      "isVIP": false,
+      "totalRentedCars": 2,
+      "id": "XbyQ59U"
+    },
+    {
+      "isAdmin": false,
+      "name": "123123123",
+      "picture": "https://bootdey.com/img/Content/bg1.jpg",
+      "email": "user@user.comm",
+      "phone": "0878256985",
+      "address": "user@user.com",
+      "password": "user",
+      "isVIP": false,
+      "totalRentedCars": 0,
+      "id": "L4ob6HX"
     }
   ],
   "rents": [
@@ -299,6 +323,51 @@
       "startDate": "2023-11-30",
       "endDate": "2023-12-08",
       "totalPrice": "596.17"
+    },
+    {
+      "id": 12,
+      "userId": "XbyQ59U",
+      "vehicleId": "d2df73cc-5197-4e40-8a72-ee573969a305",
+      "status": "Awaiting Confirmation",
+      "startDate": "2023-11-22",
+      "endDate": "2023-11-25",
+      "totalPrice": "228.37"
+    },
+    {
+      "id": 13,
+      "userId": "XbyQ59U",
+      "vehicleId": "7b5edfcf-18b2-481f-85e9-d1eea878d488",
+      "status": "Awaiting Confirmation",
+      "startDate": "2023-11-23",
+      "endDate": "2023-11-30",
+      "totalPrice": "651.00"
+    },
+    {
+      "id": 14,
+      "userId": "L4ob6HX",
+      "vehicleId": "d2df73cc-5197-4e40-8a72-ee573969a305",
+      "status": "Awaiting Confirmation",
+      "startDate": "2023-11-22",
+      "endDate": "2023-11-23",
+      "totalPrice": "80.13"
+    },
+    {
+      "id": 15,
+      "userId": "XbyQ59U",
+      "vehicleId": "d2df73cc-5197-4e40-8a72-ee573969a305",
+      "status": "Awaiting Confirmation",
+      "startDate": "2023-11-22",
+      "endDate": "2023-11-23",
+      "totalPrice": "80.13"
+    },
+    {
+      "id": 16,
+      "userId": "XbyQ59U",
+      "vehicleId": "d2df73cc-5197-4e40-8a72-ee573969a305",
+      "status": "Awaiting Confirmation",
+      "startDate": "2023-11-23",
+      "endDate": "2023-11-24",
+      "totalPrice": "80.13"
     }
   ]
 }

@@ -18,14 +18,28 @@ export function getAllUsers() {
 }
 
 export function getUserById(id) {
-  return axios.get(`${apiUrlUsers}/${id}`);
+  const user = axios.get(`${apiUrlUsers}/${id}`);
+  if (!user){
+    throw new Error(`User with id ${id} not found!`)
+  }
+  return user;
 }
 
 export function deleteUserById(id) {
   return axios.delete(`${apiUrlUsers}/${id}`);
 }
 
-export function saveUser(user) {
+export async function updateUser(user) {
+  return axios.put(`${apiUrlUsers}/${user.id}`, user);
+}
+
+export async function saveUser(user) {
+  const existingUsers = (await axios.get(`${apiUrlUsers}?email=${user.email}`)).data;
+
+  if (existingUsers.length > 0 && user.email !== getLoggedUser().email) {
+    throw new Error('User with this email already exist');
+  }
+
   if (!user.picture) {
     user.picture = `https://picsum.photos/200/300?random=${Math.random()}`;
   }
@@ -37,14 +51,7 @@ export function saveUser(user) {
 }
 
 export async function registerUser(user) {
-  const existingUsers = (await axios.get(`${apiUrlUsers}?email=${user.email}`))
-    .data;
-
-  if (existingUsers.length > 0) {
-    throw new Error('User with this email already exist');
-  }
-
-  return saveUser(user);
+  return await saveUser(user);
 }
 
 export async function login(user) {
