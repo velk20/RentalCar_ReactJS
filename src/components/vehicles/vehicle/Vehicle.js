@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import {Fragment, useEffect, useState} from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import {
   getVehicleById,
@@ -85,12 +85,17 @@ export function Vehicle(props) {
       user.isVIP = true;
     }
 
-    saveVehicle(vehicle).then(
-      updateUser(user).then(
-        saveRent(rent).then(() => {
-          navigate('/rents-list');
-        })
-      )
+    saveVehicle(vehicle)
+      .then(()=>{
+        updateUser(user)
+          .then(()=>{
+            saveRent(rent)
+              .then(() => {
+                navigate('/rents-list');
+              })
+          }
+        )
+      }
     );
   };
 
@@ -102,62 +107,65 @@ export function Vehicle(props) {
   };
 
   return (
-    <div className="vehicle">
-      <div className="form-vehicle">
-        <div className="vehicleCard">
-          <VehicleCard vehicle={vehicle} />
-        </div>
-        <Form onSubmit={onFormSubmit}>
-          <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Label>Start Date</Form.Label>
-            <Form.Control
-              required
-              type="date"
-              placeholder="Enter Due date"
-              name="startDate"
-              value={rent.startDate}
-              onChange={onInputChange}
-            />
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Label>End Date</Form.Label>
-            <Form.Control
-              required
-              type="date"
-              placeholder="Enter Due date"
-              name="endDate"
-              value={rent.endDate}
-              onChange={onInputChange}
-            />
-          </Form.Group>
+    <div className="vehicle-wrapper" >
+      <div className="vehicle">
+        <div className="form-vehicle">
+          <div className="vehicleCard">
+            <VehicleCard vehicle={vehicle} />
+          </div>
+          <Form onSubmit={onFormSubmit}>
+            <Form.Group className="mb-3" controlId="formBasicEmail">
+              <Form.Label>Start Date</Form.Label>
+              <Form.Control
+                required
+                type="date"
+                placeholder="Enter Due date"
+                name="startDate"
+                value={rent.startDate}
+                onChange={onInputChange}
+              />
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="formBasicEmail">
+              <Form.Label>End Date</Form.Label>
+              <Form.Control
+                required
+                type="date"
+                placeholder="Enter Due date"
+                name="endDate"
+                value={rent.endDate}
+                onChange={onInputChange}
+              />
+            </Form.Group>
 
-          {rent.startDate
+            {rent.startDate
               && rent.endDate
               && (
-            <Total
-              days={{
-                dayCount: getDifferenceInDays(
-                  new Date(rent.startDate),
-                  new Date(rent.endDate)
-                ),
-              }}
-              passData={passData}
-            />
-          )}
+                <Total
+                  days={{
+                    dayCount: getDifferenceInDays(
+                      new Date(rent.startDate),
+                      new Date(rent.endDate)
+                    ),
+                  }}
+                  passData={passData}
+                />
+              )}
 
-          <br></br>
-          <Button variant="warning" type="submit"
-                  disabled={
-            !rent.startDate
-              || !rent.endDate
-              || getDifferenceInDays(
-                  new Date(rent.startDate),
-                  new Date(rent.endDate)
-              ) <=  0 }>
-            Rent Car
-          </Button>
-        </Form>
+            <br></br>
+            <Button variant="warning" type="submit"
+                    disabled={
+                      !rent.startDate
+                      || !rent.endDate
+                      || getDifferenceInDays(
+                        new Date(rent.startDate),
+                        new Date(rent.endDate)
+                      ) <=  0 }>
+              Rent Car
+            </Button>
+          </Form>
+        </div>
       </div>
     </div>
+
   );
 }

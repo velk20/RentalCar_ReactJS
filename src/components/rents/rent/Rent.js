@@ -51,9 +51,9 @@ export function Rent(props) {
       rent.status === orderStatus.Canceled ||
       rent.status === orderStatus.Finished
     ) {
-      vehicle.carCount += 1;
+      vehicle.carCount = Number(vehicle.carCount) + 1;
     } else if (rent.status === orderStatus.InProgress) {
-      vehicle.carCount -= 1;
+      vehicle.carCount = Number(vehicle.carCount) - 1;
     }
 
     saveVehicle(vehicle).finally(

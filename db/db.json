@@ -11,7 +11,7 @@
       "fuel": "Petrol",
       "numberOfSeats": 5,
       "pricePerDay": "142.07",
-      "carCount": 7
+      "carCount": 10
     },
     {
       "id": "d2df73cc-5197-4e40-8a72-ee573969a305",
@@ -24,7 +24,7 @@
       "fuel": "Petrol",
       "numberOfSeats": 4,
       "pricePerDay": 80.13,
-      "carCount": 6
+      "carCount": 1114
     },
     {
       "id": "7b5edfcf-18b2-481f-85e9-d1eea878d488",
@@ -37,7 +37,7 @@
       "fuel": "Hybrid",
       "numberOfSeats": 5,
       "pricePerDay": "100",
-      "carCount": 5
+      "carCount": 7
     },
     {
       "isActive": true,
@@ -50,7 +50,7 @@
       "numberOfSeats": "5",
       "pricePerDay": "107.99",
       "id": "Ni8VOvF",
-      "carCount": 5
+      "carCount": 6
     },
     {
       "isActive": true,
@@ -63,20 +63,7 @@
       "numberOfSeats": "5",
       "pricePerDay": "98",
       "id": "OLm5fxE",
-      "carCount": 7
-    },
-    {
-      "isActive": true,
-      "picture": "https://cars.usnews.com/pics/size/776x517/images/Auto/izmo/i159614930/2022_hyundai_kona_angularfront.jpg",
-      "brand": "Hyundai",
-      "model": "Kona",
-      "year": "2020",
-      "type": "SUV",
-      "fuel": "Hybrid",
-      "numberOfSeats": "5",
-      "pricePerDay": "89",
-      "id": "46FSQBJ",
-      "carCount": 2
+      "carCount": 10
     },
     {
       "isActive": true,
@@ -207,7 +194,7 @@
     {
       "isAdmin": true,
       "isVIP": true,
-      "totalRentedCars": 3,
+      "totalRentedCars": 9,
       "name": "Inês Danilo  ",
       "picture": "https://images.unsplash.com/photo-1610879247468-ba0c12f0d709?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
       "email": "admin@admin",
@@ -289,84 +276,12 @@
   ],
   "rents": [
     {
-      "id": 1,
-      "userId": "eektb1k",
-      "vehicleId": "OLm5fxE",
-      "status": "In Progress",
-      "startDate": "2022-06-04",
-      "endDate": "2022-06-11",
-      "totalPrice": "583.10"
-    },
-    {
-      "id": 9,
-      "userId": "ewktb1K",
-      "vehicleId": "Ni8VOvF",
-      "status": "Awaiting Confirmation",
-      "startDate": "2022-06-04",
-      "endDate": "2022-06-25",
-      "totalPrice": "2041.01"
-    },
-    {
-      "id": 10,
-      "userId": "_71frDv",
-      "vehicleId": "d2df73cc-5197-4e40-8a72-ee573969a305",
-      "status": "In Progress",
-      "startDate": "2023-11-19",
-      "endDate": "2023-12-08",
-      "totalPrice": "1370.22"
-    },
-    {
-      "id": 11,
-      "userId": "WiOLSRC",
-      "vehicleId": "d2df73cc-5197-4e40-8a72-ee573969a305",
-      "status": "Finished",
-      "startDate": "2023-11-30",
-      "endDate": "2023-12-08",
-      "totalPrice": "596.17"
-    },
-    {
-      "id": 12,
-      "userId": "XbyQ59U",
-      "vehicleId": "d2df73cc-5197-4e40-8a72-ee573969a305",
-      "status": "Awaiting Confirmation",
-      "startDate": "2023-11-22",
-      "endDate": "2023-11-25",
-      "totalPrice": "228.37"
-    },
-    {
-      "id": 13,
-      "userId": "XbyQ59U",
-      "vehicleId": "7b5edfcf-18b2-481f-85e9-d1eea878d488",
-      "status": "Awaiting Confirmation",
-      "startDate": "2023-11-23",
-      "endDate": "2023-11-30",
-      "totalPrice": "651.00"
-    },
-    {
-      "id": 14,
-      "userId": "L4ob6HX",
-      "vehicleId": "d2df73cc-5197-4e40-8a72-ee573969a305",
-      "status": "Awaiting Confirmation",
-      "startDate": "2023-11-22",
-      "endDate": "2023-11-23",
-      "totalPrice": "80.13"
-    },
-    {
       "id": 15,
       "userId": "XbyQ59U",
       "vehicleId": "d2df73cc-5197-4e40-8a72-ee573969a305",
-      "status": "Awaiting Confirmation",
+      "status": "Finished",
       "startDate": "2023-11-22",
       "endDate": "2023-11-23",
-      "totalPrice": "80.13"
-    },
-    {
-      "id": 16,
-      "userId": "XbyQ59U",
-      "vehicleId": "d2df73cc-5197-4e40-8a72-ee573969a305",
-      "status": "Awaiting Confirmation",
-      "startDate": "2023-11-23",
-      "endDate": "2023-11-24",
       "totalPrice": "80.13"
     }
   ]

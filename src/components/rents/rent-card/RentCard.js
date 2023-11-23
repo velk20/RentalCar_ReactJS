@@ -91,7 +91,7 @@ export function RentCard({ rent, deleteRent }) {
                     variant="danger"
                     onClick={() => {
                       deleteRent(rent.id);
-                      vehicle.carCount += 1;
+                      vehicle.carCount = Number(vehicle.carCount) + 1;
                       saveVehicle(vehicle).then(navigate('/vehicles-list'));
                     }}
                   >
@@ -130,9 +130,9 @@ export function RentCard({ rent, deleteRent }) {
           {loggedUser.isAdmin && (
             <Button
               variant="danger"
-              onClick={() => {
+              onClick={async () => {
                 deleteRent(rent.id);
-                vehicle.carCount += 1;
+                vehicle.carCount = Number(vehicle.carCount) + 1;
                 saveVehicle(vehicle).then(navigate('/rents-list'));
               }}
             >

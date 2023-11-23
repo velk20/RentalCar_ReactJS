@@ -1,6 +1,6 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import { useNavigate } from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom';
 import './VehicleCard.scss';
 import { getLoggedUser } from '../../../utils/http-utils/user-request';
 
@@ -23,7 +23,9 @@ export function VehicleCard({ vehicle, deleteVehicle }) {
 
   return (
     <Card style={{ width: '18rem' }}>
+      <Link to={`/vehicle/${vehicle.id}`}>
       <Card.Img variant="top" src={vehicle.picture} />
+      </Link>
       <Card.Body>
         <Card.Title>{`${vehicle.brand} ${vehicle.model}`}</Card.Title>
         <Card.Text>

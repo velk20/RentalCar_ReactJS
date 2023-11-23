@@ -16,10 +16,12 @@ export function UsersList() {
   }, []);
 
   const deleteUserHandler = async (id) => {
-    await deleteUserById(id);
-    setUsers((pervState) => {
-      return pervState.filter((user) => user.id !== id);
-    });
+    if (window.confirm("Are you sure you want to delete this user?")) {
+      await deleteUserById(id);
+      setUsers((pervState) => {
+        return pervState.filter((user) => user.id !== id);
+      });
+    }
   };
 
   return (

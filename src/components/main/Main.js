@@ -18,8 +18,8 @@ export function Main() {
         <Route exact path="/" element={<Home />} />
         <Route exact path="/vehicles-list" element={<VehiclesList />} />
         <Route path="/vehicle/:id" element={<Vehicle />} />
-        <Route path="/vehicle/create" element={<AdminRoute> <VehicleForm /> </AdminRoute>} />
-        <Route path="/vehicle/edit/:id" element={<AdminRoute> <VehicleForm /> </AdminRoute>} />
+        <Route path="/vehicle/create" element={<AdminRoute> <VehicleForm key="/vehicle/create"  /> </AdminRoute>} />
+        <Route path="/vehicle/edit/:id" element={<AdminRoute> <VehicleForm key="/vehicle/edit/:id" /> </AdminRoute>} />
 
         <Route exact path="/users-list" element={<AdminRoute> <UsersList/> </AdminRoute>} />
         <Route path="/user/:id" element={<AdminRoute> <User/> </AdminRoute>} />

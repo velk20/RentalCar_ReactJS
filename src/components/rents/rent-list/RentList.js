@@ -1,6 +1,6 @@
 import {
   deleteRentById,
-  getAllRents,
+  getAllRents, orderStatus, saveRent,
 } from '../../../utils/http-utils/rent-requests';
 import { useEffect, useState } from 'react';
 import { RentCard } from '../rent-card/RentCard';
@@ -15,11 +15,22 @@ export function RentList() {
   const loggedUser = getLoggedUser();
 
   useEffect(() => {
-    getAllRents().then((response) => {
-      setRents(response.data);
+    getAllRents()
+      .then((response) => {
+        const rents = response.data
+        for (const rent of rents) {
+          if (new Date(rent.endDate) < new Date()){
+            rent.status = orderStatus.Finished;
+          }
+
+          saveRent(rent)
+            .then((res) => {
+              console.log(res.data);
+            })
+        }
+      setRents(rents);
     });
 
-    console.log(rents);
   }, []);
 
   const toAllVehicles = () => {
@@ -27,10 +38,12 @@ export function RentList() {
   };
 
   const deleteRentHandler = async (id) => {
-    await deleteRentById(id);
-    setRents((prevState) => {
-      return prevState.filter((rent) => rent.id !== id);
-    });
+    if (window.confirm("Are you sure you want to delete this rent info?")) {
+      await deleteRentById(id);
+      setRents((prevState) => {
+        return prevState.filter((rent) => rent.id !== id);
+      });
+    }
   };
 
   if (rents.filter((rent) => rent.userId === loggedUser.id).length === 0) {

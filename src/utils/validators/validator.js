@@ -49,3 +49,21 @@ export const emailValidation = (e, setErrors) => {
 export const phoneValidation = (e, setErrors) => {
     regexValidation(e, REGEXES.phoneNumber, setErrors);
 }
+
+export const numberMinMaxValidation = (e, minLength, maxLength, setErrors) => {
+    setErrors(prevState => ({
+        ...prevState,
+        [e.target.name]: !e.target.value
+        || Number(e.target.value) < minLength
+        ||  Number(e.target.value) > maxLength,
+    }))
+}
+
+export const numberMinValidation = (e, minLength, setErrors) => {
+    setErrors(prevState => ({
+        ...prevState,
+        [e.target.name]: !e.target.value
+        || Number(e.target.value) < minLength
+    }))
+}
+

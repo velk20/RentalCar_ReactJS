@@ -6,6 +6,8 @@ import {
 import { VehicleCard } from '../vehicle-card/VehicleCard';
 import './VehiclesList.scss';
 import { getLoggedUser } from '../../../utils/http-utils/user-request';
+import { confirmAlert } from 'react-confirm-alert'; // Import
+
 
 export function VehiclesList() {
   const [vehicles, setVehicles] = useState([]);
@@ -18,10 +20,12 @@ export function VehiclesList() {
   }, []); //only one time will execute when empty array
 
   const deleteVehicleHandler = async (id) => {
-    await deleteVehicleById(id);
-    setVehicles((prevState) => {
-      return prevState.filter((vehicle) => vehicle.id !== id);
-    });
+   if (window.confirm("Are you sure you want to delete this vehicle?")) {
+     await deleteVehicleById(id);
+     setVehicles((prevState) => {
+       return prevState.filter((vehicle) => vehicle.id !== id);
+     });
+   }
   };
 
   return (
