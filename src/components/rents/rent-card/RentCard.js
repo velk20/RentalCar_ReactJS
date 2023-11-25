@@ -142,8 +142,8 @@ export function RentCard({ rent, deleteRent }) {
         </div>
         <div>
           {loggedUser.isAdmin && (
-            <Button variant="warning" onClick={redirectToEdit}>
-              Change Status
+            <Button variant="warning" onClick={redirectToEdit} disabled={rent.status === orderStatus.Finished}>
+              {orderStatus.Finished === rent.status ? 'Rent has ended' : 'Change Status'}
             </Button>
           )}
         </div>

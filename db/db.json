@@ -11,7 +11,7 @@
       "fuel": "Petrol",
       "numberOfSeats": 5,
       "pricePerDay": "142.07",
-      "carCount": 10
+      "carCount": 12
     },
     {
       "id": "d2df73cc-5197-4e40-8a72-ee573969a305",
@@ -24,7 +24,7 @@
       "fuel": "Petrol",
       "numberOfSeats": 4,
       "pricePerDay": 80.13,
-      "carCount": 1114
+      "carCount": 1116
     },
     {
       "id": "7b5edfcf-18b2-481f-85e9-d1eea878d488",
@@ -37,7 +37,7 @@
       "fuel": "Hybrid",
       "numberOfSeats": 5,
       "pricePerDay": "100",
-      "carCount": 7
+      "carCount": 8
     },
     {
       "isActive": true,
@@ -116,6 +116,19 @@
       "pricePerDay": "100",
       "id": "oZor8fp",
       "carCount": 3
+    },
+    {
+      "isActive": true,
+      "picture": "https://images.pexels.com/photos/9615358/pexels-photo-9615358.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "brand": "Toyota",
+      "model": "Rav4",
+      "year": "1900",
+      "type": "Luxury",
+      "fuel": "Electric",
+      "numberOfSeats": "8",
+      "pricePerDay": "926",
+      "carCount": "766",
+      "id": "_KRJmJC"
     }
   ],
   "users": [
@@ -126,9 +139,9 @@
       "totalRentedCars": 0,
       "picture": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZmlsZXxlbnwwfHwwfHw%3D&w=1000&q=80",
       "name": "Kelly Johns",
-      "email": "kellyjohns@caxt.com",
+      "email": "admin@admin.comm",
       "password": "admin",
-      "phone": "+1 (977) 521-3716",
+      "phone": "0878256389",
       "address": "585 Desmond Court, Ezel, Pennsylvania, 3419"
     },
     {
@@ -185,8 +198,8 @@
       "isVIP": true,
       "totalRentedCars": 5,
       "picture": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-      "email": "vyzuz@mailinator.comm",
-      "phone": "+1 (549) 533-7445",
+      "email": "admin@admin.com",
+      "phone": "0878258963",
       "address": "341 Laurel Ave. New Castle, PA 16101",
       "password": "Pa$$w0rd!",
       "id": "ewktb1K"
@@ -194,7 +207,7 @@
     {
       "isAdmin": true,
       "isVIP": true,
-      "totalRentedCars": 9,
+      "totalRentedCars": 13,
       "name": "Inês Danilo  ",
       "picture": "https://images.unsplash.com/photo-1610879247468-ba0c12f0d709?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
       "email": "admin@admin",
@@ -283,6 +296,33 @@
       "startDate": "2023-11-22",
       "endDate": "2023-11-23",
       "totalPrice": "80.13"
+    },
+    {
+      "id": 16,
+      "userId": "eektb1k",
+      "vehicleId": "d2df73cc-5197-4e40-8a72-ee573969a305",
+      "status": "Finished",
+      "startDate": "2023-11-26",
+      "endDate": "2023-11-30",
+      "totalPrice": "272.44"
+    },
+    {
+      "id": 18,
+      "userId": "eektb1k",
+      "vehicleId": "3ab67e59-0d59-4ef8-977c-63e2b97e9305",
+      "status": "Finished",
+      "startDate": "2023-12-07",
+      "endDate": "2023-12-15",
+      "totalPrice": "966.08"
+    },
+    {
+      "id": 19,
+      "userId": "eektb1k",
+      "vehicleId": "d2df73cc-5197-4e40-8a72-ee573969a305",
+      "status": "In Progress",
+      "startDate": "2023-11-25",
+      "endDate": "2023-11-30",
+      "totalPrice": "340.55"
     }
   ]
 }

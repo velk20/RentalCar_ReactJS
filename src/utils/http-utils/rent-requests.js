@@ -16,11 +16,11 @@ export function deleteRentById(id) {
   return axios.delete(`${apiUrl}/${id}`);
 }
 
-export function saveRent(rent) {
+export async function saveRent(rent) {
   if (rent.id) {
-    return axios.put(`${apiUrl}/${rent.id}`, rent);
+    return await axios.put(`${apiUrl}/${rent.id}`, rent);
   }
-  return axios.post(`${apiUrl}`, rent);
+  return await axios.post(`${apiUrl}`, rent);
 }
 
 export const orderStatus = {

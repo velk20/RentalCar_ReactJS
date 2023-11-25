@@ -44,7 +44,7 @@ export function Rent(props) {
     getVehicleById(rent.vehicleId).then((res) => setVehicle(res.data));
   }, [rent.vehicleId]);
 
-  const onFormSubmit = (event) => {
+  const onFormSubmit = async (event) => {
     event.preventDefault();
 
     if (
@@ -56,10 +56,12 @@ export function Rent(props) {
       vehicle.carCount = Number(vehicle.carCount) - 1;
     }
 
-    saveVehicle(vehicle).finally(
-      saveRent(rent).then(() => {
-        navigate('/rents-list');
-      })
+    await saveVehicle(vehicle)
+      .then(async ()=>{
+        await saveRent(rent).then(() => {
+          navigate('/rents-list');
+        })
+    }
     );
   };
 

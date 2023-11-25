@@ -95,7 +95,7 @@ export function VehicleForm() {
                 {errors.brand && (
                   <span className="text-danger">
                     Brand must be between 3 and 30 characters.
-              </span>
+                  </span>
                 )}
               </Form.Group>
 

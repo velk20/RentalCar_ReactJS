@@ -19,14 +19,14 @@ export function RentList() {
       .then((response) => {
         const rents = response.data
         for (const rent of rents) {
-          if (new Date(rent.endDate) < new Date()){
+          if (new Date(rent.endDate) < new Date() && rent.status !== orderStatus.Finished){
             rent.status = orderStatus.Finished;
-          }
 
-          saveRent(rent)
-            .then((res) => {
-              console.log(res.data);
-            })
+            saveRent(rent)
+              .then((res) => {
+                console.log(res.data);
+              })
+          }
         }
       setRents(rents);
     });

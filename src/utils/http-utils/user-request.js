@@ -36,7 +36,7 @@ export async function updateUser(user) {
 export async function saveUser(user) {
   const existingUsers = (await axios.get(`${apiUrlUsers}?email=${user.email}`)).data;
 
-  if (existingUsers.length > 0 && user.email !== getLoggedUser().email) {
+  if (existingUsers.length > 0 && user.id !== existingUsers[0].id) {
     throw new Error('User with this email already exist');
   }
 
