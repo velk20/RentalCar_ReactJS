@@ -26,9 +26,9 @@ export function Main() {
         <Route path="/user/:id" element={<AdminRoute> <User/> </AdminRoute>} />
         <Route path="/user/create" element={<AdminRoute> <UserForm /> </AdminRoute>} />
         <Route path="/user/edit/:id" element={<AdminRoute> <UserForm /> </AdminRoute>} />
-        <Route path="/user/editUser/:id" element={<UserForm />} />
+        <Route path="/user/editUser/:id" element={<AuthenticatedRoute><UserForm /></AuthenticatedRoute>} />
 
-        <Route exact path="/rents-list" element={<RentList />} />
+        <Route exact path="/rents-list" element={<AuthenticatedRoute><RentList /></AuthenticatedRoute>} />
         <Route path="/rent/edit/:id" element={<AdminRoute><Rent /></AdminRoute>} />
 
         <Route exact path="/404" element={<PageNotFound/>} />

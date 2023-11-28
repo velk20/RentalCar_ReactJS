@@ -11,7 +11,7 @@
       "fuel": "Petrol",
       "numberOfSeats": 5,
       "pricePerDay": "142.07",
-      "carCount": 12
+      "carCount": 14
     },
     {
       "id": "d2df73cc-5197-4e40-8a72-ee573969a305",
@@ -24,7 +24,7 @@
       "fuel": "Petrol",
       "numberOfSeats": 4,
       "pricePerDay": 80.13,
-      "carCount": 1116
+      "carCount": 1119
     },
     {
       "id": "7b5edfcf-18b2-481f-85e9-d1eea878d488",
@@ -136,7 +136,7 @@
       "id": "f529a9c7-b5bb-4d3c-a451-825c03b12013",
       "isAdmin": false,
       "isVIP": false,
-      "totalRentedCars": 0,
+      "totalRentedCars": 1,
       "picture": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZmlsZXxlbnwwfHwwfHw%3D&w=1000&q=80",
       "name": "Kelly Johns",
       "email": "admin@admin.comm",
@@ -251,15 +251,15 @@
       "id": "WCP8t9m"
     },
     {
-      "isAdmin": true,
+      "isAdmin": false,
       "name": "User User",
       "picture": "https://images.pexels.com/photos/354951/pexels-photo-354951.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "email": "user@user",
       "phone": "0878285388",
       "address": "СПИДИ Пловдив - Тракия (жк), бл. 45",
       "password": "user",
-      "isVIP": false,
-      "totalRentedCars": 2,
+      "isVIP": true,
+      "totalRentedCars": 3,
       "id": "WiOLSRC"
     },
     {
@@ -285,48 +285,9 @@
       "isVIP": false,
       "totalRentedCars": 0,
       "id": "L4ob6HX"
-    },
-    {
-      "isAdmin": false,
-      "name": "angelmladenov3@gmail.com",
-      "picture": "https://srv.carbonads.net/static/30242/3913207e72f710f619a5492de1f4271d876d8c0f",
-      "email": "angelmladenov3@gmail.com",
-      "phone": "0878285378",
-      "address": "СПИДИ Пловдив - Тракия (жк), бл. 45",
-      "password": "angel",
-      "isVIP": false,
-      "totalRentedCars": 0,
-      "id": "vvHWk11"
     }
   ],
   "rents": [
-    {
-      "id": 15,
-      "userId": "XbyQ59U",
-      "vehicleId": "d2df73cc-5197-4e40-8a72-ee573969a305",
-      "status": "Finished",
-      "startDate": "2023-11-22",
-      "endDate": "2023-11-23",
-      "totalPrice": "80.13"
-    },
-    {
-      "id": 16,
-      "userId": "eektb1k",
-      "vehicleId": "d2df73cc-5197-4e40-8a72-ee573969a305",
-      "status": "Finished",
-      "startDate": "2023-11-26",
-      "endDate": "2023-11-30",
-      "totalPrice": "272.44"
-    },
-    {
-      "id": 18,
-      "userId": "eektb1k",
-      "vehicleId": "3ab67e59-0d59-4ef8-977c-63e2b97e9305",
-      "status": "Finished",
-      "startDate": "2023-12-07",
-      "endDate": "2023-12-15",
-      "totalPrice": "966.08"
-    },
     {
       "id": 19,
       "userId": "eektb1k",
