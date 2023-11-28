@@ -10,6 +10,7 @@ import { RentList } from '../rents/rent-list/RentList';
 import { Rent } from '../rents/rent/Rent';
 import {AdminRoute} from "../../utils/guards/AdminRoute";
 import {PageNotFound} from "../404/PageNotFound";
+import {AuthenticatedRoute} from "../../utils/guards/AuthenticatedRoute";
 
 export function Main() {
   return (
@@ -17,7 +18,7 @@ export function Main() {
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route exact path="/vehicles-list" element={<VehiclesList />} />
-        <Route path="/vehicle/:id" element={<Vehicle />} />
+        <Route path="/vehicle/:id" element={<AuthenticatedRoute><Vehicle /></AuthenticatedRoute>} />
         <Route path="/vehicle/create" element={<AdminRoute> <VehicleForm key="/vehicle/create"  /> </AdminRoute>} />
         <Route path="/vehicle/edit/:id" element={<AdminRoute> <VehicleForm key="/vehicle/edit/:id" /> </AdminRoute>} />
 

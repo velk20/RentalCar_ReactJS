@@ -16,6 +16,8 @@ export function Login() {
   const [error, setError] = useState('');
 
   const onInputChange = (event) => {
+    setError('')
+
     setUser((prevState) => ({
       ...prevState,
       [event.target.name]: event.target.value,
@@ -36,7 +38,7 @@ export function Login() {
     <div className="user-form-wrapper">
       <Form onSubmit={onFormSubmit}>
         <h2>Login</h2>
-        {error.message && <p className="bg-danger fw-semibold">{error.message}</p>}
+        {error && <p className="bg-danger fw-semibold">{error}</p>}
         <br />
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
@@ -70,7 +72,9 @@ export function Login() {
         <Button variant="primary" type="submit">
           Login
         </Button>
+        <p>Click  <Link to="/">here</Link> to redirect to home page</p>
       </Form>
+
     </div>
   );
 }

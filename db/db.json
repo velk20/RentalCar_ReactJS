@@ -285,6 +285,18 @@
       "isVIP": false,
       "totalRentedCars": 0,
       "id": "L4ob6HX"
+    },
+    {
+      "isAdmin": false,
+      "name": "angelmladenov3@gmail.com",
+      "picture": "https://srv.carbonads.net/static/30242/3913207e72f710f619a5492de1f4271d876d8c0f",
+      "email": "angelmladenov3@gmail.com",
+      "phone": "0878285378",
+      "address": "СПИДИ Пловдив - Тракия (жк), бл. 45",
+      "password": "angel",
+      "isVIP": false,
+      "totalRentedCars": 0,
+      "id": "vvHWk11"
     }
   ],
   "rents": [

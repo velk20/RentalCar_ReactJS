@@ -9,8 +9,6 @@ export function AuthenticatedRoute({ children }) {
   const url = window.location.href;
 
   if (!user) {
-    // if (url !== homePageUrl && url !== vehiclesPageUrl) {
-    // }
     return <Navigate to="/login" />;
   }
 
