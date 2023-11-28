@@ -24,7 +24,7 @@
       "fuel": "Petrol",
       "numberOfSeats": 4,
       "pricePerDay": 80.13,
-      "carCount": 1119
+      "carCount": 1120
     },
     {
       "id": "7b5edfcf-18b2-481f-85e9-d1eea878d488",
@@ -37,7 +37,7 @@
       "fuel": "Hybrid",
       "numberOfSeats": 5,
       "pricePerDay": "100",
-      "carCount": 8
+      "carCount": 9
     },
     {
       "isActive": true,
@@ -259,7 +259,7 @@
       "address": "СПИДИ Пловдив - Тракия (жк), бл. 45",
       "password": "user",
       "isVIP": true,
-      "totalRentedCars": 3,
+      "totalRentedCars": 4,
       "id": "WiOLSRC"
     },
     {
@@ -292,10 +292,19 @@
       "id": 19,
       "userId": "eektb1k",
       "vehicleId": "d2df73cc-5197-4e40-8a72-ee573969a305",
-      "status": "In Progress",
+      "status": "Finished",
       "startDate": "2023-11-25",
       "endDate": "2023-11-30",
       "totalPrice": "340.55"
+    },
+    {
+      "id": 20,
+      "userId": "WiOLSRC",
+      "vehicleId": "Ni8VOvF",
+      "status": "Awaiting Confirmation",
+      "startDate": "2023-11-29",
+      "endDate": "2023-12-09",
+      "totalPrice": "917.92"
     }
   ]
 }

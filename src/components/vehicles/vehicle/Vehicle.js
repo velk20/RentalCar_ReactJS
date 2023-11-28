@@ -117,23 +117,29 @@ export function Vehicle(props) {
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Label>Start Date</Form.Label>
               <Form.Control
+                id={"startDate"}
                 required
                 type="date"
                 placeholder="Enter Due date"
                 name="startDate"
                 value={rent.startDate}
                 onChange={onInputChange}
+                min={new Date().toJSON().slice(0, 10)}
+                max={new Date(new Date().setFullYear(new Date().getFullYear() + 1)).toJSON().slice(0, 10)}
               />
             </Form.Group>
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Label>End Date</Form.Label>
               <Form.Control
+                id={"endDate"}
                 required
                 type="date"
                 placeholder="Enter Due date"
                 name="endDate"
                 value={rent.endDate}
                 onChange={onInputChange}
+                min={new Date(Date.now() + 24*60*60*1000).toJSON().slice(0, 10)}
+                max={new Date(new Date().setFullYear(new Date().getFullYear() + 1)).toJSON().slice(0, 10)}
               />
             </Form.Group>
 
