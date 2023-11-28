@@ -161,6 +161,7 @@ export function Register() {
         <Button variant="primary" type="submit" disabled={!validatorService.isFormValid(errors)}>
           Register
         </Button>
+        <p>Click  <Link to="/">here</Link> to redirect to home page</p>
       </Form>
     </div>
   );
