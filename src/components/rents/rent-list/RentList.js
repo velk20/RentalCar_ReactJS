@@ -52,6 +52,7 @@ export function RentList() {
     }
   };
 
+
   return (
   <>
     {rents.length > 0
