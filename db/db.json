@@ -11,7 +11,7 @@
       "fuel": "Petrol",
       "numberOfSeats": 5,
       "pricePerDay": "142.07",
-      "carCount": 0
+      "carCount": 1
     },
     {
       "id": "d2df73cc-5197-4e40-8a72-ee573969a305",
@@ -263,15 +263,5 @@
       "id": "XbyQ59U"
     }
   ],
-  "rents": [
-    {
-      "id": 1,
-      "userId": "f529a9c7-b5bb-4d3c-a451-825c03b12013",
-      "vehicleId": "3ab67e59-0d59-4ef8-977c-63e2b97e9305",
-      "status": "In Progress",
-      "startDate": "2023-12-01",
-      "endDate": "2023-12-15",
-      "totalPrice": "1790.08"
-    }
-  ]
+  "rents": []
 }

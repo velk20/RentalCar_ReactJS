@@ -167,7 +167,7 @@ export function Vehicle(props) {
                         new Date(rent.endDate)
                       ) <=  0
                       || Number(vehicle.carCount) <= 0}>
-              Rent Car {Number(vehicle.carCount) <= 0 ? 'is not available!' : ''}
+              Rent Car {Number(vehicle.carCount) <= 0 ? 'is not possible! No cars of this model are free' : ''}
             </Button>
           </Form>
         </div>
