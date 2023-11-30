@@ -34,9 +34,9 @@ export function VehicleForm() {
     picture: '',
     brand: '',
     model: '',
-    year: '',
     type: '',
     fuel: '',
+    year: '',
     numberOfSeats: '',
     pricePerDay: '',
     carCount: '',
@@ -53,6 +53,11 @@ export function VehicleForm() {
 
   const onFormSubmit = (event) => {
     event.preventDefault();
+
+    vehicle.year = Number(vehicle.year);
+    vehicle.numberOfSeats = Number(vehicle.numberOfSeats);
+    vehicle.pricePerDay = Number(vehicle.pricePerDay);
+    vehicle.carCount = Number(vehicle.carCount);
 
     saveVehicle(vehicle).then(() => {
       navigate('/vehicles-list');

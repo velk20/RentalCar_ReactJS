@@ -79,7 +79,7 @@ export function Vehicle(props) {
     rent.userId = loggedUser.id;
     rent.vehicleId = vehicle.id;
     rent.status = orderStatus.WaitingConfirm;
-    rent.totalPrice = finalPrice;
+    rent.totalPrice = Number(finalPrice);
     user.totalRentedCars = user.totalRentedCars + 1;
     if (user.totalRentedCars >= 3) {
       user.isVIP = true;

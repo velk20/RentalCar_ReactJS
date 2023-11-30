@@ -40,6 +40,8 @@ export function UserForm() {
   const onFormSubmit = (event) => {
     event.preventDefault();
 
+    user.totalRentedCars = Number(user.totalRentedCars);
+
     saveUser(user)
         .then(() => {
               navigate('/');
