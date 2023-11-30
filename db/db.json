@@ -11,7 +11,7 @@
       "fuel": "Petrol",
       "numberOfSeats": 5,
       "pricePerDay": "142.07",
-      "carCount": 14
+      "carCount": 0
     },
     {
       "id": "d2df73cc-5197-4e40-8a72-ee573969a305",
@@ -24,7 +24,7 @@
       "fuel": "Petrol",
       "numberOfSeats": 4,
       "pricePerDay": 80.13,
-      "carCount": 1120
+      "carCount": 1122
     },
     {
       "id": "7b5edfcf-18b2-481f-85e9-d1eea878d488",
@@ -37,7 +37,7 @@
       "fuel": "Hybrid",
       "numberOfSeats": 5,
       "pricePerDay": "100",
-      "carCount": 9
+      "carCount": 13
     },
     {
       "isActive": true,
@@ -50,7 +50,7 @@
       "numberOfSeats": "5",
       "pricePerDay": "107.99",
       "id": "Ni8VOvF",
-      "carCount": 6
+      "carCount": 8
     },
     {
       "isActive": true,
@@ -63,7 +63,7 @@
       "numberOfSeats": "5",
       "pricePerDay": "98",
       "id": "OLm5fxE",
-      "carCount": 10
+      "carCount": 15
     },
     {
       "isActive": true,
@@ -89,7 +89,7 @@
       "numberOfSeats": "5",
       "pricePerDay": "123",
       "id": "BapmaVZ",
-      "carCount": "11"
+      "carCount": 12
     },
     {
       "isActive": true,
@@ -127,16 +127,16 @@
       "fuel": "Electric",
       "numberOfSeats": "8",
       "pricePerDay": "926",
-      "carCount": "766",
+      "carCount": 766,
       "id": "_KRJmJC"
     }
   ],
   "users": [
     {
       "id": "f529a9c7-b5bb-4d3c-a451-825c03b12013",
-      "isAdmin": false,
-      "isVIP": false,
-      "totalRentedCars": 1,
+      "isAdmin": true,
+      "isVIP": true,
+      "totalRentedCars": 16,
       "picture": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZmlsZXxlbnwwfHwwfHw%3D&w=1000&q=80",
       "name": "Kelly Johns",
       "email": "admin@admin.comm",
@@ -148,7 +148,7 @@
       "id": "c3cd55ff-03e8-4e06-b4ee-fab89847958c",
       "isAdmin": true,
       "isVIP": false,
-      "totalRentedCars": 0,
+      "totalRentedCars": 1,
       "picture": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
       "name": "Tami Carlson",
       "email": "tamicarlson@caxt.com",
@@ -252,18 +252,6 @@
     },
     {
       "isAdmin": false,
-      "name": "User User",
-      "picture": "https://images.pexels.com/photos/354951/pexels-photo-354951.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "email": "user@user",
-      "phone": "0878285388",
-      "address": "СПИДИ Пловдив - Тракия (жк), бл. 45",
-      "password": "user",
-      "isVIP": true,
-      "totalRentedCars": 4,
-      "id": "WiOLSRC"
-    },
-    {
-      "isAdmin": false,
       "name": "213",
       "picture": "https://images.pexels.com/photos/19154211/pexels-photo-19154211/free-photo-of-a-man-playing-a-bass-at-a-wedding.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "email": "vixo@gmail.com",
@@ -273,38 +261,17 @@
       "isVIP": false,
       "totalRentedCars": 2,
       "id": "XbyQ59U"
-    },
-    {
-      "isAdmin": false,
-      "name": "123123123",
-      "picture": "https://bootdey.com/img/Content/bg1.jpg",
-      "email": "user@user.comm",
-      "phone": "0878256985",
-      "address": "user@user.com",
-      "password": "user",
-      "isVIP": false,
-      "totalRentedCars": 0,
-      "id": "L4ob6HX"
     }
   ],
   "rents": [
     {
-      "id": 19,
-      "userId": "eektb1k",
-      "vehicleId": "d2df73cc-5197-4e40-8a72-ee573969a305",
-      "status": "Finished",
-      "startDate": "2023-11-25",
-      "endDate": "2023-11-30",
-      "totalPrice": "340.55"
-    },
-    {
-      "id": 20,
-      "userId": "WiOLSRC",
-      "vehicleId": "Ni8VOvF",
-      "status": "Awaiting Confirmation",
-      "startDate": "2023-11-29",
-      "endDate": "2023-12-09",
-      "totalPrice": "917.92"
+      "id": 1,
+      "userId": "f529a9c7-b5bb-4d3c-a451-825c03b12013",
+      "vehicleId": "3ab67e59-0d59-4ef8-977c-63e2b97e9305",
+      "status": "In Progress",
+      "startDate": "2023-12-01",
+      "endDate": "2023-12-15",
+      "totalPrice": "1790.08"
     }
   ]
 }

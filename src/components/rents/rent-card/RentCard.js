@@ -131,7 +131,7 @@ export function RentCard({ rent, deleteRent }) {
             <Button
               variant="danger"
               onClick={async () => {
-                deleteRent(rent.id);
+                await deleteRent(rent.id);
                 vehicle.carCount = Number(vehicle.carCount) + 1;
                 saveVehicle(vehicle).then(navigate('/rents-list'));
               }}

@@ -6,7 +6,6 @@ import { useEffect, useState } from 'react';
 import { RentCard } from '../rent-card/RentCard';
 import './RentList.scss';
 import { getLoggedUser } from '../../../utils/http-utils/user-request';
-import { Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import {NoRent} from "../no-rent/NoRent";
 
@@ -45,7 +44,8 @@ export function RentList() {
 
   const deleteRentHandler = async (id) => {
     if (window.confirm("Are you sure you want to delete this rent info?")) {
-      deleteRentById(id);
+      await deleteRentById(id);
+
       setRents((prevState) => {
         return prevState.filter((rent) => rent.id !== id);
       });

@@ -114,7 +114,7 @@ export function Vehicle(props) {
             <VehicleCard vehicle={vehicle} />
           </div>
           <Form onSubmit={onFormSubmit}>
-            <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Group className="mb-3">
               <Form.Label>Start Date</Form.Label>
               <Form.Control
                 id={"startDate"}
@@ -128,7 +128,7 @@ export function Vehicle(props) {
                 max={new Date(new Date().setFullYear(new Date().getFullYear() + 1)).toJSON().slice(0, 10)}
               />
             </Form.Group>
-            <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Group className="mb-3">
               <Form.Label>End Date</Form.Label>
               <Form.Control
                 id={"endDate"}
@@ -165,8 +165,9 @@ export function Vehicle(props) {
                       || getDifferenceInDays(
                         new Date(rent.startDate),
                         new Date(rent.endDate)
-                      ) <=  0 }>
-              Rent Car
+                      ) <=  0
+                      || Number(vehicle.carCount) <= 0}>
+              Rent Car {Number(vehicle.carCount) <= 0 ? 'is not available!' : ''}
             </Button>
           </Form>
         </div>

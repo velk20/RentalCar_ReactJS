@@ -96,9 +96,12 @@ export function VehicleCard({ vehicle, deleteVehicle }) {
             currentVehicleId !== 'rents-list' &&
               loggedUser && (
               <div>
-                <Button variant="warning" onClick={redirectToDetails}>
-                  Rent
-                </Button>
+                {Number(vehicle.carCount)
+                    ?(<Button variant="warning" onClick={redirectToDetails}>
+                      Rent
+                    </Button>)
+                : (<Button variant={"warning"} disabled={true}>No available cars</Button>)}
+
               </div>
             )}
         </div>

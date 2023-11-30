@@ -22,6 +22,7 @@ export function UserForm() {
     email: '',
     phone: '',
     address: '',
+    password: '',
     isVIP: false,
     totalRentedCars: 0,
   });
@@ -68,7 +69,7 @@ export function UserForm() {
         <h2>{user.id ? 'Edit User' : 'Create User'}</h2>
         <br/>
         {errors.message && <p className="bg-danger fw-semibold">{errors.message}</p>}
-        <Form.Group className="mb-3" controlId="formBasicEmail">
+        <Form.Group className="mb-3" controlId="formBasicName">
           <Form.Label>Full Name</Form.Label>
           <Form.Control
             value={user.name}
@@ -104,7 +105,7 @@ export function UserForm() {
           )}
         </Form.Group>
 
-        <Form.Group className="mb-3" controlId="formBasicEmail">
+        <Form.Group className="mb-3" controlId="formBasicUrl">
           <Form.Label>Picture</Form.Label>
           <Form.Control
             value={user.picture}
@@ -122,7 +123,7 @@ export function UserForm() {
           )}
         </Form.Group>
 
-        <Form.Group className="mb-3" controlId="formBasicEmail">
+        <Form.Group className="mb-3" controlId="formBasicPhone">
           <Form.Label>Phone</Form.Label>
           <Form.Control
             value={user.phone}
@@ -140,7 +141,7 @@ export function UserForm() {
           )}
         </Form.Group>
 
-        <Form.Group className="mb-3" controlId="formBasicEmail">
+        <Form.Group className="mb-3" controlId="formBasicAddress">
           <Form.Label>Address</Form.Label>
           <Form.Control
             value={user.address}
@@ -157,6 +158,26 @@ export function UserForm() {
               </span>
           )}
         </Form.Group>
+
+        {loggedUser.isAdmin && (
+            <Form.Group className="mb-3" controlId="formBasicPassword">
+              <Form.Label>Password</Form.Label>
+              <Form.Control
+                  value={user.password}
+                  onChange={onInputChange}
+                  onBlur={(e)=>validatorService.minLength(e, 5, setErrors, user)}
+                  name="password"
+                  type="password"
+                  placeholder="Enter password"
+                  required
+              />
+              {errors.password && (
+                  <span className="text-danger">
+                Password must be at least 5 symbols.
+              </span>
+              )}
+            </Form.Group>
+        )}
 
         {loggedUser.isAdmin && (
           <Form.Group className="mb-3" controlId="formBasicCheckbox">

@@ -12,8 +12,8 @@ export function getRentById(id) {
   return axios.get(`${apiUrl}/${id}`);
 }
 
-export function deleteRentById(id) {
-  return axios.delete(`${apiUrl}/${id}`);
+export async function deleteRentById(id) {
+  return await axios.delete(`${apiUrl}/${id}`);
 }
 
 export async function saveRent(rent) {
