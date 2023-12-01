@@ -5,12 +5,12 @@ This is my first SPA Serveless Web App with ReactJS. It is a ready-to-use web ap
 <br/><br/>
 
 ## 📝 Project Overview
--	**RentalCarReactJS** is a ready to use application for rent and manage cars and users, which is easy to use and has a simple user-friendly interface. The backend is developed with JSON-server, and the frontend is built with ReactJs and Bootstrap.
--	The application requires a simple registration process.
--	Users can rent cars, cancel their requests, also edit their accounts.
--	Only the administrator can delete, add or edit cars and users, to accept or deny rent requests.
--	Also admins can add other accounts and make them administrators
--	Admins can configur order details like: "On Delivery", "Cancled" ...
+-	**RentalCarReactJS** is a ready-to-use application for renting and managing cars and users, which is easy to use and has a simple user-friendly interface. The backend is developed with JSON-server, and the frontend is built with ReactJs and Bootstrap.
+-	The application can be used as a guest user but can only view the available cars on the site. To rent a vehicle users need a registration.
+-	Registered users can rent cars, cancel requests for renting, and edit their accounts.
+-	Only the administrator can delete, add, or edit cars and users, to accept or deny rent requests.
+-	Also admins can add other accounts and make them administrators.
+-	Admins can configure order details like: "On Delivery", "Canceled", "In progress" and "Finished".
 <br/><br/>
 
 ## Getting Started <a name = "getting_started"></a>
@@ -24,7 +24,7 @@ npm install
 npm start
 ```
 ```
-npm run start-json:server
+npm run json-server
 ```
 
 ## 🧪 Test Accounts
