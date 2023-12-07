@@ -242,15 +242,15 @@
     },
     {
       "isAdmin": false,
-      "name": "Amethyst Mcdonald",
-      "picture": "Eum dolorum quidem d",
-      "email": "qowinifug@mailinator.com",
-      "phone": "+1 (894) 181-4135",
-      "address": "Sit et nulla non la",
-      "password": "Pa$$w0rd!",
+      "name": "angel01",
+      "picture": "https://srv.carbonads.net/static/30242/3913207e72f710f619a5492de1f4271d876d8c0f",
+      "email": "angel@angel.com",
+      "phone": "0878285374",
+      "address": "СПИДИ Пловдив - Тракия (жк), бл. 45",
+      "password": "angel01",
       "isVIP": false,
-      "totalRentedCars": 2,
-      "id": "ARewRwl"
+      "totalRentedCars": 1,
+      "id": "G4WldKt"
     }
   ],
   "rents": [
@@ -258,37 +258,19 @@
       "id": 1,
       "userId": "f529a9c7-b5bb-4d3c-a451-825c03b12013",
       "vehicleId": "d2df73cc-5197-4e40-8a72-ee573969a305",
-      "status": "In Progress",
+      "status": "Finished",
       "startDate": "2023-12-01",
       "endDate": "2023-12-14",
       "totalPrice": "937.52"
     },
     {
-      "id": 2,
-      "userId": "WCP8t9m",
-      "vehicleId": "3ab67e59-0d59-4ef8-977c-63e2b97e9305",
-      "status": "In Progress",
-      "startDate": "2023-12-01",
-      "endDate": "2023-12-28",
-      "totalPrice": "3452.30"
-    },
-    {
-      "id": 3,
-      "userId": "ARewRwl",
+      "id": 5,
+      "userId": "G4WldKt",
       "vehicleId": "d2df73cc-5197-4e40-8a72-ee573969a305",
       "status": "Awaiting Confirmation",
-      "startDate": "2023-12-02",
-      "endDate": "2023-12-22",
-      "totalPrice": "1442.34"
-    },
-    {
-      "id": 4,
-      "userId": "ARewRwl",
-      "vehicleId": "d2df73cc-5197-4e40-8a72-ee573969a305",
-      "status": "Awaiting Confirmation",
-      "startDate": "2023-12-01",
-      "endDate": "2024-01-05",
-      "totalPrice": 2524.1
+      "startDate": "2023-12-08",
+      "endDate": "2023-12-09",
+      "totalPrice": 80.13
     }
   ]
 }

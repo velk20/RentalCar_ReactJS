@@ -37,7 +37,7 @@ export function Register() {
 
     registerUser(user)
       .then(() => {
-        navigate('/users-list');
+        navigate('/login');
       })
       .catch((error) => setErrors(error.message));
   };
