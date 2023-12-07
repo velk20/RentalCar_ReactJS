@@ -74,7 +74,7 @@ export function Vehicle(props) {
     setFinalPrice(data);
   }
 
-  const onFormSubmit = (event) => {
+  const onFormSubmit = async (event) => {
     event.preventDefault();
     rent.userId = loggedUser.id;
     rent.vehicleId = vehicle.id;
@@ -85,11 +85,11 @@ export function Vehicle(props) {
       user.isVIP = true;
     }
 
-    saveVehicle(vehicle)
-      .then(()=>{
-        updateUser(user)
-          .then(()=>{
-            saveRent(rent)
+    await saveVehicle(vehicle)
+      .then(async ()=>{
+        await updateUser(user)
+          .then(async ()=>{
+            await saveRent(rent)
               .then(() => {
                 navigate('/rents-list');
               })

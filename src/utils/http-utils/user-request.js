@@ -30,7 +30,7 @@ export function deleteUserById(id) {
 }
 
 export async function updateUser(user) {
-  return axios.put(`${apiUrlUsers}/${user.id}`, user);
+  return await axios.put(`${apiUrlUsers}/${user.id}`, user);
 }
 
 export async function saveUser(user) {

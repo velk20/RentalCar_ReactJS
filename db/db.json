@@ -24,7 +24,7 @@
       "fuel": "Petrol",
       "numberOfSeats": 4,
       "pricePerDay": 80.13,
-      "carCount": 11
+      "carCount": 13
     },
     {
       "id": "7b5edfcf-18b2-481f-85e9-d1eea878d488",
@@ -37,7 +37,7 @@
       "fuel": "Hybrid",
       "numberOfSeats": 5,
       "pricePerDay": "100",
-      "carCount": 13
+      "carCount": 16
     },
     {
       "isActive": true,
@@ -50,7 +50,7 @@
       "numberOfSeats": "5",
       "pricePerDay": "107.99",
       "id": "Ni8VOvF",
-      "carCount": 8
+      "carCount": 11
     },
     {
       "isActive": true,
@@ -89,7 +89,7 @@
       "numberOfSeats": "5",
       "pricePerDay": "123",
       "id": "BapmaVZ",
-      "carCount": 12
+      "carCount": 15
     },
     {
       "isActive": true,
@@ -102,7 +102,7 @@
       "numberOfSeats": "5",
       "pricePerDay": "145",
       "id": "JcbyFMi",
-      "carCount": 3
+      "carCount": 4
     },
     {
       "isActive": true,
@@ -127,7 +127,7 @@
       "fuel": "Electric",
       "numberOfSeats": "8",
       "pricePerDay": "926",
-      "carCount": 766,
+      "carCount": 768,
       "id": "_KRJmJC"
     }
   ],
@@ -136,7 +136,7 @@
       "id": "f529a9c7-b5bb-4d3c-a451-825c03b12013",
       "isAdmin": true,
       "isVIP": true,
-      "totalRentedCars": 17,
+      "totalRentedCars": 21,
       "picture": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZmlsZXxlbnwwfHwwfHw%3D&w=1000&q=80",
       "name": "Kelly Johns",
       "email": "admin@admin.com",
@@ -147,8 +147,8 @@
     {
       "id": "c3cd55ff-03e8-4e06-b4ee-fab89847958c",
       "isAdmin": false,
-      "isVIP": false,
-      "totalRentedCars": 1,
+      "isVIP": true,
+      "totalRentedCars": 12,
       "picture": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
       "name": "Tami Carlson",
       "email": "user@user.com",
@@ -257,20 +257,11 @@
     {
       "id": 1,
       "userId": "f529a9c7-b5bb-4d3c-a451-825c03b12013",
-      "vehicleId": "d2df73cc-5197-4e40-8a72-ee573969a305",
-      "status": "Finished",
-      "startDate": "2023-12-01",
-      "endDate": "2023-12-14",
-      "totalPrice": "937.52"
-    },
-    {
-      "id": 5,
-      "userId": "G4WldKt",
-      "vehicleId": "d2df73cc-5197-4e40-8a72-ee573969a305",
+      "vehicleId": "OLm5fxE",
       "status": "Awaiting Confirmation",
-      "startDate": "2023-12-08",
-      "endDate": "2023-12-09",
-      "totalPrice": 80.13
+      "startDate": "2023-12-16",
+      "endDate": "2023-12-23",
+      "totalPrice": 583.1
     }
   ]
 }

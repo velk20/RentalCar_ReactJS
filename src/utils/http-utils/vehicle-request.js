@@ -16,9 +16,9 @@ export function deleteVehicleById(id) {
   return axios.delete(`${apiUrl}/${id}`);
 }
 
-export function saveVehicle(vehicle) {
+export async function saveVehicle(vehicle) {
   if (vehicle.id) {
-    return axios.put(`${apiUrl}/${vehicle.id}`, vehicle);
+    return await axios.put(`${apiUrl}/${vehicle.id}`, vehicle);
   }
-  return axios.post(`${apiUrl}`, vehicle);
+  return await axios.post(`${apiUrl}`, vehicle);
 }

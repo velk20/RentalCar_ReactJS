@@ -42,6 +42,7 @@ export function RentList() {
     navigate('/vehicles-list');
   };
 
+
   const deleteRentHandler = async (id) => {
     if (window.confirm("Are you sure you want to delete this rent info?")) {
       await deleteRentById(id);
@@ -49,6 +50,7 @@ export function RentList() {
       setRents((prevState) => {
         return prevState.filter((rent) => rent.id !== id);
       });
+
     }
   };
 
