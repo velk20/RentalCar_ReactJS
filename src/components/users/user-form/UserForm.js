@@ -44,7 +44,7 @@ export function UserForm() {
 
     saveUser(user)
         .then(() => {
-              navigate('/');
+              navigate('/users-list');
         })
         .catch((error)=>setErrors({message: error.message}));
   };

@@ -6,7 +6,7 @@ import { getLoggedUser } from '../../../utils/http-utils/user-request';
 import { getAllRents } from '../../../utils/http-utils/rent-requests';
 import { useEffect, useState } from 'react';
 
-export function UserCard({ user, deleteUser }) {
+export function UserCard({ user, deleteUser, isDetailsAvailable }) {
   const loggedUser = getLoggedUser();
   const navigate = useNavigate();
   const url = window.location.href.split('/').pop();
@@ -93,7 +93,7 @@ export function UserCard({ user, deleteUser }) {
               </Button>
             )}
 
-            <Button variant="info" onClick={redirectToDetails}>
+            <Button variant="info" onClick={redirectToDetails} disabled={isDetailsAvailable}>
               Details
             </Button>
           </div>

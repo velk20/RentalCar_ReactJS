@@ -139,21 +139,21 @@
       "totalRentedCars": 17,
       "picture": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZmlsZXxlbnwwfHwwfHw%3D&w=1000&q=80",
       "name": "Kelly Johns",
-      "email": "admin@admin.comm",
+      "email": "admin@admin.com",
       "password": "admin",
       "phone": "0878256389",
       "address": "585 Desmond Court, Ezel, Pennsylvania, 3419"
     },
     {
       "id": "c3cd55ff-03e8-4e06-b4ee-fab89847958c",
-      "isAdmin": true,
+      "isAdmin": false,
       "isVIP": false,
       "totalRentedCars": 1,
       "picture": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
       "name": "Tami Carlson",
-      "email": "tamicarlson@caxt.com",
-      "password": "admin",
-      "phone": "+1 (988) 494-2020",
+      "email": "user@user.com",
+      "password": "user",
+      "phone": "0878256399",
       "address": "515 Hazel Court, Hondah, Alaska, 8525"
     },
     {
@@ -162,10 +162,10 @@
       "isVIP": false,
       "totalRentedCars": 0,
       "picture": "https://images.unsplash.com/photo-1542740348-39501cd6e2b4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-      "name": "Silva Patton",
+      "name": "Silva Pattonnnn",
       "email": "silvapatton@caxt.com",
       "password": "admin",
-      "phone": "+1 (941) 545-2163",
+      "phone": "0878256332",
       "address": "571 Brooklyn Road, Ellerslie, Florida, 7824"
     },
     {
@@ -177,7 +177,7 @@
       "name": "Bertha Gray",
       "email": "berthagray@caxt.com",
       "password": "admin",
-      "phone": "+1 (861) 443-2680",
+      "phone": "0878256311",
       "address": "419 Sumner Place, Bellamy, Connecticut, 5480"
     },
     {
@@ -187,7 +187,7 @@
       "totalRentedCars": 0,
       "picture": "https://images.unsplash.com/photo-1534030347209-467a5b0ad3e6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
       "email": "vyzuz@mailinator.com",
-      "phone": "+1 (933) 263-8266",
+      "phone": "0878256322",
       "address": "67 Augusta Street Redford, MI 48239",
       "password": "admin",
       "id": "gFEmTLy"
@@ -198,7 +198,7 @@
       "isVIP": true,
       "totalRentedCars": 5,
       "picture": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-      "email": "admin@admin.com",
+      "email": "admin@admin.commmm",
       "phone": "0878258963",
       "address": "341 Laurel Ave. New Castle, PA 16101",
       "password": "Pa$$w0rd!",
@@ -208,10 +208,10 @@
       "isAdmin": true,
       "isVIP": true,
       "totalRentedCars": 13,
-      "name": "Inês Danilo  ",
+      "name": "Inês Danilo",
       "picture": "https://images.unsplash.com/photo-1610879247468-ba0c12f0d709?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
       "email": "admin@admin",
-      "phone": "+1 (549) 533-7445",
+      "phone": "0878256355",
       "address": "117 Summit St. Fort Lauderdale, FL 33308",
       "password": "admin",
       "id": "eektb1k"
@@ -223,7 +223,7 @@
       "name": "Silvia Aristide",
       "picture": "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
       "email": "vixo@mailinator.com",
-      "phone": "+1 (988) 991-3135",
+      "phone": "0878256323",
       "address": "8406 Center Ave. Holyoke, MA 01040",
       "password": "toni",
       "id": "ZYYul4H"
@@ -235,7 +235,7 @@
       "name": "Ganka Petrova",
       "picture": "https://images.pexels.com/photos/3746210/pexels-photo-3746210.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "email": "ad@ad",
-      "phone": "+1 256 897 152",
+      "phone": "0878256352",
       "address": "stree. Petrovi, bl.2, 32",
       "password": "admin",
       "id": "_71frDv"

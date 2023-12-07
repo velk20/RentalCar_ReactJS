@@ -3,13 +3,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url(../../../img/login-car.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  flex-wrap: wrap;
+  background-image: url(../../../img/pexels-fwstudio-129731.jpg);
 
   form {
-    border: 1px solid gray;
+    border: 2px solid gray;
     padding: 20px;
     border-radius: 10px;
     width: 500px;
