@@ -24,7 +24,7 @@
       "fuel": "Petrol",
       "numberOfSeats": 4,
       "pricePerDay": 80.13,
-      "carCount": 13
+      "carCount": 15
     },
     {
       "id": "7b5edfcf-18b2-481f-85e9-d1eea878d488",
@@ -37,7 +37,7 @@
       "fuel": "Hybrid",
       "numberOfSeats": 5,
       "pricePerDay": "100",
-      "carCount": 16
+      "carCount": 18
     },
     {
       "isActive": true,
@@ -50,7 +50,7 @@
       "numberOfSeats": "5",
       "pricePerDay": "107.99",
       "id": "Ni8VOvF",
-      "carCount": 11
+      "carCount": 12
     },
     {
       "isActive": true,
@@ -63,7 +63,7 @@
       "numberOfSeats": "5",
       "pricePerDay": "98",
       "id": "OLm5fxE",
-      "carCount": 15
+      "carCount": 18
     },
     {
       "isActive": true,
@@ -102,7 +102,7 @@
       "numberOfSeats": "5",
       "pricePerDay": "145",
       "id": "JcbyFMi",
-      "carCount": 4
+      "carCount": 6
     },
     {
       "isActive": true,
@@ -115,7 +115,7 @@
       "numberOfSeats": "1",
       "pricePerDay": "100",
       "id": "oZor8fp",
-      "carCount": 3
+      "carCount": 4
     },
     {
       "isActive": true,
@@ -127,7 +127,7 @@
       "fuel": "Electric",
       "numberOfSeats": "8",
       "pricePerDay": "926",
-      "carCount": 768,
+      "carCount": 769,
       "id": "_KRJmJC"
     }
   ],
@@ -138,7 +138,7 @@
       "isVIP": true,
       "totalRentedCars": 21,
       "picture": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZmlsZXxlbnwwfHwwfHw%3D&w=1000&q=80",
-      "name": "Kelly Johns",
+      "name": "Kelly Johnss",
       "email": "admin@admin.com",
       "password": "admin",
       "phone": "0878256389",
@@ -146,11 +146,11 @@
     },
     {
       "id": "c3cd55ff-03e8-4e06-b4ee-fab89847958c",
-      "isAdmin": false,
+      "isAdmin": true,
       "isVIP": true,
-      "totalRentedCars": 12,
+      "totalRentedCars": 26,
       "picture": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-      "name": "Tami Carlson",
+      "name": "Tami Carlsonnnn",
       "email": "user@user.com",
       "password": "user",
       "phone": "0878256399",
@@ -242,26 +242,35 @@
     },
     {
       "isAdmin": false,
-      "name": "angel01",
-      "picture": "https://srv.carbonads.net/static/30242/3913207e72f710f619a5492de1f4271d876d8c0f",
-      "email": "angel@angel.com",
-      "phone": "0878285374",
+      "name": "angelmladenov3@gmail.com",
+      "picture": "https://images.pexels.com/photos/19154211/pexels-photo-19154211/free-photo-of-a-man-playing-a-bass-at-a-wedding.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "email": "angelmladenov3@gmail.com",
+      "phone": "0878285378",
       "address": "СПИДИ Пловдив - Тракия (жк), бл. 45",
-      "password": "angel01",
+      "password": "admin",
       "isVIP": false,
-      "totalRentedCars": 1,
-      "id": "G4WldKt"
+      "totalRentedCars": 0,
+      "id": "EDs11pt"
     }
   ],
   "rents": [
     {
-      "id": 1,
-      "userId": "f529a9c7-b5bb-4d3c-a451-825c03b12013",
-      "vehicleId": "OLm5fxE",
-      "status": "Awaiting Confirmation",
-      "startDate": "2023-12-16",
+      "id": 2,
+      "userId": "c3cd55ff-03e8-4e06-b4ee-fab89847958c",
+      "vehicleId": "7b5edfcf-18b2-481f-85e9-d1eea878d488",
+      "status": "In Progress",
+      "startDate": "2023-12-09",
+      "endDate": "2023-12-15",
+      "totalPrice": 510
+    },
+    {
+      "id": 3,
+      "userId": "c3cd55ff-03e8-4e06-b4ee-fab89847958c",
+      "vehicleId": "oZor8fp",
+      "status": "Finished",
+      "startDate": "2023-12-09",
       "endDate": "2023-12-23",
-      "totalPrice": 583.1
+      "totalPrice": 1190
     }
   ]
 }
