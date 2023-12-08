@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const apiUrlUsers = 'http://localhost:3005/users';
+const apiUrlUsers = 'http://localhost:3388/users';
 
 const loggedUserKey = 'loggedUser';
 //Users

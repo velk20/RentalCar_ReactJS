@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const apiUrl = 'http://localhost:3005/rents';
+const apiUrl = 'http://localhost:3388/rents';
 
 //Vehicles
 

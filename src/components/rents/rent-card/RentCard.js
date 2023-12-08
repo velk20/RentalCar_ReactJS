@@ -89,10 +89,10 @@ export function RentCard({ rent, deleteRent }) {
                 rent.status === orderStatus.WaitingConfirm && (
                   <Button
                     variant="danger"
-                    onClick={() => {
-                      deleteRent(rent.id);
+                    onClick={async () => {
+                      await deleteRent(rent.id);
                       vehicle.carCount = Number(vehicle.carCount) + 1;
-                      saveVehicle(vehicle).then(navigate('/vehicles-list'));
+                      saveVehicle(vehicle).then(navigate('/rents-list'));
                     }}
                   >
                     Cancel Rent

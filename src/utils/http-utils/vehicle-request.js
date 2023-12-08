@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const apiUrl = 'http://localhost:3005/vehicles';
+const apiUrl = 'http://localhost:3388/vehicles';
 
 //Vehicles
 
