@@ -10,7 +10,7 @@ export function PageNotFound() {
                     <div className="col-md-9 col-lg-6 my-5">
                         <div className="text-center error-page">
                             <h1 className="mb-0 text-secondary">404</h1>
-                            <h2 className="mb-4 text-white">{'Sorry, something went wrong!'}</h2>
+                            <h2 className="mb-4 text-white">{'Sorry, something went wrong! Page is not found!'}</h2>
                             <div>
                                 <Link to="/" className="btn btn-info btn-lg me-sm-2 mb-2 mb-sm-0">Return to Home Page</Link>
                             </div>
