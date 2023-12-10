@@ -44,6 +44,11 @@ export function RentCard({ rent, deleteRent }) {
     navigate(`/rent/edit/${rent.id}`);
   };
 
+  const deleteRentHandler = async (id) => {
+    await deleteRent(id);
+    vehicle.carCount = Number(vehicle.carCount) + 1;
+    saveVehicle(vehicle).then(navigate('/rents-list'));
+  }
   if (!rent) {
     return <p>No Rents!</p>;
   }
@@ -89,11 +94,7 @@ export function RentCard({ rent, deleteRent }) {
                 rent.status === orderStatus.WaitingConfirm && (
                   <Button
                     variant="danger"
-                    onClick={async () => {
-                      await deleteRent(rent.id);
-                      vehicle.carCount = Number(vehicle.carCount) + 1;
-                      saveVehicle(vehicle).then(navigate('/rents-list'));
-                    }}
+                    onClick={async ()=> await deleteRentHandler(rent.id)}
                   >
                     Cancel Rent
                   </Button>
@@ -130,11 +131,7 @@ export function RentCard({ rent, deleteRent }) {
           {loggedUser.isAdmin && (
             <Button
               variant="danger"
-              onClick={async () => {
-                await deleteRent(rent.id);
-                vehicle.carCount = Number(vehicle.carCount) + 1;
-                saveVehicle(vehicle).then(navigate('/rents-list'));
-              }}
+              onClick={async ()=> await deleteRentHandler(rent.id)}
             >
               Delete
             </Button>
